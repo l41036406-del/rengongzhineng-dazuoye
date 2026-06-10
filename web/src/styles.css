@@ -17,10 +17,10 @@
 :root {
   color: #15372f;
   background: #ece5d6;
-  font-family: "WorldCup Sans", "Microsoft YaHei", sans-serif;
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "WorldCup Sans", sans-serif;
   font-synthesis: none;
-  --font-serif: "WorldCup Serif", STSong, SimSun, serif;
-  --font-sans: "WorldCup Sans", "Microsoft YaHei", sans-serif;
+  --font-serif: SimSun, "Songti SC", "Noto Serif CJK SC", "WorldCup Serif", serif;
+  --font-sans: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "WorldCup Sans", sans-serif;
   --paper: #f3eddf;
   --paper-soft: #f8f3e8;
   --forest: #0d3028;
@@ -998,7 +998,7 @@ body {
 .header-visual {
   inset: 0;
   opacity: 1;
-  background-image: url("/assets/world-cup-data-hero.png");
+  background-image: url("/assets/world-cup-data-hero-v2.png");
   background-size: cover;
   background-position: center;
   filter: none;
@@ -1892,6 +1892,215 @@ td {
 .recharts-legend-item-text {
   fill: #53675f;
   color: #53675f !important;
+}
+
+/* Homepage narrative rhythm and typography system. */
+.home-transition {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.25fr) minmax(320px, .75fr);
+  gap: clamp(48px, 7vw, 110px);
+  align-items: end;
+  padding: 74px 4px 58px;
+  border-bottom: 1px solid var(--rule-dark);
+}
+
+.home-transition span {
+  display: block;
+  margin-bottom: 13px;
+  color: #806735;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: .12em;
+}
+
+.home-transition h2 {
+  max-width: 760px;
+  margin: 0;
+  color: var(--forest);
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 3vw, 48px);
+  font-weight: 550;
+  line-height: 1.35;
+}
+
+.home-transition p {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.home-transition + .analysis-pipeline {
+  margin: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  border-top: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+table,
+.sidebar,
+.page-header p,
+.panel-note,
+.visual-card p,
+.correlation-grid,
+.correlation-readout {
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+.metric strong,
+.brand strong {
+  font-family: var(--font-serif);
+}
+
+/* Correlation matrix uses the full analysis width instead of a clipped half-column. */
+.visual-card-correlation {
+  grid-column: 1 / -1;
+  min-height: 760px;
+  border-left: 0 !important;
+}
+
+.visual-card-correlation .interactive-chart-body {
+  min-height: 650px;
+}
+
+.visual-card-correlation .correlation-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: 170px repeat(10, minmax(64px, 1fr)) !important;
+}
+
+.visual-card-correlation .correlation-x {
+  min-height: 132px;
+  padding: 0 0 12px 8px;
+  writing-mode: horizontal-tb;
+  transform: rotate(-48deg);
+  transform-origin: left bottom;
+  align-self: end;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.visual-card-correlation ~ .visual-card:nth-child(3) {
+  grid-column: auto;
+  margin-top: 0;
+  border-left: 1px solid var(--rule);
+}
+
+/* Light editorial surfaces need dark, explicit foreground colors. */
+.report-callout span {
+  color: #52675f;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.report-callout strong {
+  color: var(--forest);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.report-callout p {
+  color: #52675f;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 450;
+}
+
+.report-callout b {
+  color: #806735;
+  font-weight: 700;
+}
+
+/* Overview typography: serif headings, sans UI copy, consistent weights. */
+.page-header h1,
+.home-transition h2,
+.pipeline-heading h2,
+.section-title h2,
+.overview-grid .panel h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+.home-transition span,
+.home-transition p,
+.pipeline-heading span,
+.pipeline-heading p,
+.pipeline-flow small,
+.pipeline-flow p,
+.metric > span,
+.metric small,
+.section-title span,
+.overview-grid th,
+.overview-grid td {
+  font-family: var(--font-sans);
+}
+
+.pipeline-flow strong {
+  font-family: var(--font-sans);
+  font-weight: 650;
+}
+
+.metric strong {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.home-transition p,
+.pipeline-heading p,
+.pipeline-flow p,
+.metric small {
+  color: #52675f;
+  font-weight: 450;
+}
+
+.home-transition h2 > span {
+  display: block;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0;
+  line-height: inherit;
+}
+
+.visual-card-correlation {
+  min-height: 0;
+}
+
+.visual-card-correlation .interactive-chart-body {
+  min-height: 0;
+}
+
+.visual-card-correlation .correlation-grid {
+  align-content: start;
+  grid-auto-rows: 48px;
+}
+
+.visual-card-correlation .correlation-x {
+  min-height: 48px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 0 4px 9px;
+  writing-mode: horizontal-tb;
+  transform: none;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.25;
 }
 
 @media (prefers-reduced-motion: reduce) {

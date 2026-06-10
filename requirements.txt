@@ -28,3 +28,5 @@ streamlit-lottie==0.0.5         # Lottie 动画(欢迎页足球动画)
 
 # --- 网络请求(数据下载 / 可选的大模型报告) ---
 requests==2.32.5
+reportlab==4.4.1
+openpyxl==3.1.5

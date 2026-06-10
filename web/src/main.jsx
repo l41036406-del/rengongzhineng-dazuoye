@@ -62,6 +62,41 @@ const CHART_COLORS = {
   axis: "#53675F",
 };
 
+const FEATURE_LABELS = {
+  home_elo: "队伍A ELO",
+  away_elo: "队伍B ELO",
+  elo_diff: "ELO差值",
+  elo_abs_diff: "ELO总和",
+  home_recent_winrate: "队伍A近期胜率",
+  away_recent_winrate: "队伍B近期胜率",
+  home_recent_goal_diff: "队伍A近期净胜球",
+  away_recent_goal_diff: "队伍B近期净胜球",
+  home_avg_goals: "队伍A场均进球",
+  away_avg_goals: "队伍B场均进球",
+  h2h_diff: "历史交锋差值",
+  home_wc_exp: "队伍A世界杯经验",
+  away_wc_exp: "队伍B世界杯经验",
+  neutral: "中立场地",
+  is_world_cup_final: "世界杯正赛",
+  match_year: "比赛年份",
+};
+
+const FEATURE_SHORT_LABELS = {
+  elo_diff: "ELO差值",
+  home_recent_winrate: "队伍A胜率",
+  away_recent_winrate: "队伍B胜率",
+  home_recent_goal_diff: "A近期净胜球",
+  away_recent_goal_diff: "B近期净胜球",
+  home_avg_goals: "A场均进球",
+  away_avg_goals: "B场均进球",
+  h2h_diff: "交锋差值",
+  neutral: "中立场地",
+  is_world_cup_final: "世界杯正赛",
+};
+
+const featureLabel = (name) => FEATURE_LABELS[name] || name;
+const featureShortLabel = (name) => FEATURE_SHORT_LABELS[name] || featureLabel(name);
+
 const CSV_FIELD_ALIASES = {
   home_team: "home_team",
   away_team: "away_team",
@@ -81,6 +116,15 @@ const CSV_FIELD_ALIASES = {
   日期: "date",
   赛事名称: "tournament",
   赛事: "tournament",
+};
+
+const decodeCsvFile = async (file) => {
+  const bytes = await file.arrayBuffer();
+  try {
+    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  } catch {
+    return new TextDecoder("gb18030").decode(bytes);
+  }
 };
 
 const UPLOAD_FIELDS = [
@@ -320,14 +364,18 @@ function Overview() {
         subtitle="融合历史比赛、ELO 评分与赛前状态的大数据分析平台。系统覆盖数据治理、特征工程、多模型评估、概率预测和上传赛程实时报告。"
         visual
       />
-      <section className="metric-row">
-        {metrics.map(([index, value, label]) => (
-          <div className="metric" key={label}>
-            <span>{index}</span>
-            <strong>{value}</strong>
-            <small>{label}</small>
-          </div>
-        ))}
+      <section className="home-transition">
+        <div>
+        <span>从历史比赛到赛前决策</span>
+        <h2>
+          <span>让每一次预测都能追溯到</span>
+          <span>数据、特征与模型依据</span>
+        </h2>
+        </div>
+        <p>
+          平台不是简单展示比赛统计，而是把历史状态、对手强度和模型概率组织成可解释的分析流程，
+          并在上传赛程后生成逐队报告。
+        </p>
       </section>
       <section className="analysis-pipeline">
         <div className="pipeline-heading">
@@ -351,6 +399,15 @@ function Overview() {
             </article>
           ))}
         </div>
+      </section>
+      <section className="metric-row">
+        {metrics.map(([index, value, label]) => (
+          <div className="metric" key={label}>
+            <span>{index}</span>
+            <strong>{value}</strong>
+            <small>{label}</small>
+          </div>
+        ))}
       </section>
       <SectionTitle title="数据概览" note="最近更新：训练数据末次比赛" />
       <div className="overview-grid">
@@ -601,7 +658,10 @@ function Visualizations() {
         description: "随机森林对各赛前特征的使用权重",
         chart: (
           <BarChart
-            data={data.feature_importance}
+            data={data.feature_importance.map((item) => ({
+              ...item,
+              feature_label: featureLabel(item.feature),
+            }))}
             layout="vertical"
             margin={{ left: 25, right: 35 }}
           >
@@ -609,7 +669,7 @@ function Visualizations() {
             <XAxis type="number" unit="%" stroke={CHART_COLORS.axis} tick={{ fontSize: 9 }} />
             <YAxis
               type="category"
-              dataKey="feature"
+              dataKey="feature_label"
               width={145}
               stroke={CHART_COLORS.axis}
               tick={{ fontSize: 8 }}
@@ -641,7 +701,10 @@ function Visualizations() {
       </div>
       <div className="visual-grid">
         {groups[group].map((item) => (
-          <article className="visual-card interactive-chart" key={item.id}>
+          <article
+            className={`visual-card interactive-chart visual-card-${item.id}`}
+            key={item.id}
+          >
             <div className="visual-card-heading">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
@@ -675,11 +738,11 @@ function CorrelationHeatmap({ data }) {
       >
         <span />
         {data.columns.map((column) => (
-          <strong className="correlation-x" key={column}>{column}</strong>
+          <strong className="correlation-x" key={column}>{featureShortLabel(column)}</strong>
         ))}
         {data.columns.map((row) => (
           <React.Fragment key={row}>
-            <strong className="correlation-y">{row}</strong>
+            <strong className="correlation-y">{featureLabel(row)}</strong>
             {data.columns.map((column) => {
               const item = data.values.find((value) => value.x === column && value.y === row);
               return (
@@ -691,7 +754,7 @@ function CorrelationHeatmap({ data }) {
                   }}
                   onMouseEnter={() => setActive(item)}
                   onFocus={() => setActive(item)}
-                  title={`${row} × ${column}: ${item.value}`}
+                  title={`${featureLabel(row)} × ${featureLabel(column)}：${item.value}`}
                 >
                   {item.value.toFixed(2)}
                 </button>
@@ -702,7 +765,7 @@ function CorrelationHeatmap({ data }) {
       </div>
       <div className="correlation-readout">
         {active
-          ? `${active.y} × ${active.x}：相关系数 ${active.value.toFixed(2)}`
+          ? `${featureLabel(active.y)} × ${featureLabel(active.x)}：相关系数 ${active.value.toFixed(2)}`
           : "悬停任意色块查看变量关系"}
       </div>
     </div>
@@ -936,7 +999,7 @@ function Batch({ onUploadedMatches }) {
   const loadFile = async (event) => {
     const file = event.target.files?.[0];
     if (!file) return;
-    const text = await file.text();
+    const text = await decodeCsvFile(file);
     const lines = text.split(/\r?\n/).filter(Boolean);
     const headers = lines[0]
       .replace(/^\uFEFF/, "")
@@ -960,44 +1023,59 @@ function Batch({ onUploadedMatches }) {
     if (value === undefined || value === null || value === "") return defaultValue;
     return !["0", "false", "否", "不是", "no"].includes(String(value).trim().toLowerCase());
   };
+  const buildPayload = () =>
+    rows.map((row) => ({
+      home_team: row.home_team,
+      away_team: row.away_team,
+      neutral: parseBoolean(row.neutral),
+      is_world_cup_final: parseBoolean(row.is_world_cup_final),
+      date: row.date || null,
+      tournament: row.tournament || null,
+    }));
   const runBatch = async () => {
     if (!rows.length) return;
     setStatus({ loading: true, error: "" });
     try {
-      const payload = rows.map((row) => ({
-        home_team: row.home_team,
-        away_team: row.away_team,
-        neutral: parseBoolean(row.neutral),
-        is_world_cup_final: parseBoolean(row.is_world_cup_final),
-        date: row.date || null,
-        tournament: row.tournament || null,
-      }));
+      const payload = buildPayload();
       const data = await api("/api/batch", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ matches: payload }),
       });
       setResults(data.results);
-      onUploadedMatches(payload);
+      onUploadedMatches(
+        data.results.map((item, index) => ({
+          ...payload[index],
+          home_team: item.home_team,
+          away_team: item.away_team,
+        })),
+      );
       setStatus({ loading: false, error: "" });
     } catch (error) {
       setStatus({ loading: false, error: error.message });
     }
   };
-  const download = () => {
-    const header = "home_team,away_team,prediction,home_win,draw,away_win\n";
-    const body = results
-      .map(
-        (item) =>
-          `${item.home_team},${item.away_team},${item.prediction},${item.probabilities["队伍A胜"]},${item.probabilities["平局"]},${item.probabilities["队伍B胜"]}`,
-      )
-      .join("\n");
-    const url = URL.createObjectURL(new Blob([`\uFEFF${header}${body}`], { type: "text/csv" }));
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = "batch_predictions.csv";
-    anchor.click();
-    URL.revokeObjectURL(url);
+  const download = async () => {
+    setStatus((current) => ({ ...current, error: "" }));
+    try {
+      const response = await fetch("/api/batch/export/xlsx", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ matches: buildPayload() }),
+      });
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body.detail || "Excel 预测结果生成失败");
+      }
+      const url = URL.createObjectURL(await response.blob());
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = "世界杯批量预测结果.xlsx";
+      anchor.click();
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      setStatus((current) => ({ ...current, error: error.message }));
+    }
   };
   const downloadTemplate = () => {
     const content = [
@@ -1071,7 +1149,7 @@ function Batch({ onUploadedMatches }) {
               </div>
               <button className="secondary-button" onClick={download}>
                 <FileDown size={17} />
-                下载预测结果
+                下载预测结果 XLSX
               </button>
               <p className="panel-note">
                 本次上传数据已同步到“分析报告”，可按队伍查看实时图表与建议。
@@ -1102,6 +1180,7 @@ function Batch({ onUploadedMatches }) {
 function Report({ matches }) {
   const [state, setState] = useState({ data: null, error: "", loading: false });
   const [selectedTeam, setSelectedTeam] = useState("");
+  const [exportError, setExportError] = useState("");
   useEffect(() => {
     if (!matches.length) {
       setState({ data: null, error: "", loading: false });
@@ -1130,14 +1209,28 @@ function Report({ matches }) {
   }, [matches]);
   const { data, error, loading } = state;
   const team = data?.teams.find((item) => item.team === selectedTeam);
-  const download = () => {
-    if (!data) return;
-    const url = URL.createObjectURL(new Blob([data.markdown], { type: "text/markdown" }));
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = "世界杯预测分析报告.md";
-    anchor.click();
-    URL.revokeObjectURL(url);
+  const download = async () => {
+    if (!matches.length) return;
+    setExportError("");
+    try {
+      const response = await fetch("/api/report/export/pdf", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ matches }),
+      });
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body.detail || "PDF 报告生成失败");
+      }
+      const url = URL.createObjectURL(await response.blob());
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = "世界杯预测分析报告.pdf";
+      anchor.click();
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      setExportError(error.message);
+    }
   };
   return (
     <>
@@ -1148,7 +1241,7 @@ function Report({ matches }) {
           data ? (
             <button className="secondary-button" onClick={download}>
               <FileDown size={17} />
-              下载 Markdown
+              下载 PDF 报告
             </button>
           ) : null
         }
@@ -1162,6 +1255,7 @@ function Report({ matches }) {
       ) : null}
       {loading ? <Loading /> : null}
       {error ? <ErrorState message={error} /> : null}
+      {exportError ? <ErrorState message={exportError} /> : null}
       {data ? (
         <div className="report-dashboard">
           <div className="report-callout">

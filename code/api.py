@@ -2,17 +2,22 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import unicodedata
+from io import BytesIO
 from datetime import datetime
+from difflib import get_close_matches
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
+from xml.sax.saxutils import escape
 
 import joblib
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -76,6 +81,108 @@ def team_data() -> dict:
         return json.load(file)
 
 
+TEAM_ALIASES = {
+    "us": "United States",
+    "usa": "United States",
+    "united states of america": "United States",
+    "美国": "United States",
+    "eng": "England",
+    "英格兰": "England",
+    "china pr": "China",
+    "pr china": "China",
+    "中国": "China",
+    "korea republic": "South Korea",
+    "republic of korea": "South Korea",
+    "korea rep": "South Korea",
+    "韩国": "South Korea",
+    "korea dpr": "North Korea",
+    "dpr korea": "North Korea",
+    "朝鲜": "North Korea",
+    "ir iran": "Iran",
+    "islamic republic of iran": "Iran",
+    "cote d ivoire": "Ivory Coast",
+    "côte d ivoire": "Ivory Coast",
+    "cabo verde": "Cape Verde",
+    "congo dr": "DR Congo",
+    "congo kinshasa": "DR Congo",
+    "democratic republic of congo": "DR Congo",
+    "democratic republic of the congo": "DR Congo",
+    "republic of the congo": "Congo",
+    "congo brazzaville": "Congo",
+    "czechia": "Czech Republic",
+    "turkiye": "Turkey",
+    "türkiye": "Turkey",
+    "fyr macedonia": "North Macedonia",
+    "macedonia": "North Macedonia",
+    "ireland": "Republic of Ireland",
+    "eire": "Republic of Ireland",
+    "uae": "United Arab Emirates",
+    "hong kong china": "Hong Kong",
+    "chinese taipei": "Taiwan",
+    "viet nam": "Vietnam",
+    "kyrgyz republic": "Kyrgyzstan",
+    "republic of moldova": "Moldova",
+    "russian federation": "Russia",
+    "brunei darussalam": "Brunei",
+    "lao pdr": "Laos",
+    "syrian arab republic": "Syria",
+    "state of palestine": "Palestine",
+    "swaziland": "Eswatini",
+    "burma": "Myanmar",
+    "east timor": "Timor-Leste",
+    "bosnia herzgovina": "Bosnia and Herzegovina",
+    "bosnia herzegovina": "Bosnia and Herzegovina",
+    "trinidad tobago": "Trinidad and Tobago",
+    "antigua barbuda": "Antigua and Barbuda",
+    "st kitts and nevis": "Saint Kitts and Nevis",
+    "st lucia": "Saint Lucia",
+    "st vincent and the grenadines": "Saint Vincent and the Grenadines",
+    "sao tome and principe": "São Tomé and Príncipe",
+}
+
+
+def team_name_key(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value.strip().casefold())
+    normalized = "".join(char for char in normalized if not unicodedata.combining(char))
+    return re.sub(r"[^a-z0-9\u4e00-\u9fff]+", "", normalized)
+
+
+@lru_cache
+def team_name_lookup() -> dict[str, str]:
+    names = list(team_data()["team_state"])
+    lookup = {team_name_key(name): name for name in names}
+    for name in names:
+        lookup.setdefault(team_name_key(name.replace(" and ", " & ")), name)
+        if name.startswith("Saint "):
+            lookup.setdefault(team_name_key(name.replace("Saint ", "St ", 1)), name)
+    for alias, canonical in TEAM_ALIASES.items():
+        if canonical in names:
+            lookup[team_name_key(alias)] = canonical
+    return lookup
+
+
+def canonical_team_name(value: str) -> str:
+    raw = value.strip()
+    canonical = team_name_lookup().get(team_name_key(raw))
+    if canonical:
+        return canonical
+    candidates = get_close_matches(raw, list(team_data()["team_state"]), n=3, cutoff=0.58)
+    suggestion = f"；可能是：{'、'.join(candidates)}" if candidates else ""
+    raise HTTPException(
+        status_code=422,
+        detail=f"无法识别队伍“{raw}”{suggestion}。请使用标准队名或常见国家别名。",
+    )
+
+
+def normalize_match_request(request: MatchRequest) -> MatchRequest:
+    return request.model_copy(
+        update={
+            "home_team": canonical_team_name(request.home_team),
+            "away_team": canonical_team_name(request.away_team),
+        }
+    )
+
+
 @lru_cache
 def evaluation_data() -> dict:
     with (OUTPUT_DIR / "eval_results.json").open(encoding="utf-8") as file:
@@ -129,6 +236,7 @@ def build_feature_vector(request: MatchRequest) -> dict[str, float]:
 
 
 def run_prediction(request: MatchRequest) -> dict:
+    request = normalize_match_request(request)
     if request.home_team == request.away_team:
         raise HTTPException(status_code=400, detail="请选择两支不同的球队")
 
@@ -172,6 +280,73 @@ def run_prediction(request: MatchRequest) -> dict:
         "model": request.model_name or evaluation_data()["best_model_name"],
         "warnings": warnings,
     }
+
+
+def build_batch_xlsx(matches: list[MatchRequest]) -> BytesIO:
+    from openpyxl import Workbook
+    from openpyxl.styles import Alignment, Font, PatternFill
+
+    results = [run_prediction(match) for match in matches]
+    workbook = Workbook()
+    worksheet = workbook.active
+    worksheet.title = "预测结果"
+    headers = [
+        "比赛日期",
+        "赛事名称",
+        "队伍A",
+        "队伍B",
+        "预测结果",
+        "队伍A胜概率",
+        "平局概率",
+        "队伍B胜概率",
+        "队伍A ELO",
+        "队伍B ELO",
+        "中立场地",
+        "世界杯正赛",
+        "使用模型",
+    ]
+    worksheet.append(headers)
+    for item in results:
+        worksheet.append(
+            [
+                item["date"] or "",
+                item["tournament"] or "",
+                item["home_team"],
+                item["away_team"],
+                item["prediction"],
+                item["probabilities"]["队伍A胜"],
+                item["probabilities"]["平局"],
+                item["probabilities"]["队伍B胜"],
+                item["home_elo"],
+                item["away_elo"],
+                "是" if item["neutral"] else "否",
+                "是" if item["is_world_cup_final"] else "否",
+                item["model"],
+            ]
+        )
+
+    header_fill = PatternFill("solid", fgColor="17372F")
+    for cell in worksheet[1]:
+        cell.fill = header_fill
+        cell.font = Font(color="FFFFFF", bold=True)
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+    for row in worksheet.iter_rows(min_row=2):
+        for cell in row:
+            cell.alignment = Alignment(vertical="center")
+        for cell in row[5:8]:
+            cell.number_format = "0.0%"
+
+    widths = [13, 20, 20, 20, 12, 15, 13, 15, 13, 13, 12, 14, 22]
+    for index, width in enumerate(widths, start=1):
+        worksheet.column_dimensions[chr(64 + index)].width = width
+    worksheet.freeze_panes = "A2"
+    worksheet.auto_filter.ref = worksheet.dimensions
+    worksheet.row_dimensions[1].height = 24
+
+    buffer = BytesIO()
+    workbook.save(buffer)
+    buffer.seek(0)
+    return buffer
 
 
 def team_history_summary(team: str) -> dict:
@@ -389,6 +564,226 @@ def build_dynamic_report(matches: list[MatchRequest]) -> dict:
     }
 
 
+def build_report_pdf(report: dict) -> BytesIO:
+    from reportlab.lib import colors
+    from reportlab.lib.enums import TA_CENTER
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+    from reportlab.lib.units import mm
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.cidfonts import UnicodeCIDFont
+    from reportlab.pdfbase.ttfonts import TTFont
+    from reportlab.platypus import (
+        PageBreak,
+        Paragraph,
+        SimpleDocTemplate,
+        Spacer,
+        Table,
+        TableStyle,
+    )
+
+    font_name = "STSong-Light"
+    font_candidates = [
+        os.getenv("REPORT_FONT_PATH"),
+        str(BASE_DIR / "assets" / "fonts" / "NotoSansCJKsc-Regular.otf"),
+        "C:/Windows/Fonts/msyh.ttc",
+        "C:/Windows/Fonts/simhei.ttf",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+    ]
+    for font_path in font_candidates:
+        if font_path and Path(font_path).exists():
+            font_name = "ReportChinese"
+            pdfmetrics.registerFont(TTFont(font_name, font_path, subfontIndex=0))
+            break
+    else:
+        pdfmetrics.registerFont(UnicodeCIDFont(font_name))
+    buffer = BytesIO()
+    document = SimpleDocTemplate(
+        buffer,
+        pagesize=A4,
+        rightMargin=18 * mm,
+        leftMargin=18 * mm,
+        topMargin=17 * mm,
+        bottomMargin=16 * mm,
+        title="世界杯预测分析报告",
+        author="世界杯比赛结果智能预测与分析系统",
+    )
+    styles = getSampleStyleSheet()
+    title = ParagraphStyle(
+        "ChineseTitle",
+        parent=styles["Title"],
+        fontName=font_name,
+        fontSize=22,
+        leading=30,
+        textColor=colors.HexColor("#17372f"),
+        alignment=TA_CENTER,
+        spaceAfter=12,
+    )
+    heading = ParagraphStyle(
+        "ChineseHeading",
+        parent=styles["Heading2"],
+        fontName=font_name,
+        fontSize=14,
+        leading=20,
+        textColor=colors.HexColor("#17372f"),
+        spaceBefore=9,
+        spaceAfter=7,
+    )
+    body = ParagraphStyle(
+        "ChineseBody",
+        parent=styles["BodyText"],
+        fontName=font_name,
+        fontSize=9.5,
+        leading=16,
+        textColor=colors.HexColor("#40584f"),
+        spaceAfter=5,
+    )
+    small = ParagraphStyle(
+        "ChineseSmall",
+        parent=body,
+        fontSize=8,
+        leading=12,
+    )
+    table_header = ParagraphStyle(
+        "ChineseTableHeader",
+        parent=small,
+        textColor=colors.white,
+        alignment=TA_CENTER,
+        leading=11,
+    )
+    story = [
+        Paragraph("世界杯预测分析报告", title),
+        Paragraph(f"生成时间：{escape(report['generated_at'])}", body),
+        Spacer(1, 4 * mm),
+        Paragraph("总体摘要", heading),
+    ]
+    summary = report["summary"]
+    summary_data = [
+        ["分析比赛", "涉及队伍", "平均置信度", "高不确定对局"],
+        [
+            f"{summary['matches']} 场",
+            f"{summary['teams']} 支",
+            f"{summary['average_confidence']}%",
+            f"{summary['uncertain_matches']} 场",
+        ],
+    ]
+    summary_table = Table(summary_data, colWidths=[41 * mm] * 4)
+    summary_table.setStyle(
+        TableStyle(
+            [
+                ("FONTNAME", (0, 0), (-1, -1), font_name),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#52675f")),
+                ("TEXTCOLOR", (0, 1), (-1, 1), colors.HexColor("#17372f")),
+                ("FONTSIZE", (0, 0), (-1, 0), 8),
+                ("FONTSIZE", (0, 1), (-1, 1), 14),
+                ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                ("TOPPADDING", (0, 0), (-1, -1), 7),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
+                ("LINEBELOW", (0, 0), (-1, 0), 0.5, colors.HexColor("#cbc2af")),
+                ("BOX", (0, 0), (-1, -1), 0.6, colors.HexColor("#a9a18f")),
+                ("INNERGRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#cbc2af")),
+                ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#f8f3e8")),
+            ]
+        )
+    )
+    story.extend(
+        [
+            summary_table,
+            Spacer(1, 5 * mm),
+            Paragraph("总体判断", heading),
+            Paragraph(
+                f"ELO 最高的队伍是 {escape(summary['strongest_team'])}；"
+                f"赛程前景最佳的是 {escape(summary['best_schedule_outlook'])}。"
+                f"共有 {summary['uncertain_matches']} 场比赛的最高结果概率低于 50%，"
+                "应重点关注首发、伤停与临场战术变化。",
+                body,
+            ),
+            Paragraph("比赛预测明细", heading),
+        ]
+    )
+    match_rows = [["队伍A", "队伍B", "预测", "队伍A胜", "平局", "队伍B胜", "置信度"]]
+    for item in report["matches"]:
+        match_rows.append(
+            [
+                item["home_team"],
+                item["away_team"],
+                item["prediction"],
+                f"{item['probabilities']['队伍A胜'] * 100:.1f}%",
+                f"{item['probabilities']['平局'] * 100:.1f}%",
+                f"{item['probabilities']['队伍B胜'] * 100:.1f}%",
+                f"{item['confidence']:.1f}%",
+            ]
+        )
+    match_table = Table(
+        [
+            [
+                Paragraph(
+                    escape(str(cell)),
+                    table_header if row_index == 0 else small,
+                )
+                for cell in row
+            ]
+            for row_index, row in enumerate(match_rows)
+        ],
+        colWidths=[27 * mm, 27 * mm, 22 * mm, 21 * mm, 18 * mm, 21 * mm, 21 * mm],
+        repeatRows=1,
+    )
+    match_table.setStyle(
+        TableStyle(
+            [
+                ("FONTNAME", (0, 0), (-1, -1), font_name),
+                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#17372f")),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+                ("ALIGN", (0, 0), (-1, 0), "CENTER"),
+                ("ALIGN", (2, 1), (-1, -1), "CENTER"),
+                ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+                ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#cbc2af")),
+                ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#f8f3e8")]),
+                ("TOPPADDING", (0, 0), (-1, 0), 7),
+                ("BOTTOMPADDING", (0, 0), (-1, 0), 7),
+                ("TOPPADDING", (0, 1), (-1, -1), 5),
+                ("BOTTOMPADDING", (0, 1), (-1, -1), 5),
+            ]
+        )
+    )
+    story.append(match_table)
+
+    for index, team in enumerate(report["teams"]):
+        if index and index % 3 == 0:
+            story.append(PageBreak())
+        story.extend(
+            [
+                Paragraph(escape(team["team"]), heading),
+                Paragraph(
+                    f"ELO：{team['elo']}　近期胜率：{team['recent_winrate']}%　"
+                    f"近期净胜球：{team['recent_goal_diff']}　场均进球：{team['avg_goals']}",
+                    body,
+                ),
+                Paragraph(
+                    f"{team['fixtures_count']} 场比赛预期积分：{team['expected_points']}，"
+                    f"场均预期积分：{team['points_per_match']}；"
+                    f"预期胜/平/负：{team['expected_wins']} / {team['expected_draws']} / {team['expected_losses']}",
+                    body,
+                ),
+            ]
+        )
+        for recommendation in team["recommendations"]:
+            story.append(Paragraph(f"• {escape(recommendation)}", body))
+
+    def add_page_number(canvas, doc):
+        canvas.saveState()
+        canvas.setFont(font_name, 8)
+        canvas.setFillColor(colors.HexColor("#718078"))
+        canvas.drawCentredString(A4[0] / 2, 9 * mm, f"第 {doc.page} 页")
+        canvas.restoreState()
+
+    document.build(story, onFirstPage=add_page_number, onLaterPages=add_page_number)
+    buffer.seek(0)
+    return buffer
+
+
 @app.get("/api/health")
 def health():
     return {"status": "ok"}
@@ -469,6 +864,16 @@ def batch_predict(request: BatchRequest):
     return {"results": [run_prediction(match) for match in request.matches]}
 
 
+@app.post("/api/batch/export/xlsx")
+def export_batch_xlsx(request: BatchRequest):
+    filename = f"batch-predictions-{datetime.now().strftime('%Y%m%d-%H%M%S')}.xlsx"
+    return StreamingResponse(
+        build_batch_xlsx(request.matches),
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
+
+
 @app.get("/api/report")
 def report():
     path = OUTPUT_DIR / "reports" / "analysis_report.md"
@@ -480,6 +885,17 @@ def report():
 @app.post("/api/report/analyze")
 def analyze_report(request: BatchRequest):
     return build_dynamic_report(request.matches)
+
+
+@app.post("/api/report/export/pdf")
+def export_report_pdf(request: BatchRequest):
+    report_data = build_dynamic_report(request.matches)
+    filename = f"world-cup-analysis-{datetime.now().strftime('%Y%m%d-%H%M%S')}.pdf"
+    return StreamingResponse(
+        build_report_pdf(report_data),
+        media_type="application/pdf",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
 
 
 @app.get("/api/visualizations")

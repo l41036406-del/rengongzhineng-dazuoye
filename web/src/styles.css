@@ -2476,9 +2476,9 @@ h3,
 :root {
   --paper: #f4efe4;
   --paper-soft: #f8f4eb;
-  --forest: #073f34;
-  --forest-2: #0c5343;
-  --ink: #123d34;
+  --forest: #1f5a32;
+  --forest-2: #2d7040;
+  --ink: #183d29;
   --muted: #697a72;
   --rule: #d1c8b7;
   --rule-dark: #aaa28f;
@@ -2502,8 +2502,8 @@ body,
   background:
     linear-gradient(150deg, transparent 60%, rgba(32, 105, 79, .14) 60.2% 60.8%, transparent 61%),
     linear-gradient(34deg, transparent 72%, rgba(207, 169, 82, .08) 72.2% 72.7%, transparent 73%),
-    radial-gradient(circle at 25% 3%, rgba(20, 105, 80, .34), transparent 30rem),
-    linear-gradient(180deg, #003d32 0%, #04362e 62%, #05322b 100%);
+    radial-gradient(circle at 25% 3%, rgba(74, 132, 58, .3), transparent 30rem),
+    linear-gradient(180deg, #1a522e 0%, #174a2a 62%, #123d24 100%);
   border-right-color: rgba(229, 217, 186, .25);
 }
 
@@ -2599,7 +2599,7 @@ body,
 }
 
 .page-header:not(.has-visual) h1 {
-  color: #073f34;
+  color: #1d512e;
   font-family: var(--font-sans);
   font-size: clamp(31px, 2.45vw, 39px);
   font-weight: 750;
@@ -2654,7 +2654,7 @@ body,
   background:
     radial-gradient(circle at 28% 20%, rgba(221, 229, 171, .24) 0 1px, transparent 2px),
     repeating-linear-gradient(112deg, rgba(218, 227, 178, .09) 0 1px, transparent 1px 7px),
-    linear-gradient(140deg, #416a21, #285411 55%, #173f0d);
+    linear-gradient(140deg, #5f842f, #376923 55%, #214f18);
   box-shadow: inset 0 0 44px rgba(6, 35, 7, .35);
 }
 
@@ -2688,7 +2688,7 @@ body,
 }
 
 .match-section-heading strong {
-  color: #173f35;
+  color: #244d31;
   font-size: 13px;
 }
 
@@ -2701,7 +2701,7 @@ body,
 }
 
 .match-control-rail .field select {
-  color: #173f35;
+  color: #244d31;
   background: rgba(255, 253, 247, .48);
   border-color: #c8bfad;
 }
@@ -2713,18 +2713,18 @@ body,
 
 .primary-button {
   color: #fff8e7;
-  background: #064437;
-  border-color: #064437;
+  background: #205d33;
+  border-color: #205d33;
 }
 
 .primary-button:hover {
-  background: #0b5846;
+  background: #2e7141;
 }
 
 .pitch-scoreboard {
   margin-top: 13px;
   color: #fffaf0;
-  background: linear-gradient(90deg, #064437 0 49.8%, #c5a34f 50.2% 100%);
+  background: linear-gradient(90deg, #205d33 0 49.8%, #c5a34f 50.2% 100%);
 }
 
 .football-pitch {
@@ -2752,7 +2752,7 @@ body,
 
 .pitch-player.home {
   color: #fffaf0;
-  background: #073f34;
+  background: #205d33;
 }
 
 .pitch-player.away {
@@ -2761,7 +2761,7 @@ body,
 }
 
 .pitch-legend i.home {
-  background: #073f34;
+  background: #205d33;
 }
 
 .pitch-legend i.away {
@@ -2773,7 +2773,7 @@ body,
   border-radius: 7px;
   background:
     radial-gradient(circle at 84% 50%, rgba(214, 181, 98, .18), transparent 7rem),
-    linear-gradient(110deg, #064437, #07382f);
+    linear-gradient(110deg, #205d33, #174a2a);
   box-shadow: 0 6px 18px rgba(13, 52, 42, .08);
 }
 
@@ -2783,7 +2783,7 @@ body,
 
 .confidence-ring {
   background:
-    radial-gradient(circle, #073c32 55%, transparent 57%),
+    radial-gradient(circle, #1b512d 55%, transparent 57%),
     conic-gradient(#e0b85c var(--confidence), rgba(255,255,255,.18) 0);
 }
 
@@ -2838,7 +2838,7 @@ body,
       radial-gradient(circle at 34% 24%, transparent 0 31px, rgba(222, 230, 180, .26) 32px 34px, transparent 35px),
       radial-gradient(circle at 80% 78%, transparent 0 42px, rgba(222, 230, 180, .2) 43px 46px, transparent 47px),
       repeating-linear-gradient(112deg, rgba(218, 227, 178, .08) 0 1px, transparent 1px 7px),
-      linear-gradient(140deg, #416a21, #285411 55%, #173f0d);
+      linear-gradient(140deg, #5f842f, #376923 55%, #214f18);
     box-shadow: inset 0 0 55px rgba(6, 35, 7, .34);
   }
 }

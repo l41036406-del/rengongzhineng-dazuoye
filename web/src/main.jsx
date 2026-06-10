@@ -4,11 +4,13 @@ import {
   Activity,
   BarChart3,
   Bot,
+  CalendarDays,
   ChevronDown,
   Database,
   FileChartColumn,
   FileDown,
   Gauge,
+  Globe2,
   Menu,
   PanelLeftClose,
   PanelLeftOpen,
@@ -233,7 +235,7 @@ function App() {
   };
 
   return (
-    <div className={`app-shell ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
+    <div className={`app-shell page-${page} ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
       <Sidebar
         page={page}
         open={sidebarOpen}
@@ -274,9 +276,9 @@ function Sidebar({ page, open, collapsed, onCollapse, onNavigate }) {
   return (
     <aside className={`sidebar ${open ? "is-open" : ""} ${collapsed ? "is-collapsed" : ""}`}>
       <div className="brand">
-        <div className="brand-mark">◉</div>
+        <div className="brand-mark"><Trophy size={24} strokeWidth={1.8} /></div>
         <div className="brand-copy">
-          <strong>世界杯预测系统</strong>
+          <strong>世界杯预测<br />与分析系统</strong>
           <span>WORLD CUP INTELLIGENCE</span>
         </div>
         <button
@@ -930,6 +932,13 @@ function Predict() {
       <PageHeader
         title="单场比赛预测"
         subtitle="结合多模型共识、ELO 先验与阵型情景，查看胜平负概率和战术影响。"
+        action={(
+          <div className="predict-toolbar">
+            <span><CalendarDays size={15} />{new Intl.DateTimeFormat("zh-CN").format(new Date())}</span>
+            <i />
+            <span><Globe2 size={16} />世界杯正赛<ChevronDown size={13} /></span>
+          </div>
+        )}
       />
       <form className="match-center" onSubmit={submit}>
         <section className="match-control-rail">

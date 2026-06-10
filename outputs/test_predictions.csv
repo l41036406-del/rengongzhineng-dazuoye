@@ -1,0 +1,1948 @@
+﻿date,home_team,away_team,elo_diff,result,best_pred
+2017-10-08,Kazakhstan,Armenia,-58.48,draw,draw
+2017-10-08,Germany,Azerbaijan,582.85,home_win,home_win
+2017-10-09,Ukraine,Croatia,21.29,away_win,home_win
+2017-10-09,Finland,Turkey,-101.25,draw,away_win
+2017-10-09,Serbia,Georgia,235.44,home_win,home_win
+2017-10-09,Moldova,Austria,-260.79,away_win,away_win
+2017-10-09,North Macedonia,Liechtenstein,214.23,home_win,home_win
+2017-10-09,Israel,Spain,-375.39,away_win,away_win
+2017-10-09,Albania,Italy,-345.03,away_win,away_win
+2017-10-09,Iceland,Kosovo,107.58,home_win,home_win
+2017-10-09,Wales,Republic of Ireland,-99.33,away_win,away_win
+2017-10-10,Luxembourg,Bulgaria,-392.46,draw,away_win
+2017-10-10,Netherlands,Sweden,146.77,home_win,home_win
+2017-10-10,Uruguay,Bolivia,202.41,home_win,home_win
+2017-10-10,Paraguay,Venezuela,99.7,away_win,home_win
+2017-10-10,Hungary,Faroe Islands,227.67,home_win,home_win
+2017-10-10,Peru,Colombia,-113.95,draw,home_win
+2017-10-10,Trinidad and Tobago,United States,-200.83,home_win,draw
+2017-10-10,Brazil,Chile,163.7,home_win,home_win
+2017-10-10,Portugal,Switzerland,49.72,home_win,home_win
+2017-10-10,Latvia,Andorra,121.76,home_win,home_win
+2017-10-10,Australia,Syria,103.69,home_win,home_win
+2017-10-10,Greece,Gibraltar,259.49,home_win,home_win
+2017-10-10,France,Belarus,343.11,home_win,home_win
+2017-10-10,Panama,Costa Rica,-177.46,home_win,draw
+2017-10-10,Honduras,Mexico,-187.46,home_win,away_win
+2017-10-10,Ecuador,Argentina,-160.54,away_win,away_win
+2017-10-10,Belgium,Cyprus,398.01,home_win,home_win
+2017-10-10,Estonia,Bosnia and Herzegovina,-179.59,away_win,away_win
+2017-11-09,Croatia,Greece,3.78,home_win,home_win
+2017-11-09,Northern Ireland,Switzerland,-208.65,away_win,away_win
+2017-11-10,Algeria,Nigeria,-151.23,home_win,away_win
+2017-11-10,Honduras,Australia,-94.05,draw,away_win
+2017-11-10,South Africa,Senegal,-47.3,away_win,away_win
+2017-11-10,Sweden,Italy,-74.95,home_win,home_win
+2017-11-11,Tunisia,Libya,169.92,draw,home_win
+2017-11-11,New Zealand,Peru,121.17,draw,home_win
+2017-11-11,Zambia,Cameroon,-64.03,draw,away_win
+2017-11-11,Ivory Coast,Morocco,60.37,away_win,home_win
+2017-11-11,DR Congo,Guinea,74.76,home_win,home_win
+2017-11-11,Denmark,Republic of Ireland,25.06,draw,home_win
+2017-11-11,Gabon,Mali,17.19,draw,home_win
+2017-11-12,Congo,Uganda,-50.55,draw,home_win
+2017-11-12,Ghana,Egypt,-58.12,draw,away_win
+2017-11-12,Greece,Croatia,-33.46,draw,home_win
+2017-11-12,Switzerland,Northern Ireland,222.53,draw,home_win
+2017-11-13,Italy,Sweden,38.58,draw,home_win
+2017-11-14,Senegal,South Africa,73.24,home_win,home_win
+2017-11-14,Republic of Ireland,Denmark,-22.9,away_win,home_win
+2017-11-14,Burkina Faso,Cape Verde,83.99,home_win,home_win
+2017-11-15,Australia,Honduras,86.12,home_win,home_win
+2017-11-15,Peru,New Zealand,-111.11,home_win,home_win
+2018-06-14,Russia,Saudi Arabia,-89.4,home_win,home_win
+2018-06-15,Egypt,Uruguay,32.37,away_win,home_win
+2018-06-15,Morocco,Iran,-145.57,away_win,away_win
+2018-06-15,Portugal,Spain,-101.07,draw,away_win
+2018-06-16,Croatia,Nigeria,-17.87,home_win,home_win
+2018-06-16,Peru,Denmark,-98.65,away_win,home_win
+2018-06-16,Argentina,Iceland,158.95,draw,home_win
+2018-06-16,France,Australia,9.92,home_win,home_win
+2018-06-17,Costa Rica,Serbia,113.07,away_win,home_win
+2018-06-17,Germany,Mexico,133.1,away_win,home_win
+2018-06-17,Brazil,Switzerland,111.63,draw,home_win
+2018-06-18,Sweden,South Korea,-9.46,home_win,home_win
+2018-06-18,Belgium,Panama,135.86,home_win,home_win
+2018-06-18,Tunisia,England,-64.98,away_win,away_win
+2018-06-19,Russia,Egypt,-36.7,home_win,home_win
+2018-06-19,Poland,Senegal,-41.71,away_win,home_win
+2018-06-19,Colombia,Japan,-95.44,away_win,home_win
+2018-06-20,Portugal,Morocco,144.54,home_win,home_win
+2018-06-20,Uruguay,Saudi Arabia,-14.73,home_win,draw
+2018-06-20,Iran,Spain,-73.44,away_win,away_win
+2018-06-21,Denmark,Australia,-65.61,draw,away_win
+2018-06-21,France,Peru,225.03,home_win,home_win
+2018-06-21,Argentina,Croatia,6.73,away_win,home_win
+2018-06-22,Serbia,Switzerland,-34.79,away_win,home_win
+2018-06-22,Nigeria,Iceland,125.71,home_win,home_win
+2018-06-22,Brazil,Costa Rica,63.47,home_win,home_win
+2018-06-23,Belgium,Tunisia,79.29,home_win,home_win
+2018-06-23,South Korea,Mexico,-127.62,away_win,away_win
+2018-06-23,Germany,Sweden,198.4,home_win,home_win
+2018-06-24,England,Panama,164.83,home_win,home_win
+2018-06-24,Japan,Senegal,89.09,draw,home_win
+2018-06-24,Poland,Colombia,-39.81,away_win,home_win
+2018-06-25,Russia,Uruguay,-36.17,away_win,home_win
+2018-06-25,Saudi Arabia,Egypt,16.08,home_win,home_win
+2018-06-25,Spain,Morocco,258.09,draw,home_win
+2018-06-25,Iran,Portugal,-1.83,draw,away_win
+2018-06-26,Australia,Peru,189.62,away_win,home_win
+2018-06-26,Denmark,France,-108.33,draw,away_win
+2018-06-26,Nigeria,Argentina,4.68,away_win,away_win
+2018-06-26,Iceland,Croatia,-164.47,away_win,home_win
+2018-06-27,Switzerland,Costa Rica,-13.05,draw,draw
+2018-06-27,Serbia,Brazil,-162.89,away_win,away_win
+2018-06-27,Mexico,Sweden,123.24,away_win,home_win
+2018-06-27,South Korea,Germany,-236.74,home_win,away_win
+2018-06-28,Japan,Poland,166.74,away_win,home_win
+2018-06-28,Senegal,Colombia,18.79,away_win,home_win
+2018-06-28,Panama,Tunisia,-72.14,away_win,away_win
+2018-06-28,England,Belgium,6.87,away_win,home_win
+2018-06-30,France,Argentina,87.89,home_win,home_win
+2018-06-30,Uruguay,Portugal,-73.96,home_win,home_win
+2018-07-01,Russia,Spain,-223.0,draw,away_win
+2018-07-01,Croatia,Denmark,28.41,draw,home_win
+2018-07-02,Brazil,Mexico,4.63,home_win,home_win
+2018-07-02,Belgium,Japan,59.3,home_win,home_win
+2018-07-03,Sweden,Switzerland,21.32,home_win,home_win
+2018-07-03,Colombia,England,-98.43,draw,away_win
+2018-07-06,Uruguay,France,-74.98,away_win,home_win
+2018-07-06,Brazil,Belgium,27.95,away_win,home_win
+2018-07-07,Russia,Croatia,-64.34,draw,home_win
+2018-07-07,Sweden,England,-20.1,away_win,away_win
+2018-07-10,France,Belgium,-9.52,home_win,home_win
+2018-07-11,Croatia,England,-65.05,home_win,away_win
+2018-07-14,Belgium,England,44.76,home_win,home_win
+2018-07-15,France,Croatia,95.56,home_win,home_win
+2019-06-06,Cambodia,Pakistan,27.34,home_win,away_win
+2019-06-06,Laos,Bangladesh,17.7,away_win,away_win
+2019-06-06,Macau,Sri Lanka,-94.96,home_win,away_win
+2019-06-06,Bhutan,Guam,-38.59,home_win,home_win
+2019-06-06,Mongolia,Brunei,70.58,home_win,home_win
+2019-06-07,Malaysia,Timor-Leste,57.14,home_win,home_win
+2019-06-11,Sri Lanka,Macau,56.96,home_win,home_win
+2019-06-11,Pakistan,Cambodia,-54.99,away_win,away_win
+2019-06-11,Malaysia,Timor-Leste,82.25,home_win,home_win
+2019-06-11,Brunei,Mongolia,-94.57,home_win,away_win
+2019-06-11,Bangladesh,Laos,13.83,draw,home_win
+2019-06-11,Guam,Bhutan,5.27,home_win,home_win
+2019-09-04,São Tomé and Príncipe,Guinea-Bissau,37.22,away_win,away_win
+2019-09-04,South Sudan,Equatorial Guinea,67.6,draw,away_win
+2019-09-04,Liberia,Sierra Leone,-52.65,home_win,home_win
+2019-09-04,Mauritius,Mozambique,-98.53,away_win,home_win
+2019-09-04,Eritrea,Namibia,9.12,away_win,away_win
+2019-09-04,Ethiopia,Lesotho,20.68,draw,home_win
+2019-09-04,Burundi,Tanzania,13.54,draw,home_win
+2019-09-04,Djibouti,Eswatini,-84.34,home_win,away_win
+2019-09-05,Guam,Maldives,54.27,away_win,home_win
+2019-09-05,Seychelles,Rwanda,-43.23,away_win,away_win
+2019-09-05,Chad,Sudan,106.33,away_win,home_win
+2019-09-05,Sri Lanka,Turkmenistan,-177.96,away_win,away_win
+2019-09-05,North Korea,Lebanon,101.84,home_win,home_win
+2019-09-05,Indonesia,Malaysia,8.91,away_win,home_win
+2019-09-05,Thailand,Vietnam,55.02,draw,home_win
+2019-09-05,Tajikistan,Kyrgyzstan,-42.74,home_win,home_win
+2019-09-05,Mongolia,Myanmar,-47.01,home_win,home_win
+2019-09-05,Qatar,Afghanistan,156.54,home_win,home_win
+2019-09-05,India,Oman,-206.16,away_win,away_win
+2019-09-05,Singapore,Yemen,18.75,draw,home_win
+2019-09-05,Palestine,Uzbekistan,-194.35,home_win,away_win
+2019-09-05,Bahrain,Iraq,-21.66,draw,home_win
+2019-09-05,Cambodia,Hong Kong,-158.88,draw,away_win
+2019-09-05,Kuwait,Nepal,213.45,home_win,home_win
+2019-09-05,Taiwan,Jordan,-359.04,away_win,away_win
+2019-09-05,Philippines,Syria,-195.48,away_win,away_win
+2019-09-05,Somalia,Zimbabwe,-80.87,home_win,away_win
+2019-09-06,Gambia,Angola,-86.3,away_win,away_win
+2019-09-06,Comoros,Togo,-55.02,draw,away_win
+2019-09-07,Botswana,Malawi,-5.22,draw,home_win
+2019-09-08,Equatorial Guinea,South Sudan,-61.84,home_win,home_win
+2019-09-08,Lesotho,Ethiopia,-18.89,draw,home_win
+2019-09-08,Sierra Leone,Liberia,18.14,home_win,home_win
+2019-09-08,Tanzania,Burundi,-12.37,draw,home_win
+2019-09-10,Zimbabwe,Somalia,44.01,home_win,home_win
+2019-09-10,Togo,Comoros,50.31,home_win,home_win
+2019-09-10,Eswatini,Djibouti,47.19,draw,home_win
+2019-09-10,Turkmenistan,South Korea,-198.41,away_win,away_win
+2019-09-10,Rwanda,Seychelles,69.52,home_win,home_win
+2019-09-10,Malawi,Botswana,4.77,home_win,home_win
+2019-09-10,Mozambique,Mauritius,120.25,home_win,home_win
+2019-09-10,Guinea-Bissau,São Tomé and Príncipe,-4.02,home_win,home_win
+2019-09-10,Malaysia,United Arab Emirates,-143.61,away_win,away_win
+2019-09-10,Angola,Gambia,109.0,home_win,home_win
+2019-09-10,Sri Lanka,North Korea,-305.81,away_win,away_win
+2019-09-10,Sudan,Chad,-67.42,draw,home_win
+2019-09-10,Namibia,Eritrea,21.67,home_win,home_win
+2019-09-10,Hong Kong,Iran,-296.98,away_win,away_win
+2019-09-10,Afghanistan,Bangladesh,90.54,home_win,home_win
+2019-09-10,Guam,Philippines,11.82,away_win,home_win
+2019-09-10,Maldives,China,-245.89,away_win,away_win
+2019-09-10,Indonesia,Thailand,-59.52,away_win,home_win
+2019-09-10,Kuwait,Australia,-138.33,away_win,away_win
+2019-09-10,Cambodia,Bahrain,-231.56,away_win,away_win
+2019-09-10,Taiwan,Nepal,-125.85,away_win,away_win
+2019-09-10,Yemen,Saudi Arabia,-287.86,draw,away_win
+2019-09-10,Singapore,Palestine,-94.67,home_win,away_win
+2019-09-10,Myanmar,Japan,-276.09,away_win,away_win
+2019-09-10,Qatar,India,205.13,draw,home_win
+2019-09-10,Mongolia,Tajikistan,-51.43,away_win,home_win
+2019-10-10,South Korea,Sri Lanka,403.88,home_win,home_win
+2019-10-10,Iraq,Hong Kong,109.91,home_win,home_win
+2019-10-10,Uzbekistan,Yemen,250.74,home_win,home_win
+2019-10-10,Kyrgyzstan,Myanmar,52.61,home_win,home_win
+2019-10-10,Australia,Nepal,364.91,home_win,home_win
+2019-10-10,Vietnam,Malaysia,-3.51,home_win,home_win
+2019-10-10,United Arab Emirates,Indonesia,187.05,home_win,home_win
+2019-10-10,Oman,Afghanistan,177.76,home_win,home_win
+2019-10-10,Syria,Maldives,223.85,home_win,home_win
+2019-10-10,Saudi Arabia,Singapore,241.54,home_win,home_win
+2019-10-10,China,Guam,247.64,home_win,home_win
+2019-10-10,Bangladesh,Qatar,-267.64,away_win,away_win
+2019-10-10,Japan,Mongolia,306.94,home_win,home_win
+2019-10-10,Jordan,Kuwait,22.22,draw,home_win
+2019-10-10,Iran,Cambodia,453.88,home_win,home_win
+2019-10-10,Lebanon,Turkmenistan,-4.04,home_win,home_win
+2019-10-15,North Korea,South Korea,-91.94,draw,away_win
+2019-10-15,Sri Lanka,Lebanon,-204.77,away_win,away_win
+2019-10-15,India,Bangladesh,83.71,draw,home_win
+2019-10-15,Indonesia,Vietnam,-44.45,away_win,home_win
+2019-10-15,Mongolia,Kyrgyzstan,-90.42,away_win,away_win
+2019-10-15,Tajikistan,Japan,-234.3,away_win,away_win
+2019-10-15,Thailand,United Arab Emirates,-110.25,home_win,away_win
+2019-10-15,Qatar,Oman,-25.65,home_win,home_win
+2019-10-15,Palestine,Saudi Arabia,-190.83,draw,away_win
+2019-10-15,Jordan,Nepal,232.45,home_win,home_win
+2019-10-15,Syria,Guam,226.17,home_win,home_win
+2019-10-15,Philippines,China,-234.25,draw,away_win
+2019-10-15,Taiwan,Australia,-513.61,away_win,away_win
+2019-10-15,Singapore,Uzbekistan,-236.52,away_win,away_win
+2019-10-15,Bahrain,Iran,-211.85,home_win,away_win
+2019-10-15,Cambodia,Iraq,-270.07,away_win,away_win
+2019-11-14,Turkmenistan,North Korea,-142.71,home_win,away_win
+2019-11-14,Lebanon,South Korea,-193.52,draw,away_win
+2019-11-14,Malaysia,Thailand,-94.0,home_win,away_win
+2019-11-14,Vietnam,United Arab Emirates,-125.16,home_win,away_win
+2019-11-14,Kyrgyzstan,Japan,-220.28,away_win,away_win
+2019-11-14,Myanmar,Tajikistan,-62.91,home_win,away_win
+2019-11-14,Oman,Bangladesh,284.23,home_win,home_win
+2019-11-14,Afghanistan,India,30.1,draw,away_win
+2019-11-14,Yemen,Palestine,-95.85,home_win,away_win
+2019-11-14,Uzbekistan,Saudi Arabia,-3.36,away_win,home_win
+2019-11-14,Hong Kong,Bahrain,-129.94,draw,away_win
+2019-11-14,Iraq,Iran,-159.52,home_win,away_win
+2019-11-14,Kuwait,Taiwan,355.8,home_win,home_win
+2019-11-14,Jordan,Australia,-134.24,away_win,away_win
+2019-11-14,Syria,China,-17.86,home_win,home_win
+2019-11-14,Maldives,Philippines,-44.47,away_win,home_win
+2019-11-19,Turkmenistan,Sri Lanka,206.35,home_win,home_win
+2019-11-19,Malaysia,Indonesia,49.71,home_win,home_win
+2019-11-19,Vietnam,Thailand,-14.98,draw,home_win
+2019-11-19,Kyrgyzstan,Tajikistan,37.48,draw,home_win
+2019-11-19,Myanmar,Mongolia,41.18,home_win,home_win
+2019-11-19,Oman,India,211.21,home_win,home_win
+2019-11-19,Afghanistan,Qatar,-185.37,away_win,away_win
+2019-11-19,Lebanon,North Korea,-80.92,draw,home_win
+2019-11-19,Uzbekistan,Palestine,176.65,home_win,home_win
+2019-11-19,Hong Kong,Cambodia,149.94,home_win,home_win
+2019-11-19,Yemen,Singapore,-0.52,away_win,home_win
+2019-11-19,Jordan,Taiwan,376.29,home_win,home_win
+2019-11-19,Nepal,Kuwait,-221.81,away_win,away_win
+2019-11-19,Syria,Philippines,201.44,home_win,home_win
+2019-11-19,Maldives,Guam,-17.32,home_win,home_win
+2019-11-19,Iraq,Bahrain,32.82,draw,home_win
+2020-10-08,Paraguay,Peru,-27.78,draw,home_win
+2020-10-08,Uruguay,Chile,91.52,home_win,home_win
+2020-10-08,Argentina,Ecuador,159.79,home_win,home_win
+2020-10-09,Colombia,Venezuela,185.98,home_win,home_win
+2020-10-09,Brazil,Bolivia,372.15,home_win,home_win
+2020-10-13,Peru,Brazil,-243.44,away_win,away_win
+2020-10-13,Ecuador,Uruguay,-203.14,home_win,home_win
+2020-10-13,Venezuela,Paraguay,-70.17,away_win,away_win
+2020-10-13,Bolivia,Argentina,-256.52,away_win,home_win
+2020-10-13,Chile,Colombia,-71.77,draw,home_win
+2020-11-12,Bolivia,Ecuador,-108.1,away_win,home_win
+2020-11-12,Argentina,Paraguay,140.46,draw,home_win
+2020-11-13,Colombia,Uruguay,-22.19,away_win,home_win
+2020-11-13,Chile,Peru,42.94,home_win,home_win
+2020-11-13,Brazil,Venezuela,356.94,home_win,home_win
+2020-11-17,Paraguay,Bolivia,143.45,draw,home_win
+2020-11-17,Uruguay,Brazil,-113.87,away_win,away_win
+2020-11-17,Peru,Argentina,-140.42,away_win,home_win
+2020-11-17,Venezuela,Chile,-161.15,home_win,away_win
+2020-11-17,Ecuador,Colombia,-110.65,home_win,away_win
+2020-12-04,Qatar,Bangladesh,303.35,home_win,home_win
+2021-03-24,Latvia,Montenegro,-157.08,away_win,away_win
+2021-03-24,Gibraltar,Norway,-109.99,away_win,away_win
+2021-03-24,Estonia,Czech Republic,-155.39,away_win,away_win
+2021-03-24,Malta,Russia,-482.49,away_win,away_win
+2021-03-24,Slovenia,Croatia,-178.15,home_win,away_win
+2021-03-24,Belgium,Wales,306.71,home_win,home_win
+2021-03-24,Finland,Bosnia and Herzegovina,-95.6,draw,away_win
+2021-03-24,Suriname,Cayman Islands,40.27,home_win,home_win
+2021-03-24,Serbia,Republic of Ireland,18.16,home_win,home_win
+2021-03-24,Turkey,Netherlands,-238.89,home_win,away_win
+2021-03-24,France,Ukraine,183.73,draw,home_win
+2021-03-24,Saint Kitts and Nevis,Puerto Rico,11.82,home_win,home_win
+2021-03-24,Portugal,Azerbaijan,410.91,home_win,home_win
+2021-03-24,Cyprus,Slovakia,-211.34,draw,away_win
+2021-03-24,Dominican Republic,Dominica,68.37,home_win,home_win
+2021-03-24,Antigua and Barbuda,Montserrat,77.57,draw,home_win
+2021-03-24,Guatemala,Cuba,176.45,home_win,home_win
+2021-03-25,Hungary,Poland,-92.55,draw,away_win
+2021-03-25,Moldova,Faroe Islands,33.22,draw,home_win
+2021-03-25,England,San Marino,609.12,home_win,home_win
+2021-03-25,Andorra,Albania,-181.05,away_win,away_win
+2021-03-25,Romania,North Macedonia,167.61,home_win,home_win
+2021-03-25,Germany,Iceland,362.92,home_win,home_win
+2021-03-25,Liechtenstein,Armenia,-201.58,away_win,away_win
+2021-03-25,Scotland,Austria,-5.56,draw,home_win
+2021-03-25,Israel,Denmark,-203.62,away_win,away_win
+2021-03-25,Tajikistan,Mongolia,83.56,home_win,home_win
+2021-03-25,Bulgaria,Switzerland,-148.19,away_win,home_win
+2021-03-25,Haiti,Belize,41.09,home_win,home_win
+2021-03-25,El Salvador,Grenada,123.39,home_win,home_win
+2021-03-25,Spain,Greece,210.48,draw,home_win
+2021-03-25,Trinidad and Tobago,Guyana,119.64,home_win,home_win
+2021-03-25,Sweden,Georgia,337.58,home_win,home_win
+2021-03-25,Panama,Barbados,207.03,home_win,home_win
+2021-03-25,Curaçao,Saint Vincent and the Grenadines,48.37,home_win,home_win
+2021-03-25,Italy,Northern Ireland,252.62,home_win,home_win
+2021-03-25,Canada,Bermuda,46.11,home_win,home_win
+2021-03-27,Czech Republic,Belgium,-243.33,draw,away_win
+2021-03-27,Russia,Slovenia,92.18,home_win,home_win
+2021-03-27,Netherlands,Latvia,466.22,home_win,home_win
+2021-03-27,Norway,Turkey,-121.25,away_win,home_win
+2021-03-27,Montenegro,Gibraltar,151.19,home_win,home_win
+2021-03-27,Croatia,Cyprus,337.68,home_win,home_win
+2021-03-27,Belarus,Estonia,14.55,home_win,home_win
+2021-03-27,Slovakia,Malta,385.19,draw,home_win
+2021-03-27,Republic of Ireland,Luxembourg,427.23,away_win,home_win
+2021-03-27,United States Virgin Islands,Antigua and Barbuda,-88.84,away_win,away_win
+2021-03-27,Anguilla,Dominican Republic,-85.67,away_win,away_win
+2021-03-27,Bahamas,Saint Kitts and Nevis,-38.71,away_win,away_win
+2021-03-27,Aruba,Suriname,-25.05,away_win,home_win
+2021-03-27,Serbia,Portugal,-112.54,draw,away_win
+2021-03-27,British Virgin Islands,Guatemala,-237.47,away_win,away_win
+2021-03-27,Turks and Caicos Islands,Nicaragua,-52.43,away_win,away_win
+2021-03-28,North Macedonia,Liechtenstein,226.65,home_win,home_win
+2021-03-28,Austria,Faroe Islands,303.28,home_win,home_win
+2021-03-28,Denmark,Moldova,388.93,home_win,home_win
+2021-03-28,Armenia,Iceland,-135.69,home_win,home_win
+2021-03-28,San Marino,Hungary,-383.27,away_win,away_win
+2021-03-28,Poland,Andorra,389.79,home_win,home_win
+2021-03-28,Albania,England,-335.94,away_win,away_win
+2021-03-28,Israel,Scotland,-96.72,draw,home_win
+2021-03-28,Romania,Germany,-310.3,away_win,away_win
+2021-03-28,Ukraine,Finland,142.02,draw,home_win
+2021-03-28,Switzerland,Lithuania,301.8,home_win,home_win
+2021-03-28,Kosovo,Sweden,-314.52,away_win,away_win
+2021-03-28,Georgia,Spain,-460.97,away_win,away_win
+2021-03-28,Puerto Rico,Trinidad and Tobago,-108.29,draw,away_win
+2021-03-28,Dominica,Panama,-220.81,away_win,away_win
+2021-03-28,Cuba,Curaçao,4.84,away_win,home_win
+2021-03-28,Bulgaria,Italy,-205.24,away_win,draw
+2021-03-28,Kazakhstan,France,-493.94,away_win,away_win
+2021-03-28,Montserrat,El Salvador,-169.73,draw,away_win
+2021-03-29,Cayman Islands,Canada,-239.54,away_win,away_win
+2021-03-30,Wales,Czech Republic,-81.22,home_win,away_win
+2021-03-30,Gibraltar,Netherlands,-453.81,away_win,away_win
+2021-03-30,Saudi Arabia,Palestine,217.69,home_win,home_win
+2021-03-30,Cyprus,Slovenia,-196.34,home_win,away_win
+2021-03-30,Belgium,Belarus,378.13,home_win,home_win
+2021-03-30,Croatia,Malta,519.51,home_win,home_win
+2021-03-30,Bermuda,Aruba,139.56,home_win,home_win
+2021-03-30,Saint Vincent and the Grenadines,British Virgin Islands,-27.9,home_win,home_win
+2021-03-30,Japan,Mongolia,364.34,home_win,home_win
+2021-03-30,Turkey,Latvia,287.11,draw,home_win
+2021-03-30,Slovakia,Russia,-123.98,home_win,away_win
+2021-03-30,Luxembourg,Portugal,-554.03,away_win,away_win
+2021-03-30,Grenada,United States Virgin Islands,55.68,home_win,home_win
+2021-03-30,Montenegro,Norway,39.22,away_win,home_win
+2021-03-30,Azerbaijan,Serbia,-308.21,away_win,away_win
+2021-03-30,Guyana,Bahamas,-20.17,home_win,away_win
+2021-03-30,Barbados,Anguilla,4.3,home_win,home_win
+2021-03-30,Belize,Turks and Caicos Islands,78.32,home_win,home_win
+2021-03-31,Austria,Denmark,-114.44,away_win,away_win
+2021-03-31,Liechtenstein,Iceland,-337.41,away_win,away_win
+2021-03-31,Germany,North Macedonia,492.37,away_win,home_win
+2021-03-31,Andorra,Hungary,-310.89,away_win,away_win
+2021-03-31,England,Poland,143.76,home_win,home_win
+2021-03-31,Moldova,Israel,-178.08,away_win,away_win
+2021-03-31,Northern Ireland,Bulgaria,-51.7,draw,home_win
+2021-03-31,Armenia,Romania,-170.03,home_win,away_win
+2021-03-31,Ukraine,Kazakhstan,320.58,draw,home_win
+2021-03-31,Bosnia and Herzegovina,France,-225.32,away_win,away_win
+2021-03-31,Lithuania,Italy,-352.45,away_win,away_win
+2021-03-31,Greece,Georgia,268.7,draw,home_win
+2021-03-31,Spain,Kosovo,436.58,home_win,home_win
+2021-03-31,Scotland,Faroe Islands,298.58,home_win,home_win
+2021-03-31,San Marino,Albania,-274.11,away_win,away_win
+2021-05-28,Japan,Myanmar,288.52,home_win,home_win
+2021-05-30,China,Guam,256.84,home_win,home_win
+2021-06-02,Montserrat,United States Virgin Islands,48.52,home_win,home_win
+2021-06-02,Dominica,Anguilla,12.74,home_win,home_win
+2021-06-02,Cuba,British Virgin Islands,52.15,home_win,home_win
+2021-06-02,Cayman Islands,Aruba,-24.59,away_win,away_win
+2021-06-02,Puerto Rico,Bahamas,31.64,home_win,home_win
+2021-06-03,Qatar,India,231.87,home_win,home_win
+2021-06-03,Kuwait,Australia,-160.29,away_win,away_win
+2021-06-03,Peru,Colombia,-97.34,away_win,home_win
+2021-06-03,Bolivia,Venezuela,-55.72,home_win,home_win
+2021-06-03,Thailand,Indonesia,118.01,draw,home_win
+2021-06-03,Uruguay,Paraguay,142.14,draw,home_win
+2021-06-03,Bangladesh,Afghanistan,-107.08,draw,draw
+2021-06-03,Palestine,Singapore,27.65,home_win,home_win
+2021-06-03,United Arab Emirates,Malaysia,113.02,home_win,home_win
+2021-06-03,Argentina,Chile,101.91,draw,home_win
+2021-06-03,Iran,Hong Kong,259.77,home_win,home_win
+2021-06-03,Bahrain,Cambodia,279.47,home_win,home_win
+2021-06-03,Nepal,Taiwan,137.39,home_win,home_win
+2021-06-04,Maldives,Syria,-263.5,away_win,away_win
+2021-06-04,Antigua and Barbuda,Grenada,43.04,home_win,home_win
+2021-06-04,Suriname,Bermuda,-95.94,home_win,away_win
+2021-06-04,Guatemala,Saint Vincent and the Grenadines,261.36,home_win,home_win
+2021-06-04,Dominican Republic,Barbados,89.31,draw,home_win
+2021-06-04,Nicaragua,Belize,-12.06,home_win,home_win
+2021-06-04,Saint Kitts and Nevis,Guyana,69.68,home_win,home_win
+2021-06-04,Brazil,Ecuador,265.42,home_win,home_win
+2021-06-05,Aruba,Canada,-213.08,away_win,away_win
+2021-06-05,Panama,Anguilla,261.14,home_win,home_win
+2021-06-05,British Virgin Islands,Curaçao,-90.5,away_win,away_win
+2021-06-05,Saudi Arabia,Yemen,289.14,home_win,home_win
+2021-06-05,Bahamas,Trinidad and Tobago,-144.5,draw,away_win
+2021-06-05,South Korea,Turkmenistan,191.46,home_win,home_win
+2021-06-05,Lebanon,Sri Lanka,236.91,home_win,home_win
+2021-06-05,United States Virgin Islands,El Salvador,-217.58,away_win,away_win
+2021-06-05,Turks and Caicos Islands,Haiti,-157.55,away_win,away_win
+2021-06-07,Qatar,Oman,13.19,home_win,home_win
+2021-06-07,Bangladesh,India,-69.66,away_win,draw
+2021-06-07,Bahrain,Iran,-148.53,away_win,away_win
+2021-06-07,Vietnam,Indonesia,99.42,home_win,home_win
+2021-06-07,Kyrgyzstan,Mongolia,132.55,away_win,home_win
+2021-06-07,Australia,Taiwan,550.46,home_win,home_win
+2021-06-07,United Arab Emirates,Thailand,85.65,home_win,home_win
+2021-06-07,Iraq,Cambodia,314.47,home_win,home_win
+2021-06-07,Nepal,Jordan,-235.71,away_win,away_win
+2021-06-07,China,Philippines,200.49,home_win,home_win
+2021-06-07,Uzbekistan,Singapore,240.71,home_win,home_win
+2021-06-07,Japan,Tajikistan,265.93,home_win,home_win
+2021-06-07,Guam,Syria,-288.65,away_win,away_win
+2021-06-08,Guyana,Puerto Rico,-45.74,away_win,home_win
+2021-06-08,Trinidad and Tobago,Saint Kitts and Nevis,31.68,home_win,home_win
+2021-06-08,Haiti,Nicaragua,61.05,home_win,home_win
+2021-06-08,Chile,Bolivia,160.77,draw,home_win
+2021-06-08,Paraguay,Brazil,-276.05,away_win,away_win
+2021-06-08,Venezuela,Uruguay,-229.71,draw,draw
+2021-06-08,Colombia,Argentina,-46.39,draw,home_win
+2021-06-08,Ecuador,Peru,31.5,away_win,home_win
+2021-06-08,Curaçao,Guatemala,-182.4,draw,away_win
+2021-06-08,Bermuda,Cayman Islands,177.61,draw,home_win
+2021-06-08,Canada,Suriname,152.61,home_win,home_win
+2021-06-08,El Salvador,Antigua and Barbuda,74.23,home_win,home_win
+2021-06-08,Grenada,Montserrat,6.32,away_win,home_win
+2021-06-08,Barbados,Dominica,10.51,draw,home_win
+2021-06-08,Panama,Dominican Republic,132.69,home_win,home_win
+2021-06-08,Saint Vincent and the Grenadines,Cuba,-65.87,away_win,away_win
+2021-06-09,Turkmenistan,Lebanon,-30.13,home_win,home_win
+2021-06-09,South Korea,Sri Lanka,425.42,home_win,home_win
+2021-06-11,United Arab Emirates,Indonesia,216.05,home_win,home_win
+2021-06-11,Saudi Arabia,Singapore,283.25,home_win,home_win
+2021-06-11,Malaysia,Vietnam,-49.98,away_win,home_win
+2021-06-11,Myanmar,Kyrgyzstan,-34.5,away_win,away_win
+2021-06-11,Yemen,Uzbekistan,-268.15,away_win,away_win
+2021-06-11,Afghanistan,Oman,-188.29,away_win,away_win
+2021-06-11,Cambodia,Iran,-451.18,away_win,away_win
+2021-06-11,Hong Kong,Iraq,-151.43,away_win,away_win
+2021-06-11,Kuwait,Jordan,-24.85,draw,home_win
+2021-06-11,Nepal,Australia,-401.71,away_win,away_win
+2021-06-11,China,Maldives,260.82,home_win,home_win
+2021-06-11,Philippines,Guam,65.08,home_win,home_win
+2021-06-12,Haiti,Canada,-73.23,away_win,away_win
+2021-06-12,Panama,Curaçao,141.42,home_win,home_win
+2021-06-12,Saint Kitts and Nevis,El Salvador,-67.11,away_win,draw
+2021-06-13,South Korea,Lebanon,194.97,home_win,home_win
+2021-06-15,Japan,Kyrgyzstan,255.42,home_win,home_win
+2021-06-15,India,Afghanistan,-8.84,draw,home_win
+2021-06-15,Tajikistan,Myanmar,40.34,home_win,home_win
+2021-06-15,Kuwait,Taiwan,375.39,home_win,home_win
+2021-06-15,Curaçao,Panama,-159.84,draw,draw
+2021-06-15,United Arab Emirates,Vietnam,88.84,home_win,home_win
+2021-06-15,Thailand,Malaysia,49.42,away_win,home_win
+2021-06-15,Australia,Jordan,157.49,home_win,home_win
+2021-06-15,El Salvador,Saint Kitts and Nevis,91.39,home_win,home_win
+2021-06-15,Palestine,Yemen,81.99,home_win,home_win
+2021-06-15,Iran,Iraq,121.51,home_win,home_win
+2021-06-15,Bahrain,Hong Kong,122.12,home_win,home_win
+2021-06-15,China,Syria,-12.8,home_win,home_win
+2021-06-15,Philippines,Maldives,63.64,draw,home_win
+2021-06-15,Bangladesh,Oman,-306.03,away_win,away_win
+2021-06-15,Saudi Arabia,Uzbekistan,30.17,home_win,home_win
+2021-06-15,Canada,Haiti,97.0,home_win,home_win
+2021-09-01,Russia,Croatia,-56.02,draw,home_win
+2021-09-01,Faroe Islands,Israel,-222.49,away_win,away_win
+2021-09-01,Slovenia,Slovakia,-33.23,draw,home_win
+2021-09-01,Denmark,Scotland,133.72,home_win,home_win
+2021-09-01,Moldova,Austria,-277.96,away_win,away_win
+2021-09-01,Turkey,Montenegro,108.47,draw,home_win
+2021-09-01,France,Bosnia and Herzegovina,238.2,draw,home_win
+2021-09-01,Latvia,Gibraltar,-4.02,home_win,home_win
+2021-09-01,Senegal,Togo,148.49,home_win,home_win
+2021-09-01,Malta,Cyprus,-198.44,home_win,draw
+2021-09-01,Egypt,Angola,77.91,home_win,home_win
+2021-09-01,Kazakhstan,Ukraine,-298.77,draw,away_win
+2021-09-01,Luxembourg,Azerbaijan,-139.5,home_win,draw
+2021-09-01,Mali,Rwanda,76.78,home_win,home_win
+2021-09-01,Central African Republic,Cape Verde,-74.39,draw,home_win
+2021-09-01,Libya,Gabon,14.62,home_win,home_win
+2021-09-01,Guinea-Bissau,Guinea,-75.03,draw,away_win
+2021-09-01,Portugal,Republic of Ireland,183.27,home_win,home_win
+2021-09-01,Norway,Netherlands,-309.49,draw,away_win
+2021-09-02,Czech Republic,Belarus,137.56,home_win,home_win
+2021-09-02,Liechtenstein,Germany,-707.25,away_win,away_win
+2021-09-02,North Macedonia,Armenia,3.11,draw,home_win
+2021-09-02,Bolivia,Colombia,-203.24,draw,home_win
+2021-09-02,Ecuador,Paraguay,-11.34,home_win,home_win
+2021-09-02,Canada,Honduras,-2.67,draw,home_win
+2021-09-02,Chile,Brazil,-247.0,away_win,away_win
+2021-09-02,Andorra,San Marino,79.17,home_win,home_win
+2021-09-02,Panama,Costa Rica,-99.18,draw,home_win
+2021-09-02,Mexico,Jamaica,261.68,home_win,home_win
+2021-09-02,Peru,Uruguay,-137.03,draw,home_win
+2021-09-02,Estonia,Belgium,-424.49,away_win,away_win
+2021-09-02,Venezuela,Argentina,-222.49,away_win,draw
+2021-09-02,Poland,Albania,185.5,home_win,home_win
+2021-09-02,El Salvador,United States,-110.52,draw,away_win
+2021-09-02,Hungary,England,-233.24,away_win,away_win
+2021-09-02,Iceland,Romania,-49.93,away_win,home_win
+2021-09-02,Morocco,Sudan,235.76,home_win,home_win
+2021-09-02,Lithuania,Northern Ireland,-87.13,away_win,home_win
+2021-09-02,Namibia,Congo,-45.95,draw,home_win
+2021-09-02,Kenya,Uganda,-60.06,draw,home_win
+2021-09-02,DR Congo,Tanzania,172.36,draw,home_win
+2021-09-02,Madagascar,Benin,-21.79,away_win,home_win
+2021-09-02,South Korea,Iraq,100.0,draw,home_win
+2021-09-02,United Arab Emirates,Lebanon,66.17,draw,home_win
+2021-09-02,Georgia,Kosovo,-16.36,away_win,home_win
+2021-09-02,Saudi Arabia,Vietnam,252.99,home_win,home_win
+2021-09-02,Sweden,Spain,-115.88,home_win,away_win
+2021-09-02,Italy,Bulgaria,225.03,draw,home_win
+2021-09-02,Iran,Syria,99.96,home_win,home_win
+2021-09-02,Algeria,Djibouti,192.13,home_win,home_win
+2021-09-02,Japan,Oman,143.46,away_win,home_win
+2021-09-02,Niger,Burkina Faso,-139.66,away_win,away_win
+2021-09-02,Australia,China,81.06,home_win,home_win
+2021-09-03,Zimbabwe,South Africa,-83.4,draw,away_win
+2021-09-03,Cameroon,Malawi,170.82,home_win,home_win
+2021-09-03,Nigeria,Liberia,267.26,home_win,home_win
+2021-09-03,Mozambique,Ivory Coast,-167.03,draw,away_win
+2021-09-03,Mauritania,Zambia,-164.33,away_win,away_win
+2021-09-03,Tunisia,Equatorial Guinea,247.33,home_win,home_win
+2021-09-03,Ghana,Ethiopia,207.95,home_win,home_win
+2021-09-04,Gibraltar,Turkey,-273.37,away_win,away_win
+2021-09-04,Israel,Austria,-82.55,home_win,home_win
+2021-09-04,Slovakia,Croatia,-138.76,away_win,away_win
+2021-09-04,Slovenia,Malta,328.11,home_win,home_win
+2021-09-04,Netherlands,Montenegro,288.43,home_win,home_win
+2021-09-04,Republic of Ireland,Azerbaijan,246.61,draw,home_win
+2021-09-04,Latvia,Norway,-147.94,away_win,away_win
+2021-09-04,Ukraine,France,-195.52,draw,away_win
+2021-09-04,Finland,Kazakhstan,168.83,home_win,home_win
+2021-09-04,Serbia,Luxembourg,435.7,home_win,home_win
+2021-09-04,Scotland,Moldova,274.68,home_win,home_win
+2021-09-04,Faroe Islands,Denmark,-457.45,away_win,away_win
+2021-09-04,Cyprus,Russia,-293.07,away_win,away_win
+2021-09-05,United States,Canada,59.53,draw,home_win
+2021-09-05,Jamaica,Panama,-94.49,away_win,away_win
+2021-09-05,El Salvador,Honduras,-44.19,draw,home_win
+2021-09-05,Costa Rica,Mexico,-87.23,away_win,draw
+2021-09-05,Peru,Venezuela,87.45,home_win,home_win
+2021-09-05,Uruguay,Bolivia,221.97,home_win,home_win
+2021-09-05,Ecuador,Chile,-29.24,draw,home_win
+2021-09-05,Romania,Liechtenstein,408.23,home_win,home_win
+2021-09-05,Togo,Namibia,40.47,away_win,home_win
+2021-09-05,Germany,Armenia,439.17,home_win,home_win
+2021-09-05,Iceland,North Macedonia,60.66,draw,home_win
+2021-09-05,Switzerland,Italy,-36.61,draw,home_win
+2021-09-05,Albania,Hungary,-115.73,home_win,away_win
+2021-09-05,Spain,Georgia,451.9,home_win,home_win
+2021-09-05,San Marino,Poland,-489.19,away_win,away_win
+2021-09-05,Rwanda,Kenya,-68.96,draw,home_win
+2021-09-05,Gabon,Egypt,-144.83,draw,away_win
+2021-09-05,Kosovo,Greece,-218.58,draw,away_win
+2021-09-05,England,Andorra,547.29,home_win,home_win
+2021-09-05,Bulgaria,Lithuania,154.26,home_win,home_win
+2021-09-05,Belarus,Wales,-102.58,away_win,away_win
+2021-09-05,Belgium,Czech Republic,239.73,home_win,home_win
+2021-09-05,Paraguay,Colombia,-102.26,draw,away_win
+2021-09-06,Uganda,Mali,23.63,draw,home_win
+2021-09-06,South Africa,Ghana,-91.6,home_win,away_win
+2021-09-06,Benin,DR Congo,-101.94,draw,away_win
+2021-09-06,Ivory Coast,Cameroon,-10.75,home_win,home_win
+2021-09-06,Liberia,Central African Republic,-13.2,home_win,home_win
+2021-09-06,Djibouti,Niger,-57.13,away_win,away_win
+2021-09-07,Russia,Malta,454.64,home_win,home_win
+2021-09-07,Austria,Scotland,-10.26,away_win,home_win
+2021-09-07,Azerbaijan,Portugal,-436.21,away_win,away_win
+2021-09-07,France,Finland,288.68,home_win,home_win
+2021-09-07,Faroe Islands,Moldova,-26.95,home_win,away_win
+2021-09-07,Montenegro,Latvia,151.83,draw,home_win
+2021-09-07,Ethiopia,Zimbabwe,-53.94,home_win,home_win
+2021-09-07,Netherlands,Turkey,188.67,home_win,home_win
+2021-09-07,Norway,Gibraltar,188.39,home_win,home_win
+2021-09-07,Croatia,Slovenia,174.5,home_win,home_win
+2021-09-07,Slovakia,Cyprus,200.91,home_win,home_win
+2021-09-07,Denmark,Israel,205.42,home_win,home_win
+2021-09-07,Bosnia and Herzegovina,Kazakhstan,261.29,draw,home_win
+2021-09-07,Oman,Saudi Arabia,-90.5,away_win,away_win
+2021-09-07,Vietnam,Australia,-312.95,away_win,away_win
+2021-09-07,China,Japan,-66.8,away_win,away_win
+2021-09-07,Republic of Ireland,Serbia,-102.44,draw,away_win
+2021-09-07,Angola,Libya,0.17,away_win,home_win
+2021-09-07,Burkina Faso,Algeria,8.3,draw,draw
+2021-09-07,Cape Verde,Nigeria,-196.61,away_win,away_win
+2021-09-07,Malawi,Mozambique,-22.78,home_win,home_win
+2021-09-07,Congo,Senegal,-164.86,away_win,away_win
+2021-09-07,Zambia,Tunisia,-85.29,away_win,draw
+2021-09-07,Tanzania,Madagascar,-6.74,home_win,home_win
+2021-09-07,Syria,United Arab Emirates,77.03,draw,home_win
+2021-09-07,South Korea,Lebanon,202.68,home_win,home_win
+2021-09-07,Iraq,Iran,-148.02,away_win,away_win
+2021-09-07,Equatorial Guinea,Mauritania,7.43,home_win,home_win
+2021-09-07,Sudan,Guinea-Bissau,-65.85,away_win,home_win
+2021-09-08,Armenia,Liechtenstein,269.47,draw,home_win
+2021-09-08,Poland,England,-160.09,draw,away_win
+2021-09-08,Iceland,Germany,-380.49,away_win,away_win
+2021-09-08,Canada,El Salvador,42.4,home_win,home_win
+2021-09-08,Panama,Mexico,-178.37,draw,away_win
+2021-09-08,Costa Rica,Jamaica,185.04,draw,home_win
+2021-09-08,North Macedonia,Romania,-136.33,draw,away_win
+2021-09-08,Honduras,United States,-56.45,away_win,away_win
+2021-09-08,Hungary,Andorra,283.04,home_win,home_win
+2021-09-08,Belarus,Belgium,-412.72,away_win,away_win
+2021-09-08,Wales,Estonia,146.56,draw,home_win
+2021-09-08,Italy,Lithuania,369.36,home_win,home_win
+2021-09-08,Northern Ireland,Switzerland,-217.4,draw,away_win
+2021-09-08,Kosovo,Spain,-400.67,away_win,away_win
+2021-09-08,Albania,San Marino,309.86,home_win,home_win
+2021-09-08,Greece,Sweden,-120.51,home_win,away_win
+2021-09-09,Uruguay,Ecuador,122.41,home_win,home_win
+2021-09-09,Colombia,Chile,50.35,home_win,home_win
+2021-09-09,Brazil,Peru,285.25,home_win,home_win
+2021-09-09,Paraguay,Venezuela,92.05,home_win,home_win
+2021-09-09,Argentina,Bolivia,250.81,home_win,home_win
+2021-10-06,Sudan,Guinea,-146.7,draw,away_win
+2021-10-06,Morocco,Guinea-Bissau,170.0,home_win,home_win
+2021-10-07,Mali,Kenya,35.25,home_win,home_win
+2021-10-07,Equatorial Guinea,Zambia,-147.61,home_win,away_win
+2021-10-07,Nigeria,Central African Republic,287.56,away_win,home_win
+2021-10-07,Uruguay,Colombia,42.43,draw,home_win
+2021-10-07,Peru,Chile,-17.35,home_win,home_win
+2021-10-07,Paraguay,Argentina,-149.4,draw,away_win
+2021-10-07,Venezuela,Brazil,-411.28,away_win,away_win
+2021-10-07,Ecuador,Bolivia,108.44,home_win,home_win
+2021-10-07,Tanzania,Benin,-45.64,away_win,home_win
+2021-10-07,DR Congo,Madagascar,162.86,home_win,home_win
+2021-10-07,Rwanda,Uganda,-119.93,away_win,home_win
+2021-10-07,Mexico,Canada,141.87,draw,home_win
+2021-10-07,United States,Jamaica,192.47,home_win,home_win
+2021-10-07,Honduras,Costa Rica,-59.56,draw,home_win
+2021-10-07,Australia,Oman,154.55,home_win,home_win
+2021-10-07,China,Vietnam,200.86,home_win,home_win
+2021-10-07,Saudi Arabia,Japan,-12.2,home_win,home_win
+2021-10-07,United Arab Emirates,Iran,-204.28,away_win,away_win
+2021-10-07,South Korea,Syria,75.53,home_win,home_win
+2021-10-07,Iraq,Lebanon,109.24,draw,home_win
+2021-10-07,Tunisia,Mauritania,292.47,home_win,home_win
+2021-10-07,El Salvador,Panama,-46.44,home_win,home_win
+2021-10-07,Liberia,Cape Verde,-58.37,away_win,home_win
+2021-10-08,Germany,Romania,308.25,home_win,home_win
+2021-10-08,Egypt,Libya,80.55,home_win,home_win
+2021-10-08,Djibouti,Burkina Faso,-227.54,away_win,away_win
+2021-10-08,Malawi,Ivory Coast,-175.88,away_win,away_win
+2021-10-08,Cameroon,Mozambique,164.89,home_win,home_win
+2021-10-08,Angola,Gabon,22.61,home_win,home_win
+2021-10-08,Iceland,Armenia,69.86,draw,home_win
+2021-10-08,Estonia,Belarus,-14.06,home_win,home_win
+2021-10-08,Liechtenstein,North Macedonia,-272.97,away_win,away_win
+2021-10-08,Russia,Slovakia,96.39,home_win,home_win
+2021-10-08,Latvia,Netherlands,-451.25,away_win,away_win
+2021-10-08,Czech Republic,Wales,42.93,draw,home_win
+2021-10-08,Gibraltar,Montenegro,-175.74,away_win,away_win
+2021-10-08,Algeria,Niger,137.71,home_win,home_win
+2021-10-08,Turkey,Norway,80.13,draw,home_win
+2021-10-08,Malta,Slovenia,-329.99,away_win,away_win
+2021-10-08,Cyprus,Croatia,-373.51,away_win,away_win
+2021-10-09,Hungary,Albania,76.7,away_win,home_win
+2021-10-09,Ghana,Zimbabwe,166.38,home_win,home_win
+2021-10-09,Andorra,England,-548.22,away_win,away_win
+2021-10-09,Poland,San Marino,503.36,home_win,home_win
+2021-10-09,Ethiopia,South Africa,-131.83,away_win,away_win
+2021-10-09,Morocco,Guinea-Bissau,186.39,home_win,home_win
+2021-10-09,Togo,Congo,-9.9,draw,home_win
+2021-10-09,Guinea,Sudan,134.73,draw,home_win
+2021-10-09,Moldova,Denmark,-457.72,away_win,away_win
+2021-10-09,Senegal,Namibia,198.5,home_win,home_win
+2021-10-09,Scotland,Israel,77.41,home_win,home_win
+2021-10-09,Lithuania,Bulgaria,-174.95,home_win,away_win
+2021-10-09,Kazakhstan,Bosnia and Herzegovina,-242.2,away_win,away_win
+2021-10-09,Finland,Ukraine,-113.25,away_win,away_win
+2021-10-09,Faroe Islands,Austria,-270.88,away_win,away_win
+2021-10-09,Azerbaijan,Republic of Ireland,-234.84,away_win,away_win
+2021-10-09,Georgia,Greece,-277.24,away_win,away_win
+2021-10-09,Luxembourg,Serbia,-435.92,away_win,away_win
+2021-10-09,Switzerland,Northern Ireland,200.74,home_win,home_win
+2021-10-09,Sweden,Kosovo,305.08,home_win,home_win
+2021-10-10,Madagascar,DR Congo,-179.75,home_win,away_win
+2021-10-10,Benin,Tanzania,71.72,away_win,home_win
+2021-10-10,Uganda,Rwanda,139.97,home_win,home_win
+2021-10-10,Chile,Paraguay,-2.46,home_win,home_win
+2021-10-10,Argentina,Uruguay,7.32,home_win,home_win
+2021-10-10,Venezuela,Ecuador,-122.89,home_win,away_win
+2021-10-10,Colombia,Brazil,-202.35,draw,away_win
+2021-10-10,Bolivia,Peru,-141.11,home_win,home_win
+2021-10-10,Kenya,Mali,-62.22,away_win,away_win
+2021-10-10,Zambia,Equatorial Guinea,105.58,draw,home_win
+2021-10-10,Mexico,Honduras,161.29,home_win,home_win
+2021-10-10,Panama,United States,-100.61,home_win,away_win
+2021-10-10,Jamaica,Canada,-151.88,draw,away_win
+2021-10-10,Costa Rica,El Salvador,81.01,home_win,home_win
+2021-10-10,Cape Verde,Liberia,83.38,home_win,home_win
+2021-10-10,Central African Republic,Nigeria,-237.18,away_win,away_win
+2021-10-10,Mauritania,Tunisia,-301.87,draw,away_win
+2021-10-11,Romania,Armenia,140.8,home_win,home_win
+2021-10-11,Libya,Egypt,-103.71,away_win,away_win
+2021-10-11,Gabon,Angola,-50.66,home_win,home_win
+2021-10-11,Ivory Coast,Malawi,191.87,home_win,home_win
+2021-10-11,Mozambique,Cameroon,-181.64,away_win,away_win
+2021-10-11,North Macedonia,Germany,-432.57,away_win,away_win
+2021-10-11,Iceland,Liechtenstein,322.01,home_win,home_win
+2021-10-11,Burkina Faso,Djibouti,240.29,home_win,home_win
+2021-10-11,Croatia,Slovakia,172.31,draw,home_win
+2021-10-11,Cyprus,Malta,147.84,draw,home_win
+2021-10-11,Norway,Montenegro,23.21,home_win,home_win
+2021-10-11,Netherlands,Gibraltar,497.58,home_win,home_win
+2021-10-11,Estonia,Wales,-120.85,away_win,away_win
+2021-10-11,Belarus,Czech Republic,-177.24,away_win,away_win
+2021-10-11,Slovenia,Russia,-135.77,away_win,away_win
+2021-10-11,Latvia,Turkey,-246.11,away_win,away_win
+2021-10-12,Ukraine,Bosnia and Herzegovina,46.34,draw,home_win
+2021-10-12,Denmark,Austria,178.26,home_win,home_win
+2021-10-12,Israel,Moldova,228.52,home_win,home_win
+2021-10-12,Albania,Poland,-168.18,away_win,away_win
+2021-10-12,South Africa,Ethiopia,150.97,home_win,home_win
+2021-10-12,Namibia,Senegal,-213.01,away_win,away_win
+2021-10-12,England,Hungary,274.82,draw,home_win
+2021-10-12,Zimbabwe,Ghana,-183.02,away_win,away_win
+2021-10-12,Congo,Togo,9.05,away_win,home_win
+2021-10-12,Faroe Islands,Scotland,-327.18,away_win,away_win
+2021-10-12,San Marino,Andorra,-102.65,away_win,away_win
+2021-10-12,Morocco,Guinea,140.9,home_win,home_win
+2021-10-12,Niger,Algeria,-156.41,away_win,away_win
+2021-10-12,United Arab Emirates,Iraq,-40.83,draw,home_win
+2021-10-12,Oman,Vietnam,165.35,home_win,home_win
+2021-10-12,Portugal,Luxembourg,550.2,home_win,home_win
+2021-10-12,Kazakhstan,Finland,-166.66,away_win,away_win
+2021-10-12,Iran,South Korea,53.55,draw,home_win
+2021-10-12,Japan,Australia,-53.75,home_win,away_win
+2021-10-12,Saudi Arabia,China,87.25,home_win,home_win
+2021-10-12,Syria,Lebanon,125.05,away_win,home_win
+2021-10-12,Serbia,Azerbaijan,337.11,home_win,home_win
+2021-10-12,Sweden,Greece,79.86,home_win,home_win
+2021-10-12,Bulgaria,Northern Ireland,30.13,home_win,home_win
+2021-10-12,Lithuania,Switzerland,-315.98,away_win,away_win
+2021-10-12,Kosovo,Georgia,53.3,away_win,home_win
+2021-10-13,Honduras,Jamaica,106.19,away_win,home_win
+2021-10-13,United States,Costa Rica,1.26,home_win,home_win
+2021-10-13,Canada,Panama,19.72,home_win,home_win
+2021-10-13,El Salvador,Mexico,-207.89,away_win,away_win
+2021-10-14,Bolivia,Paraguay,-93.53,home_win,home_win
+2021-10-14,Brazil,Uruguay,170.38,home_win,home_win
+2021-10-14,Argentina,Peru,161.01,home_win,home_win
+2021-10-14,Colombia,Ecuador,119.15,draw,home_win
+2021-10-14,Chile,Venezuela,115.49,home_win,home_win
+2021-11-11,Georgia,Sweden,-361.55,home_win,away_win
+2021-11-11,Armenia,North Macedonia,-32.12,away_win,home_win
+2021-11-11,Greece,Spain,-188.08,away_win,away_win
+2021-11-11,Russia,Cyprus,341.17,home_win,home_win
+2021-11-11,Malta,Croatia,-514.7,away_win,away_win
+2021-11-11,Slovakia,Slovenia,33.8,draw,home_win
+2021-11-11,Germany,Liechtenstein,722.22,home_win,home_win
+2021-11-11,Peru,Bolivia,72.1,home_win,home_win
+2021-11-11,Romania,Iceland,82.07,draw,home_win
+2021-11-11,Ecuador,Venezuela,97.84,home_win,home_win
+2021-11-11,Paraguay,Chile,-56.89,away_win,away_win
+2021-11-11,Brazil,Colombia,199.75,home_win,home_win
+2021-11-11,Republic of Ireland,Portugal,-200.92,draw,draw
+2021-11-11,Azerbaijan,Luxembourg,100.76,away_win,draw
+2021-11-11,Vietnam,Japan,-309.27,away_win,away_win
+2021-11-11,Australia,Saudi Arabia,6.28,draw,home_win
+2021-11-11,Uganda,Kenya,101.96,draw,home_win
+2021-11-11,Tanzania,DR Congo,-120.31,away_win,away_win
+2021-11-11,South Korea,United Arab Emirates,165.42,home_win,home_win
+2021-11-11,Iraq,Syria,-6.52,draw,home_win
+2021-11-11,Lebanon,Iran,-255.24,away_win,away_win
+2021-11-11,China,Oman,30.21,draw,home_win
+2021-11-11,Ethiopia,Ghana,-220.2,draw,away_win
+2021-11-11,Togo,Senegal,-189.75,draw,away_win
+2021-11-11,Congo,Namibia,15.13,draw,home_win
+2021-11-11,South Africa,Zimbabwe,147.02,home_win,home_win
+2021-11-11,Rwanda,Mali,-143.44,away_win,away_win
+2021-11-11,Benin,Madagascar,50.77,home_win,home_win
+2021-11-12,Moldova,Scotland,-339.66,away_win,away_win
+2021-11-12,Italy,Switzerland,33.61,draw,home_win
+2021-11-12,Hungary,San Marino,399.07,home_win,home_win
+2021-11-12,Andorra,Poland,-401.41,away_win,away_win
+2021-11-12,England,Albania,313.38,home_win,home_win
+2021-11-12,Austria,Israel,40.7,home_win,home_win
+2021-11-12,Morocco,Sudan,273.78,home_win,home_win
+2021-11-12,Uruguay,Argentina,-53.37,away_win,away_win
+2021-11-12,Northern Ireland,Lithuania,91.35,home_win,home_win
+2021-11-12,Guinea,Guinea-Bissau,51.55,draw,home_win
+2021-11-12,El Salvador,Jamaica,50.17,draw,home_win
+2021-11-12,Canada,Costa Rica,-12.08,home_win,draw
+2021-11-12,United States,Mexico,-94.51,home_win,away_win
+2021-11-12,Angola,Egypt,-135.77,draw,away_win
+2021-11-12,Gabon,Libya,-27.07,home_win,home_win
+2021-11-12,Djibouti,Algeria,-250.36,away_win,away_win
+2021-11-12,Burkina Faso,Niger,175.7,draw,home_win
+2021-11-12,Honduras,Panama,-18.93,away_win,home_win
+2021-11-12,Denmark,Faroe Islands,471.44,home_win,home_win
+2021-11-13,Norway,Latvia,192.63,draw,home_win
+2021-11-13,Ivory Coast,Mozambique,216.7,home_win,home_win
+2021-11-13,Wales,Belarus,155.93,home_win,home_win
+2021-11-13,Montenegro,Netherlands,-321.45,draw,away_win
+2021-11-13,Turkey,Gibraltar,295.76,home_win,home_win
+2021-11-13,Belgium,Estonia,426.26,home_win,home_win
+2021-11-13,Malawi,Cameroon,-187.35,away_win,away_win
+2021-11-13,Cape Verde,Central African Republic,81.2,home_win,home_win
+2021-11-13,Equatorial Guinea,Tunisia,-224.43,home_win,away_win
+2021-11-13,Zambia,Mauritania,153.15,home_win,home_win
+2021-11-13,Bosnia and Herzegovina,Finland,81.15,away_win,home_win
+2021-11-13,Liberia,Nigeria,-274.5,away_win,away_win
+2021-11-13,France,Kazakhstan,483.5,home_win,home_win
+2021-11-14,Portugal,Serbia,99.4,away_win,home_win
+2021-11-14,Madagascar,Tanzania,-17.98,draw,home_win
+2021-11-14,Luxembourg,Republic of Ireland,-340.3,away_win,away_win
+2021-11-14,Armenia,Germany,-483.36,away_win,away_win
+2021-11-14,North Macedonia,Iceland,-34.94,home_win,home_win
+2021-11-14,Liechtenstein,Romania,-409.19,away_win,away_win
+2021-11-14,Slovenia,Cyprus,191.71,home_win,home_win
+2021-11-14,Croatia,Russia,35.52,home_win,home_win
+2021-11-14,Senegal,Congo,204.68,home_win,home_win
+2021-11-14,DR Congo,Benin,81.88,home_win,home_win
+2021-11-14,Ghana,South Africa,34.09,home_win,home_win
+2021-11-14,Zimbabwe,Ethiopia,4.26,draw,home_win
+2021-11-14,Mali,Uganda,-1.64,home_win,home_win
+2021-11-14,Spain,Sweden,119.25,home_win,home_win
+2021-11-14,Greece,Kosovo,232.14,draw,home_win
+2021-11-14,Malta,Slovakia,-356.18,away_win,away_win
+2021-11-15,Austria,Moldova,298.88,home_win,home_win
+2021-11-15,Albania,Andorra,215.18,home_win,home_win
+2021-11-15,Scotland,Denmark,-134.48,home_win,away_win
+2021-11-15,Poland,Hungary,126.34,away_win,home_win
+2021-11-15,Israel,Faroe Islands,225.27,home_win,home_win
+2021-11-15,San Marino,England,-661.11,away_win,away_win
+2021-11-15,Switzerland,Bulgaria,176.91,home_win,home_win
+2021-11-15,Niger,Djibouti,89.36,home_win,home_win
+2021-11-15,Northern Ireland,Italy,-254.02,draw,draw
+2021-11-15,Kenya,Rwanda,69.95,home_win,home_win
+2021-11-15,Guinea-Bissau,Sudan,70.22,draw,home_win
+2021-11-15,Namibia,Togo,-43.68,away_win,home_win
+2021-11-16,Costa Rica,Honduras,77.69,home_win,home_win
+2021-11-16,Bosnia and Herzegovina,Ukraine,-60.8,away_win,home_win
+2021-11-16,Finland,France,-283.53,away_win,away_win
+2021-11-16,Wales,Belgium,-279.14,draw,away_win
+2021-11-16,Czech Republic,Estonia,180.4,home_win,home_win
+2021-11-16,Jamaica,United States,-194.3,draw,draw
+2021-11-16,Gibraltar,Latvia,-50.12,away_win,away_win
+2021-11-16,Venezuela,Peru,-118.25,away_win,home_win
+2021-11-16,Colombia,Paraguay,133.46,draw,home_win
+2021-11-16,Argentina,Brazil,-127.88,draw,away_win
+2021-11-16,Chile,Ecuador,39.71,away_win,home_win
+2021-11-16,Canada,Mexico,-103.23,home_win,away_win
+2021-11-16,Netherlands,Norway,266.88,home_win,home_win
+2021-11-16,Montenegro,Turkey,-110.09,away_win,away_win
+2021-11-16,Bolivia,Uruguay,-195.97,home_win,home_win
+2021-11-16,Panama,El Salvador,52.39,home_win,home_win
+2021-11-16,Tunisia,Zambia,95.38,home_win,home_win
+2021-11-16,Libya,Angola,-10.99,draw,home_win
+2021-11-16,Algeria,Burkina Faso,10.78,draw,home_win
+2021-11-16,Liberia,Central African Republic,-18.68,home_win,home_win
+2021-11-16,Nigeria,Cape Verde,161.75,draw,home_win
+2021-11-16,Mozambique,Malawi,-8.98,home_win,home_win
+2021-11-16,Oman,Japan,-130.24,away_win,away_win
+2021-11-16,Mauritania,Equatorial Guinea,-88.73,draw,home_win
+2021-11-16,Cameroon,Ivory Coast,-18.54,home_win,home_win
+2021-11-16,Lebanon,United Arab Emirates,-38.11,away_win,home_win
+2021-11-16,Iraq,South Korea,-136.17,away_win,away_win
+2021-11-16,Syria,Iran,-176.44,away_win,away_win
+2021-11-16,China,Australia,-117.18,draw,away_win
+2021-11-16,Egypt,Gabon,130.34,home_win,home_win
+2021-11-16,Vietnam,Saudi Arabia,-326.73,away_win,away_win
+2021-11-16,Morocco,Guinea,166.71,home_win,home_win
+2022-01-27,Chile,Argentina,-159.73,away_win,draw
+2022-01-27,Japan,China,107.39,home_win,home_win
+2022-01-27,Paraguay,Uruguay,-112.8,away_win,away_win
+2022-01-27,Australia,Vietnam,331.57,home_win,home_win
+2022-01-27,Ecuador,Brazil,-283.34,draw,away_win
+2022-01-27,Iran,Iraq,199.77,home_win,home_win
+2022-01-27,United Arab Emirates,Syria,-30.57,home_win,home_win
+2022-01-27,United States,El Salvador,153.58,home_win,home_win
+2022-01-27,Jamaica,Mexico,-223.91,away_win,draw
+2022-01-27,Saudi Arabia,Oman,152.64,home_win,home_win
+2022-01-27,Lebanon,South Korea,-243.0,away_win,away_win
+2022-01-27,Honduras,Canada,-127.69,away_win,away_win
+2022-01-27,Costa Rica,Panama,29.34,home_win,home_win
+2022-01-28,Colombia,Peru,76.93,away_win,home_win
+2022-01-28,Venezuela,Bolivia,-55.04,home_win,home_win
+2022-01-30,Panama,Jamaica,96.14,home_win,home_win
+2022-01-30,Honduras,El Salvador,5.2,away_win,home_win
+2022-01-30,Mexico,Costa Rica,83.91,draw,home_win
+2022-01-30,Canada,United States,-18.79,home_win,home_win
+2022-02-01,Uruguay,Venezuela,198.61,home_win,home_win
+2022-02-01,Bolivia,Chile,-106.46,away_win,home_win
+2022-02-01,Brazil,Paraguay,337.06,home_win,home_win
+2022-02-01,Peru,Ecuador,0.2,draw,home_win
+2022-02-01,Japan,Saudi Arabia,-1.44,home_win,away_win
+2022-02-01,Oman,Australia,-162.21,draw,away_win
+2022-02-01,Syria,South Korea,-169.85,away_win,draw
+2022-02-01,Iran,United Arab Emirates,213.86,home_win,home_win
+2022-02-01,Argentina,Colombia,123.9,home_win,home_win
+2022-02-01,Lebanon,Iraq,-86.75,draw,away_win
+2022-02-01,Vietnam,China,-217.5,home_win,away_win
+2022-02-02,United States,Honduras,165.34,home_win,home_win
+2022-02-02,Jamaica,Costa Rica,-167.46,away_win,away_win
+2022-02-02,El Salvador,Canada,-152.92,away_win,draw
+2022-02-02,Mexico,Panama,126.22,home_win,home_win
+2022-03-17,Cook Islands,Solomon Islands,-119.22,away_win,away_win
+2022-03-18,New Caledonia,Fiji,45.73,away_win,home_win
+2022-03-18,Papua New Guinea,New Zealand,-176.11,away_win,away_win
+2022-03-21,Papua New Guinea,New Caledonia,-82.91,home_win,away_win
+2022-03-21,New Zealand,Fiji,120.98,home_win,home_win
+2022-03-24,Colombia,Bolivia,160.07,home_win,home_win
+2022-03-24,Lebanon,Syria,-73.16,away_win,away_win
+2022-03-24,New Zealand,New Caledonia,137.67,home_win,home_win
+2022-03-24,Wales,Austria,-1.5,home_win,home_win
+2022-03-24,Sweden,Czech Republic,129.73,home_win,home_win
+2022-03-24,Portugal,Turkey,103.27,home_win,home_win
+2022-03-24,Uruguay,Peru,66.55,home_win,home_win
+2022-03-24,Paraguay,Ecuador,-77.68,home_win,home_win
+2022-03-24,Brazil,Chile,268.73,home_win,home_win
+2022-03-24,Fiji,Papua New Guinea,42.61,away_win,home_win
+2022-03-24,Panama,Honduras,92.49,draw,home_win
+2022-03-24,Australia,Japan,-28.19,away_win,home_win
+2022-03-24,China,Saudi Arabia,-138.11,draw,home_win
+2022-03-24,South Korea,Iran,-44.65,home_win,away_win
+2022-03-24,Iraq,United Arab Emirates,2.77,home_win,home_win
+2022-03-24,Costa Rica,Canada,-35.35,home_win,home_win
+2022-03-24,Mexico,United States,56.22,draw,home_win
+2022-03-24,Jamaica,El Salvador,-48.87,draw,home_win
+2022-03-24,Solomon Islands,Tahiti,34.15,home_win,home_win
+2022-03-24,Vietnam,Oman,-160.31,away_win,away_win
+2022-03-24,Italy,North Macedonia,251.94,away_win,home_win
+2022-03-25,Mali,Tunisia,-110.77,away_win,away_win
+2022-03-25,Ghana,Nigeria,-17.33,draw,home_win
+2022-03-25,Argentina,Venezuela,320.74,home_win,home_win
+2022-03-25,DR Congo,Morocco,-53.78,draw,draw
+2022-03-25,Egypt,Senegal,-10.12,home_win,home_win
+2022-03-25,Cameroon,Algeria,71.27,away_win,home_win
+2022-03-27,New Zealand,Tahiti,206.13,home_win,home_win
+2022-03-27,United States,Panama,95.87,home_win,home_win
+2022-03-27,Solomon Islands,Papua New Guinea,31.14,home_win,home_win
+2022-03-27,Canada,Jamaica,200.76,home_win,home_win
+2022-03-27,El Salvador,Costa Rica,-153.77,away_win,away_win
+2022-03-27,Honduras,Mexico,-231.96,away_win,draw
+2022-03-29,Saudi Arabia,Australia,7.62,home_win,home_win
+2022-03-29,Portugal,North Macedonia,248.18,home_win,home_win
+2022-03-29,Peru,Paraguay,47.4,home_win,home_win
+2022-03-29,Bolivia,Brazil,-410.08,away_win,away_win
+2022-03-29,Ecuador,Argentina,-196.74,draw,draw
+2022-03-29,Chile,Uruguay,-85.97,away_win,home_win
+2022-03-29,Venezuela,Colombia,-189.73,away_win,home_win
+2022-03-29,Oman,China,-7.68,home_win,draw
+2022-03-29,Poland,Sweden,-119.33,home_win,away_win
+2022-03-29,United Arab Emirates,South Korea,-214.57,home_win,draw
+2022-03-29,Algeria,Cameroon,-35.2,away_win,draw
+2022-03-29,Syria,Iraq,-9.24,draw,home_win
+2022-03-29,Iran,Lebanon,299.03,home_win,home_win
+2022-03-29,Morocco,DR Congo,49.18,home_win,home_win
+2022-03-29,Japan,Vietnam,359.95,draw,home_win
+2022-03-29,Nigeria,Ghana,15.83,draw,home_win
+2022-03-29,Senegal,Egypt,-20.75,home_win,home_win
+2022-03-29,Tunisia,Mali,131.52,draw,home_win
+2022-03-30,Mexico,El Salvador,228.16,home_win,home_win
+2022-03-30,Solomon Islands,New Zealand,-138.28,away_win,away_win
+2022-03-30,Costa Rica,United States,-10.17,home_win,home_win
+2022-03-30,Panama,Canada,-108.35,home_win,draw
+2022-03-30,Jamaica,Honduras,-26.8,home_win,home_win
+2022-06-01,Scotland,Ukraine,-35.64,away_win,home_win
+2022-06-05,Wales,Ukraine,-99.74,home_win,home_win
+2022-06-07,United Arab Emirates,Australia,-137.32,away_win,away_win
+2022-06-13,Australia,Peru,154.14,draw,home_win
+2022-06-14,Costa Rica,New Zealand,66.87,home_win,home_win
+2022-11-20,Qatar,Ecuador,67.05,away_win,home_win
+2022-11-21,Senegal,Netherlands,-137.99,away_win,away_win
+2022-11-21,England,Iran,-48.37,home_win,away_win
+2022-11-21,United States,Wales,138.44,draw,home_win
+2022-11-22,Argentina,Saudi Arabia,-11.98,away_win,away_win
+2022-11-22,Mexico,Poland,174.81,draw,home_win
+2022-11-22,Denmark,Tunisia,30.16,draw,home_win
+2022-11-22,France,Australia,92.68,home_win,home_win
+2022-11-23,Spain,Costa Rica,89.89,home_win,home_win
+2022-11-23,Morocco,Croatia,-47.06,draw,draw
+2022-11-23,Belgium,Canada,99.99,home_win,home_win
+2022-11-23,Germany,Japan,96.54,away_win,home_win
+2022-11-24,Uruguay,South Korea,-86.27,draw,home_win
+2022-11-24,Portugal,Ghana,111.09,home_win,home_win
+2022-11-24,Brazil,Serbia,182.17,home_win,draw
+2022-11-24,Switzerland,Cameroon,37.53,home_win,home_win
+2022-11-25,Qatar,Senegal,-48.88,away_win,home_win
+2022-11-25,Netherlands,Ecuador,236.88,draw,home_win
+2022-11-25,Wales,Iran,-188.87,away_win,away_win
+2022-11-25,England,United States,47.57,draw,home_win
+2022-11-26,Tunisia,Australia,-38.28,away_win,draw
+2022-11-26,France,Denmark,125.58,home_win,home_win
+2022-11-26,Argentina,Mexico,-47.2,home_win,home_win
+2022-11-26,Poland,Saudi Arabia,-154.62,home_win,away_win
+2022-11-27,Japan,Costa Rica,60.01,away_win,home_win
+2022-11-27,Spain,Germany,-6.12,draw,away_win
+2022-11-27,Belgium,Morocco,146.62,away_win,home_win
+2022-11-27,Croatia,Canada,17.99,home_win,home_win
+2022-11-28,Cameroon,Serbia,-5.36,draw,home_win
+2022-11-28,Brazil,Switzerland,138.79,home_win,home_win
+2022-11-28,South Korea,Ghana,124.22,away_win,home_win
+2022-11-28,Portugal,Uruguay,86.57,home_win,home_win
+2022-11-29,Wales,England,-180.18,away_win,away_win
+2022-11-29,Iran,United States,67.31,away_win,home_win
+2022-11-29,Qatar,Netherlands,-209.56,away_win,away_win
+2022-11-29,Ecuador,Senegal,-84.23,away_win,home_win
+2022-11-30,Poland,Argentina,-109.43,away_win,away_win
+2022-11-30,Saudi Arabia,Mexico,-10.49,away_win,away_win
+2022-11-30,Australia,Denmark,33.88,home_win,home_win
+2022-11-30,Tunisia,France,-176.3,home_win,away_win
+2022-12-01,Japan,Spain,-70.12,home_win,away_win
+2022-12-01,Costa Rica,Germany,-100.59,away_win,away_win
+2022-12-01,Croatia,Belgium,-68.4,draw,away_win
+2022-12-01,Canada,Morocco,-10.17,away_win,away_win
+2022-12-02,Serbia,Switzerland,-49.87,away_win,away_win
+2022-12-02,Cameroon,Brazil,-212.17,home_win,away_win
+2022-12-02,Ghana,Uruguay,-13.76,away_win,draw
+2022-12-02,South Korea,Portugal,-39.08,home_win,home_win
+2022-12-03,Netherlands,United States,85.96,home_win,home_win
+2022-12-03,Argentina,Australia,19.04,home_win,home_win
+2022-12-04,France,Poland,186.99,home_win,home_win
+2022-12-04,England,Senegal,77.85,home_win,home_win
+2022-12-05,Japan,Croatia,71.29,draw,home_win
+2022-12-05,Brazil,South Korea,99.28,home_win,home_win
+2022-12-06,Morocco,Spain,-130.05,draw,away_win
+2022-12-06,Portugal,Switzerland,27.81,home_win,home_win
+2022-12-09,Croatia,Brazil,-123.74,draw,away_win
+2022-12-09,Netherlands,Argentina,55.61,draw,home_win
+2022-12-10,Morocco,Portugal,-55.44,home_win,away_win
+2022-12-10,England,France,-46.71,away_win,away_win
+2022-12-13,Argentina,Croatia,39.37,home_win,home_win
+2022-12-14,France,Morocco,110.19,home_win,home_win
+2022-12-17,Croatia,Morocco,7.13,home_win,home_win
+2022-12-18,Argentina,France,-57.87,draw,away_win
+2023-09-07,Colombia,Venezuela,204.81,home_win,home_win
+2023-09-07,Paraguay,Peru,-79.58,draw,home_win
+2023-09-07,Argentina,Ecuador,211.35,home_win,home_win
+2023-09-08,Uruguay,Chile,115.41,home_win,home_win
+2023-09-08,Brazil,Bolivia,414.88,home_win,home_win
+2023-09-12,Ecuador,Uruguay,-109.31,home_win,home_win
+2023-09-12,Chile,Colombia,-82.48,draw,away_win
+2023-09-12,Bolivia,Argentina,-365.92,away_win,draw
+2023-09-12,Venezuela,Paraguay,-96.1,home_win,home_win
+2023-09-12,Peru,Brazil,-273.06,away_win,away_win
+2023-10-12,Maldives,Bangladesh,97.59,draw,home_win
+2023-10-12,Chile,Peru,-23.84,home_win,home_win
+2023-10-12,Indonesia,Brunei,-16.21,home_win,home_win
+2023-10-12,Yemen,Sri Lanka,101.56,home_win,home_win
+2023-10-12,Singapore,Guam,44.76,home_win,home_win
+2023-10-12,Nepal,Laos,25.91,draw,home_win
+2023-10-12,Hong Kong,Bhutan,35.75,home_win,home_win
+2023-10-12,Argentina,Paraguay,314.19,home_win,home_win
+2023-10-12,Cambodia,Pakistan,52.95,draw,home_win
+2023-10-12,Brazil,Venezuela,428.1,draw,home_win
+2023-10-12,Bolivia,Ecuador,-163.68,away_win,draw
+2023-10-12,Colombia,Uruguay,-37.24,draw,home_win
+2023-10-12,Taiwan,Timor-Leste,-102.08,home_win,away_win
+2023-10-12,Afghanistan,Mongolia,14.48,home_win,home_win
+2023-10-12,Myanmar,Macau,182.13,home_win,home_win
+2023-10-17,Macau,Myanmar,-197.7,draw,away_win
+2023-10-17,Laos,Nepal,-23.68,away_win,away_win
+2023-10-17,Taiwan,Timor-Leste,-63.51,home_win,home_win
+2023-10-17,Paraguay,Bolivia,62.43,home_win,home_win
+2023-10-17,Pakistan,Cambodia,-48.42,home_win,away_win
+2023-10-17,Mongolia,Afghanistan,-43.23,away_win,away_win
+2023-10-17,Guam,Singapore,-70.92,away_win,away_win
+2023-10-17,Ecuador,Colombia,-26.12,draw,home_win
+2023-10-17,Bhutan,Hong Kong,-62.67,home_win,away_win
+2023-10-17,Uruguay,Brazil,-183.43,home_win,away_win
+2023-10-17,Peru,Argentina,-247.72,away_win,draw
+2023-10-17,Brunei,Indonesia,-15.18,away_win,away_win
+2023-10-17,Sri Lanka,Yemen,-123.03,draw,away_win
+2023-10-17,Venezuela,Chile,-124.27,home_win,away_win
+2023-10-17,Bangladesh,Maldives,-89.37,home_win,draw
+2023-11-15,Equatorial Guinea,Namibia,43.51,away_win,home_win
+2023-11-15,Rwanda,Zimbabwe,-51.07,draw,home_win
+2023-11-15,DR Congo,Mauritania,195.68,home_win,home_win
+2023-11-15,Ethiopia,Sierra Leone,-21.23,draw,home_win
+2023-11-16,Tajikistan,Jordan,-99.16,draw,away_win
+2023-11-16,Saudi Arabia,Pakistan,484.94,home_win,home_win
+2023-11-16,United Arab Emirates,Nepal,227.18,home_win,home_win
+2023-11-16,Iraq,Indonesia,237.6,home_win,home_win
+2023-11-16,Yemen,Bahrain,-203.24,away_win,away_win
+2023-11-16,Australia,Bangladesh,416.08,home_win,home_win
+2023-11-16,Philippines,Vietnam,-0.55,away_win,home_win
+2023-11-16,Sudan,Togo,-136.98,draw,away_win
+2023-11-16,Nigeria,Lesotho,250.41,draw,home_win
+2023-11-16,Cape Verde,Angola,-25.31,draw,home_win
+2023-11-16,Algeria,Somalia,217.12,home_win,home_win
+2023-11-16,Botswana,Mozambique,-25.51,away_win,home_win
+2023-11-16,Egypt,Djibouti,332.24,home_win,home_win
+2023-11-16,Lebanon,Palestine,4.01,draw,home_win
+2023-11-16,South Korea,Singapore,308.24,home_win,home_win
+2023-11-16,Gabon,Kenya,48.97,home_win,home_win
+2023-11-16,Chile,Paraguay,50.65,draw,home_win
+2023-11-16,Venezuela,Ecuador,-140.19,draw,away_win
+2023-11-16,Bolivia,Peru,-143.87,home_win,home_win
+2023-11-16,Colombia,Brazil,-196.34,home_win,away_win
+2023-11-16,Burundi,Gambia,22.09,home_win,home_win
+2023-11-16,Turkmenistan,Uzbekistan,-140.42,away_win,away_win
+2023-11-16,Qatar,Afghanistan,173.12,home_win,home_win
+2023-11-16,Argentina,Uruguay,127.96,away_win,home_win
+2023-11-16,Japan,Myanmar,386.93,home_win,home_win
+2023-11-16,Syria,North Korea,-6.96,home_win,home_win
+2023-11-16,Thailand,China,-179.03,away_win,away_win
+2023-11-16,Oman,Taiwan,404.48,home_win,home_win
+2023-11-16,Kuwait,India,179.01,away_win,home_win
+2023-11-16,Iran,Hong Kong,327.13,home_win,home_win
+2023-11-16,Malaysia,Kyrgyzstan,-71.45,home_win,home_win
+2023-11-17,Comoros,Central African Republic,41.31,home_win,home_win
+2023-11-17,Burkina Faso,Guinea-Bissau,161.44,draw,home_win
+2023-11-17,Mali,Chad,116.3,home_win,home_win
+2023-11-17,Ghana,Madagascar,197.26,home_win,home_win
+2023-11-17,Liberia,Malawi,-51.14,away_win,home_win
+2023-11-17,Zambia,Congo,98.37,home_win,home_win
+2023-11-17,Ivory Coast,Seychelles,335.01,home_win,home_win
+2023-11-17,Cameroon,Mauritius,340.93,home_win,home_win
+2023-11-17,Eswatini,Libya,-95.44,away_win,away_win
+2023-11-17,Guinea,Uganda,-57.33,home_win,draw
+2023-11-17,Tunisia,São Tomé and Príncipe,278.42,home_win,home_win
+2023-11-18,Senegal,South Sudan,226.47,home_win,home_win
+2023-11-18,South Africa,Benin,75.17,home_win,home_win
+2023-11-18,Niger,Tanzania,-8.24,away_win,home_win
+2023-11-19,Sierra Leone,Egypt,-228.45,away_win,away_win
+2023-11-19,Burundi,Gabon,-67.03,away_win,away_win
+2023-11-19,Zimbabwe,Nigeria,-221.67,draw,away_win
+2023-11-19,Sudan,DR Congo,-226.73,home_win,away_win
+2023-11-19,Mozambique,Algeria,-138.02,away_win,away_win
+2023-11-20,Djibouti,Guinea-Bissau,-111.68,away_win,away_win
+2023-11-20,Gambia,Ivory Coast,-255.82,away_win,away_win
+2023-11-20,Seychelles,Kenya,-129.25,away_win,away_win
+2023-11-20,Liberia,Equatorial Guinea,-84.61,home_win,home_win
+2023-11-20,Mali,Central African Republic,201.35,draw,home_win
+2023-11-20,Chad,Madagascar,1.23,away_win,home_win
+2023-11-21,Palestine,Australia,-249.85,away_win,away_win
+2023-11-21,Bangladesh,Lebanon,-174.91,draw,away_win
+2023-11-21,South Sudan,Mauritania,54.65,draw,away_win
+2023-11-21,Togo,Senegal,-184.55,draw,away_win
+2023-11-21,Bahrain,United Arab Emirates,8.47,away_win,home_win
+2023-11-21,Rwanda,South Africa,-212.37,home_win,away_win
+2023-11-21,Eswatini,Cape Verde,-92.24,away_win,away_win
+2023-11-21,Tanzania,Morocco,-237.56,away_win,away_win
+2023-11-21,Botswana,Guinea,-68.08,home_win,away_win
+2023-11-21,Niger,Zambia,-136.09,home_win,away_win
+2023-11-21,Somalia,Uganda,-129.65,away_win,away_win
+2023-11-21,Comoros,Ghana,-207.59,home_win,away_win
+2023-11-21,Malawi,Tunisia,-236.76,away_win,away_win
+2023-11-21,Mauritius,Angola,-192.19,draw,away_win
+2023-11-21,São Tomé and Príncipe,Namibia,-49.8,away_win,away_win
+2023-11-21,Nepal,Yemen,-30.97,away_win,home_win
+2023-11-21,Libya,Cameroon,-154.11,draw,away_win
+2023-11-21,Lesotho,Benin,-77.11,draw,away_win
+2023-11-21,Ethiopia,Burkina Faso,-168.0,away_win,away_win
+2023-11-21,Peru,Venezuela,63.47,draw,home_win
+2023-11-21,India,Qatar,-194.69,away_win,away_win
+2023-11-21,Ecuador,Chile,52.64,home_win,home_win
+2023-11-21,Paraguay,Colombia,-151.24,away_win,away_win
+2023-11-21,Brazil,Argentina,8.57,away_win,home_win
+2023-11-21,Jordan,Saudi Arabia,-167.27,away_win,draw
+2023-11-21,Uruguay,Bolivia,274.66,home_win,home_win
+2023-11-21,Myanmar,North Korea,-169.4,away_win,away_win
+2023-11-21,Syria,Japan,-199.73,away_win,away_win
+2023-11-21,Kyrgyzstan,Oman,-166.46,home_win,away_win
+2023-11-21,Afghanistan,Kuwait,-129.39,away_win,away_win
+2023-11-21,Taiwan,Malaysia,-207.98,away_win,away_win
+2023-11-21,Uzbekistan,Iran,-107.98,draw,away_win
+2023-11-21,Hong Kong,Turkmenistan,-68.16,draw,home_win
+2023-11-21,China,South Korea,-129.09,away_win,away_win
+2023-11-21,Philippines,Indonesia,78.72,draw,home_win
+2023-11-21,Vietnam,Iraq,-140.56,away_win,away_win
+2023-11-21,Pakistan,Tajikistan,-230.32,away_win,away_win
+2023-11-21,Singapore,Thailand,6.96,away_win,home_win
+2024-03-21,Saudi Arabia,Tajikistan,260.08,home_win,home_win
+2024-03-21,Hong Kong,Uzbekistan,-228.68,away_win,away_win
+2024-03-21,Iraq,Philippines,183.65,home_win,home_win
+2024-03-21,Palestine,Bangladesh,158.51,home_win,home_win
+2024-03-21,Australia,Lebanon,258.91,home_win,home_win
+2024-03-21,United Arab Emirates,Yemen,210.68,home_win,home_win
+2024-03-21,Bahrain,Nepal,246.72,home_win,home_win
+2024-03-21,Pakistan,Jordan,-319.15,away_win,away_win
+2024-03-21,Indonesia,Vietnam,-96.64,home_win,away_win
+2024-03-21,Taiwan,Kyrgyzstan,-271.99,away_win,away_win
+2024-03-21,South Korea,Thailand,318.27,draw,home_win
+2024-03-21,Japan,North Korea,222.37,home_win,home_win
+2024-03-21,Myanmar,Syria,-194.04,draw,away_win
+2024-03-21,Afghanistan,India,3.11,draw,home_win
+2024-03-21,Qatar,Kuwait,57.62,home_win,home_win
+2024-03-21,Iran,Turkmenistan,265.28,home_win,home_win
+2024-03-21,Singapore,China,-193.48,draw,away_win
+2024-03-21,Oman,Malaysia,173.18,home_win,home_win
+2024-03-22,Anguilla,Turks and Caicos Islands,-29.87,draw,home_win
+2024-03-22,United States Virgin Islands,British Virgin Islands,-19.28,draw,home_win
+2024-03-26,Turks and Caicos Islands,Anguilla,27.3,draw,home_win
+2024-03-26,Australia,Lebanon,269.94,home_win,home_win
+2024-03-26,British Virgin Islands,United States Virgin Islands,17.62,draw,home_win
+2024-03-26,Jordan,Pakistan,327.39,home_win,home_win
+2024-03-26,Bahrain,Nepal,258.4,home_win,home_win
+2024-03-26,Malaysia,Oman,-189.36,away_win,away_win
+2024-03-26,Bangladesh,Palestine,-175.7,away_win,away_win
+2024-03-26,Yemen,United Arab Emirates,-224.44,away_win,away_win
+2024-03-26,Vietnam,Indonesia,58.5,away_win,home_win
+2024-03-26,Uzbekistan,Hong Kong,241.37,home_win,home_win
+2024-03-26,Turkmenistan,Iran,-275.99,away_win,away_win
+2024-03-26,Syria,Myanmar,178.83,home_win,home_win
+2024-03-26,Philippines,Iraq,-199.12,away_win,away_win
+2024-03-26,Kuwait,Qatar,-82.69,away_win,away_win
+2024-03-26,India,Afghanistan,-2.84,away_win,home_win
+2024-03-26,Thailand,South Korea,-296.55,away_win,away_win
+2024-03-26,China,Singapore,178.31,home_win,home_win
+2024-03-26,Kyrgyzstan,Taiwan,282.36,home_win,home_win
+2024-03-26,Tajikistan,Saudi Arabia,-271.05,draw,away_win
+2024-06-05,Curaçao,Barbados,80.26,home_win,home_win
+2024-06-05,Antigua and Barbuda,Bermuda,-34.04,draw,home_win
+2024-06-05,Trinidad and Tobago,Grenada,162.53,draw,home_win
+2024-06-05,Guatemala,Dominica,260.57,home_win,home_win
+2024-06-05,Togo,South Sudan,64.36,draw,home_win
+2024-06-05,Suriname,Saint Vincent and the Grenadines,89.19,home_win,home_win
+2024-06-05,Namibia,Liberia,69.12,draw,home_win
+2024-06-05,Sierra Leone,Djibouti,115.5,home_win,home_win
+2024-06-05,Central African Republic,Chad,-41.84,home_win,home_win
+2024-06-05,Tunisia,Equatorial Guinea,253.6,home_win,home_win
+2024-06-05,Nicaragua,Montserrat,34.13,home_win,home_win
+2024-06-06,Hong Kong,Iran,-350.39,away_win,away_win
+2024-06-06,Indonesia,Iraq,-234.08,away_win,away_win
+2024-06-06,Vietnam,Philippines,3.0,home_win,home_win
+2024-06-06,Jordan,Tajikistan,80.01,home_win,home_win
+2024-06-06,Pakistan,Saudi Arabia,-506.76,away_win,away_win
+2024-06-06,Kyrgyzstan,Malaysia,75.85,draw,home_win
+2024-06-06,Bahrain,Yemen,213.13,draw,home_win
+2024-06-06,Honduras,Cuba,76.95,home_win,home_win
+2024-06-06,Costa Rica,Saint Kitts and Nevis,271.85,home_win,home_win
+2024-06-06,Haiti,Saint Lucia,136.18,home_win,home_win
+2024-06-06,Panama,Guyana,230.44,home_win,home_win
+2024-06-06,Jamaica,Dominican Republic,73.77,home_win,home_win
+2024-06-06,Uzbekistan,Turkmenistan,189.1,home_win,home_win
+2024-06-06,Bangladesh,Australia,-447.22,away_win,away_win
+2024-06-06,Nepal,United Arab Emirates,-293.69,away_win,away_win
+2024-06-06,Malawi,São Tomé and Príncipe,58.47,home_win,home_win
+2024-06-06,Palestine,Lebanon,24.9,draw,home_win
+2024-06-06,Libya,Mauritius,192.92,home_win,home_win
+2024-06-06,Guinea-Bissau,Ethiopia,38.18,draw,home_win
+2024-06-06,Egypt,Burkina Faso,77.94,home_win,home_win
+2024-06-06,Mauritania,Sudan,-4.91,away_win,home_win
+2024-06-06,Senegal,DR Congo,99.87,draw,home_win
+2024-06-06,Benin,Rwanda,87.13,home_win,home_win
+2024-06-06,El Salvador,Puerto Rico,69.07,draw,home_win
+2024-06-06,Algeria,Guinea,150.49,away_win,home_win
+2024-06-06,Taiwan,Oman,-420.83,away_win,away_win
+2024-06-06,Afghanistan,Qatar,-215.62,draw,away_win
+2024-06-06,India,Kuwait,-142.53,draw,away_win
+2024-06-06,Myanmar,Japan,-415.02,away_win,away_win
+2024-06-06,North Korea,Syria,-15.02,home_win,home_win
+2024-06-06,China,Thailand,163.91,draw,home_win
+2024-06-06,Singapore,South Korea,-335.99,away_win,away_win
+2024-06-06,Mali,Ghana,-58.81,away_win,away_win
+2024-06-07,Nigeria,South Africa,70.71,draw,home_win
+2024-06-07,Madagascar,Comoros,-12.23,home_win,home_win
+2024-06-07,Mozambique,Somalia,92.77,home_win,home_win
+2024-06-07,Ivory Coast,Gabon,132.06,home_win,home_win
+2024-06-07,Zimbabwe,Lesotho,15.4,away_win,home_win
+2024-06-07,Morocco,Zambia,165.68,home_win,home_win
+2024-06-07,Angola,Eswatini,118.94,home_win,home_win
+2024-06-07,Kenya,Burundi,14.06,draw,home_win
+2024-06-07,Uganda,Botswana,82.25,home_win,home_win
+2024-06-08,Aruba,Curaçao,-94.19,away_win,away_win
+2024-06-08,Anguilla,Suriname,-128.86,away_win,away_win
+2024-06-08,British Virgin Islands,Guatemala,-295.09,away_win,away_win
+2024-06-08,Belize,Nicaragua,-20.12,away_win,home_win
+2024-06-08,Gambia,Seychelles,90.87,home_win,home_win
+2024-06-08,Cameroon,Cape Verde,161.91,home_win,home_win
+2024-06-08,Bahamas,Trinidad and Tobago,-139.79,away_win,away_win
+2024-06-08,Cayman Islands,Antigua and Barbuda,-130.91,home_win,away_win
+2024-06-09,Montserrat,Panama,-236.47,away_win,away_win
+2024-06-09,Mauritania,Senegal,-294.89,away_win,away_win
+2024-06-09,Barbados,Haiti,-158.12,away_win,away_win
+2024-06-09,Dominica,Jamaica,-173.38,away_win,away_win
+2024-06-09,Grenada,Costa Rica,-350.78,away_win,away_win
+2024-06-09,Bermuda,Honduras,-31.6,away_win,home_win
+2024-06-09,Namibia,Tunisia,-240.52,draw,away_win
+2024-06-09,DR Congo,Togo,77.04,home_win,home_win
+2024-06-09,Djibouti,Ethiopia,-106.01,draw,away_win
+2024-06-09,São Tomé and Príncipe,Liberia,-21.86,away_win,away_win
+2024-06-09,Saint Vincent and the Grenadines,El Salvador,-201.58,away_win,away_win
+2024-06-10,Equatorial Guinea,Malawi,-22.77,home_win,home_win
+2024-06-10,Uganda,Algeria,-67.89,away_win,away_win
+2024-06-10,Guinea,Mozambique,16.24,away_win,home_win
+2024-06-10,Ghana,Central African Republic,240.17,home_win,home_win
+2024-06-10,Somalia,Botswana,-66.27,away_win,away_win
+2024-06-10,Guinea-Bissau,Egypt,-237.62,draw,away_win
+2024-06-10,Benin,Nigeria,-135.27,home_win,away_win
+2024-06-10,Burkina Faso,Sierra Leone,141.33,draw,home_win
+2024-06-11,Kenya,Ivory Coast,-219.47,draw,away_win
+2024-06-11,Malaysia,Taiwan,222.05,home_win,home_win
+2024-06-11,Turkmenistan,Hong Kong,60.2,draw,home_win
+2024-06-11,Iran,Uzbekistan,93.02,draw,home_win
+2024-06-11,Iraq,Vietnam,201.9,home_win,home_win
+2024-06-11,Tajikistan,Pakistan,245.22,home_win,home_win
+2024-06-11,Saudi Arabia,Jordan,161.39,away_win,home_win
+2024-06-11,South Korea,China,152.23,home_win,home_win
+2024-06-11,United Arab Emirates,Bahrain,37.1,draw,home_win
+2024-06-11,Cuba,Cayman Islands,72.8,home_win,home_win
+2024-06-11,Dominican Republic,British Virgin Islands,104.11,home_win,home_win
+2024-06-11,Oman,Kyrgyzstan,134.28,draw,home_win
+2024-06-11,Saint Kitts and Nevis,Bahamas,68.18,home_win,home_win
+2024-06-11,Saint Lucia,Aruba,4.9,draw,home_win
+2024-06-11,Guyana,Belize,-33.5,home_win,home_win
+2024-06-11,Lebanon,Bangladesh,170.0,home_win,home_win
+2024-06-11,Australia,Palestine,258.71,home_win,home_win
+2024-06-11,Indonesia,Philippines,-11.81,home_win,home_win
+2024-06-11,South Africa,Zimbabwe,152.72,home_win,home_win
+2024-06-11,Gabon,Gambia,114.23,home_win,home_win
+2024-06-11,Yemen,Nepal,69.19,draw,home_win
+2024-06-11,Puerto Rico,Anguilla,165.29,home_win,home_win
+2024-06-11,South Sudan,Sudan,33.02,away_win,away_win
+2024-06-11,Lesotho,Rwanda,43.55,away_win,home_win
+2024-06-11,Mauritius,Eswatini,-55.54,home_win,draw
+2024-06-11,Angola,Cameroon,-155.84,draw,away_win
+2024-06-11,Zambia,Tanzania,75.72,away_win,home_win
+2024-06-11,Cape Verde,Libya,-36.21,home_win,home_win
+2024-06-11,Thailand,Singapore,40.61,home_win,home_win
+2024-06-11,Seychelles,Burundi,-146.29,away_win,away_win
+2024-06-11,Madagascar,Mali,-86.94,draw,draw
+2024-06-11,Japan,Syria,238.57,home_win,home_win
+2024-06-11,Chad,Comoros,-42.38,away_win,home_win
+2024-06-11,Kuwait,Afghanistan,95.83,home_win,home_win
+2024-06-11,Qatar,India,234.11,home_win,home_win
+2024-06-11,North Korea,Myanmar,197.77,home_win,home_win
+2024-06-11,Morocco,Congo,273.53,home_win,home_win
+2024-09-05,Australia,Bahrain,173.82,away_win,home_win
+2024-09-05,Uzbekistan,North Korea,86.9,home_win,home_win
+2024-09-05,Jordan,Kuwait,71.06,draw,home_win
+2024-09-05,Saudi Arabia,Indonesia,324.28,draw,home_win
+2024-09-05,South Korea,Palestine,271.55,draw,home_win
+2024-09-05,Argentina,Chile,275.46,home_win,home_win
+2024-09-05,Iran,Kyrgyzstan,277.99,home_win,home_win
+2024-09-05,Bolivia,Venezuela,-46.47,home_win,home_win
+2024-09-05,Iraq,Oman,18.49,home_win,home_win
+2024-09-05,Qatar,United Arab Emirates,18.93,away_win,home_win
+2024-09-05,Japan,China,237.16,home_win,home_win
+2024-09-06,Peru,Colombia,-129.09,draw,home_win
+2024-09-06,Cook Islands,Tonga,-44.64,away_win,home_win
+2024-09-06,Brazil,Ecuador,175.16,home_win,home_win
+2024-09-06,Samoa,American Samoa,58.1,home_win,home_win
+2024-09-06,Uruguay,Paraguay,220.25,draw,home_win
+2024-09-09,Samoa,Tonga,66.29,home_win,home_win
+2024-09-10,Kuwait,Iraq,-114.43,draw,away_win
+2024-09-10,United Arab Emirates,Iran,-149.21,away_win,away_win
+2024-09-10,Oman,South Korea,-140.88,away_win,away_win
+2024-09-10,China,Saudi Arabia,-133.18,away_win,away_win
+2024-09-10,Indonesia,Australia,-321.37,draw,away_win
+2024-09-10,Bahrain,Japan,-227.07,away_win,away_win
+2024-09-10,Palestine,Jordan,-108.53,away_win,away_win
+2024-09-10,Chile,Bolivia,84.98,away_win,home_win
+2024-09-10,Venezuela,Uruguay,-247.01,draw,draw
+2024-09-10,Ecuador,Peru,67.34,home_win,home_win
+2024-09-10,Colombia,Argentina,-159.36,home_win,draw
+2024-09-10,Kyrgyzstan,Uzbekistan,-209.17,away_win,away_win
+2024-09-10,North Korea,Qatar,-26.52,draw,home_win
+2024-09-10,Paraguay,Brazil,-295.32,home_win,draw
+2024-10-10,Jordan,South Korea,-142.18,away_win,draw
+2024-10-10,Uzbekistan,Iran,-80.89,draw,away_win
+2024-10-10,United Arab Emirates,North Korea,29.15,draw,home_win
+2024-10-10,Saudi Arabia,Japan,-113.05,away_win,away_win
+2024-10-10,Australia,China,150.83,home_win,home_win
+2024-10-10,Iraq,Palestine,163.65,home_win,home_win
+2024-10-10,Chile,Brazil,-259.64,away_win,draw
+2024-10-10,Bahrain,Indonesia,174.1,draw,home_win
+2024-10-10,Papua New Guinea,New Caledonia,-33.36,away_win,home_win
+2024-10-10,Venezuela,Argentina,-327.55,draw,draw
+2024-10-10,Ecuador,Paraguay,90.88,draw,home_win
+2024-10-10,Bolivia,Colombia,-214.12,home_win,home_win
+2024-10-10,Qatar,Kyrgyzstan,131.93,home_win,home_win
+2024-10-10,Fiji,Solomon Islands,-26.52,home_win,home_win
+2024-10-10,Oman,Kuwait,53.54,home_win,home_win
+2024-10-11,Peru,Uruguay,-169.6,home_win,home_win
+2024-10-11,New Zealand,Tahiti,217.34,home_win,home_win
+2024-10-12,Vanuatu,Samoa,-31.85,home_win,home_win
+2024-10-15,Palestine,Kuwait,-54.46,draw,away_win
+2024-10-15,Saudi Arabia,Bahrain,123.46,draw,home_win
+2024-10-15,China,Indonesia,132.88,home_win,home_win
+2024-10-15,Japan,Australia,115.85,draw,home_win
+2024-10-15,Jordan,Oman,-4.73,home_win,home_win
+2024-10-15,Kyrgyzstan,North Korea,-118.51,home_win,away_win
+2024-10-15,South Korea,Iraq,108.75,home_win,home_win
+2024-10-15,Uzbekistan,United Arab Emirates,90.86,home_win,home_win
+2024-10-15,Brazil,Peru,229.01,home_win,home_win
+2024-10-15,Uruguay,Ecuador,60.05,draw,home_win
+2024-10-15,Paraguay,Venezuela,52.58,home_win,home_win
+2024-10-15,Colombia,Chile,148.6,home_win,home_win
+2024-10-15,Iran,Qatar,158.99,home_win,home_win
+2024-10-15,Argentina,Bolivia,296.33,home_win,draw
+2024-11-14,Solomon Islands,New Caledonia,-13.93,away_win,home_win
+2024-11-14,Australia,Saudi Arabia,27.71,draw,home_win
+2024-11-14,Bahrain,China,22.93,away_win,home_win
+2024-11-14,Oman,Palestine,115.88,home_win,home_win
+2024-11-14,Kuwait,South Korea,-247.55,away_win,draw
+2024-11-14,United Arab Emirates,Kyrgyzstan,114.06,home_win,home_win
+2024-11-14,Paraguay,Argentina,-244.75,home_win,draw
+2024-11-14,North Korea,Iran,-220.04,away_win,away_win
+2024-11-14,Papua New Guinea,Fiji,-52.32,draw,away_win
+2024-11-14,Ecuador,Bolivia,133.84,home_win,home_win
+2024-11-14,Venezuela,Brazil,-317.91,draw,draw
+2024-11-14,Qatar,Uzbekistan,-104.7,home_win,away_win
+2024-11-14,Iraq,Jordan,26.14,draw,home_win
+2024-11-15,Samoa,Tahiti,41.87,away_win,home_win
+2024-11-15,Peru,Chile,44.25,draw,home_win
+2024-11-15,Indonesia,Japan,-422.0,away_win,away_win
+2024-11-15,Uruguay,Colombia,7.53,home_win,home_win
+2024-11-15,New Zealand,Vanuatu,187.94,home_win,home_win
+2024-11-17,Fiji,New Caledonia,-24.81,draw,home_win
+2024-11-17,Papua New Guinea,Solomon Islands,-29.92,away_win,home_win
+2024-11-18,Tahiti,Vanuatu,-18.36,home_win,home_win
+2024-11-18,New Zealand,Samoa,213.22,home_win,home_win
+2024-11-19,Bahrain,Australia,-155.73,draw,away_win
+2024-11-19,Kuwait,Jordan,-98.7,draw,away_win
+2024-11-19,China,Japan,-256.51,away_win,away_win
+2024-11-19,Indonesia,Saudi Arabia,-291.71,home_win,away_win
+2024-11-19,Oman,Iraq,-40.52,away_win,home_win
+2024-11-19,Palestine,South Korea,-313.34,draw,away_win
+2024-11-19,United Arab Emirates,Qatar,-17.63,home_win,home_win
+2024-11-19,Kyrgyzstan,Iran,-315.54,away_win,away_win
+2024-11-19,North Korea,Uzbekistan,-135.8,away_win,away_win
+2024-11-19,Brazil,Uruguay,86.36,draw,home_win
+2024-11-19,Argentina,Peru,224.38,home_win,home_win
+2024-11-19,Colombia,Ecuador,23.22,away_win,home_win
+2024-11-19,Bolivia,Paraguay,-94.41,draw,home_win
+2024-11-19,Chile,Venezuela,23.03,home_win,home_win
+2025-03-19,Eswatini,Cameroon,-305.96,draw,away_win
+2025-03-19,Liberia,Tunisia,-280.7,away_win,away_win
+2025-03-19,Central African Republic,Madagascar,-79.15,away_win,home_win
+2025-03-20,Zimbabwe,Benin,-111.51,draw,away_win
+2025-03-20,Mozambique,Uganda,-28.8,home_win,home_win
+2025-03-20,Cape Verde,Mauritius,170.76,home_win,home_win
+2025-03-20,Gambia,Kenya,-64.56,draw,home_win
+2025-03-20,Sierra Leone,Guinea-Bissau,-8.15,home_win,home_win
+2025-03-20,Gabon,Seychelles,246.7,home_win,home_win
+2025-03-20,Malawi,Namibia,-26.59,away_win,home_win
+2025-03-20,Libya,Angola,-9.67,draw,home_win
+2025-03-20,Comoros,Mali,-88.91,away_win,away_win
+2025-03-20,Saudi Arabia,China,101.65,home_win,home_win
+2025-03-20,Australia,Indonesia,285.44,home_win,home_win
+2025-03-20,Japan,Bahrain,264.83,home_win,home_win
+2025-03-20,Uzbekistan,Kyrgyzstan,231.72,home_win,home_win
+2025-03-20,Paraguay,Chile,50.31,home_win,home_win
+2025-03-20,Brazil,Colombia,135.59,home_win,home_win
+2025-03-20,Iraq,Kuwait,131.7,draw,home_win
+2025-03-20,Iran,United Arab Emirates,169.42,home_win,home_win
+2025-03-20,Qatar,North Korea,63.53,home_win,home_win
+2025-03-20,Peru,Bolivia,56.12,home_win,home_win
+2025-03-20,South Korea,Oman,179.61,draw,home_win
+2025-03-20,Jordan,Palestine,137.95,home_win,home_win
+2025-03-21,Equatorial Guinea,São Tomé and Príncipe,90.74,home_win,home_win
+2025-03-21,DR Congo,South Sudan,164.06,home_win,home_win
+2025-03-21,Guinea,Somalia,127.66,draw,home_win
+2025-03-21,Andorra,Latvia,-175.6,away_win,away_win
+2025-03-21,England,Albania,337.35,home_win,home_win
+2025-03-21,Romania,Bosnia and Herzegovina,2.99,away_win,home_win
+2025-03-21,Cyprus,San Marino,228.25,home_win,home_win
+2025-03-21,Poland,Lithuania,260.34,home_win,home_win
+2025-03-21,Ghana,Chad,251.12,home_win,home_win
+2025-03-21,Botswana,Algeria,-173.1,away_win,away_win
+2025-03-21,Burkina Faso,Djibouti,266.98,home_win,home_win
+2025-03-21,Morocco,Niger,274.08,home_win,home_win
+2025-03-21,Rwanda,Nigeria,-207.6,away_win,away_win
+2025-03-21,Ethiopia,Egypt,-268.04,away_win,away_win
+2025-03-21,New Zealand,Fiji,177.41,home_win,home_win
+2025-03-21,New Caledonia,Tahiti,57.76,home_win,home_win
+2025-03-21,Uruguay,Argentina,-80.83,away_win,draw
+2025-03-21,Ecuador,Venezuela,179.75,home_win,home_win
+2025-03-21,Burundi,Ivory Coast,-214.9,away_win,away_win
+2025-03-21,South Africa,Lesotho,162.46,away_win,home_win
+2025-03-21,Malta,Finland,-345.14,away_win,away_win
+2025-03-22,Montenegro,Gibraltar,197.36,home_win,home_win
+2025-03-22,Wales,Kazakhstan,244.11,home_win,home_win
+2025-03-22,Liechtenstein,North Macedonia,-336.74,away_win,away_win
+2025-03-22,Czech Republic,Faroe Islands,318.7,home_win,home_win
+2025-03-22,Moldova,Norway,-294.53,away_win,away_win
+2025-03-22,Togo,Mauritania,119.29,draw,home_win
+2025-03-22,Sudan,Senegal,-248.63,draw,away_win
+2025-03-22,Israel,Estonia,105.89,home_win,home_win
+2025-03-23,Kenya,Gabon,-78.74,away_win,away_win
+2025-03-23,Eswatini,Mauritius,39.55,draw,home_win
+2025-03-24,New Zealand,New Caledonia,150.15,home_win,home_win
+2025-03-24,Poland,Malta,451.83,home_win,home_win
+2025-03-24,Albania,Andorra,232.9,home_win,home_win
+2025-03-24,England,Latvia,386.18,home_win,home_win
+2025-03-24,San Marino,Romania,-474.85,away_win,away_win
+2025-03-24,Lithuania,Finland,-171.85,draw,away_win
+2025-03-24,Madagascar,Ghana,-167.14,away_win,away_win
+2025-03-24,Bosnia and Herzegovina,Cyprus,261.16,home_win,home_win
+2025-03-24,Tunisia,Malawi,267.96,home_win,home_win
+2025-03-24,Liberia,São Tomé and Príncipe,56.17,home_win,home_win
+2025-03-24,Ivory Coast,Gambia,271.25,home_win,home_win
+2025-03-24,Ethiopia,Djibouti,97.16,home_win,home_win
+2025-03-24,Guinea-Bissau,Burkina Faso,-142.27,away_win,away_win
+2025-03-24,Central African Republic,Mali,-181.62,draw,away_win
+2025-03-24,Namibia,Equatorial Guinea,20.08,draw,home_win
+2025-03-25,Botswana,Somalia,77.25,home_win,home_win
+2025-03-25,Uganda,Guinea,33.0,home_win,home_win
+2025-03-25,Nigeria,Zimbabwe,207.97,draw,home_win
+2025-03-25,Rwanda,Lesotho,-38.32,draw,home_win
+2025-03-25,Morocco,Tanzania,250.15,home_win,home_win
+2025-03-25,Burundi,Seychelles,163.44,home_win,home_win
+2025-03-25,Montenegro,Faroe Islands,263.61,home_win,home_win
+2025-03-25,Sudan,South Sudan,17.43,draw,home_win
+2025-03-25,Israel,Norway,-45.94,away_win,home_win
+2025-03-25,Liechtenstein,Kazakhstan,-173.93,away_win,away_win
+2025-03-25,North Macedonia,Wales,-85.57,draw,home_win
+2025-03-25,Gibraltar,Czech Republic,-275.29,away_win,away_win
+2025-03-25,Benin,South Africa,-41.93,away_win,home_win
+2025-03-25,Comoros,Chad,63.22,home_win,home_win
+2025-03-25,Algeria,Mozambique,112.74,home_win,home_win
+2025-03-25,Moldova,Estonia,-130.87,away_win,away_win
+2025-03-25,Argentina,Brazil,3.92,home_win,away_win
+2025-03-25,Angola,Cape Verde,4.18,away_win,home_win
+2025-03-25,Kuwait,Oman,-66.36,away_win,home_win
+2025-03-25,Kyrgyzstan,Qatar,-159.16,home_win,away_win
+2025-03-25,Bolivia,Uruguay,-213.62,draw,home_win
+2025-03-25,Colombia,Paraguay,47.34,draw,home_win
+2025-03-25,Venezuela,Peru,-91.48,home_win,home_win
+2025-03-25,Chile,Ecuador,-149.41,draw,away_win
+2025-03-25,Iran,Uzbekistan,94.17,draw,home_win
+2025-03-25,North Korea,United Arab Emirates,-81.5,away_win,away_win
+2025-03-25,Senegal,Togo,180.63,home_win,home_win
+2025-03-25,China,Australia,-161.55,away_win,away_win
+2025-03-25,Japan,Saudi Arabia,160.64,draw,home_win
+2025-03-25,Indonesia,Bahrain,-141.82,home_win,away_win
+2025-03-25,Egypt,Sierra Leone,217.89,home_win,home_win
+2025-03-25,South Korea,Jordan,137.41,draw,home_win
+2025-03-25,Mauritania,DR Congo,-223.23,away_win,away_win
+2025-03-25,Palestine,Iraq,-183.16,home_win,away_win
+2025-03-25,Cameroon,Libya,141.88,home_win,home_win
+2025-06-04,Dominica,British Virgin Islands,30.77,home_win,home_win
+2025-06-04,Montserrat,Belize,-16.62,home_win,home_win
+2025-06-04,Saint Vincent and the Grenadines,Anguilla,28.08,home_win,home_win
+2025-06-04,Barbados,Aruba,-7.05,draw,home_win
+2025-06-04,Bermuda,Cayman Islands,139.88,home_win,home_win
+2025-06-04,Grenada,Bahamas,8.2,home_win,home_win
+2025-06-05,Iraq,South Korea,-127.48,away_win,away_win
+2025-06-05,Indonesia,China,-104.33,home_win,away_win
+2025-06-05,Australia,Japan,-107.24,home_win,away_win
+2025-06-05,Bahrain,Saudi Arabia,-142.2,away_win,away_win
+2025-06-05,Oman,Jordan,-21.42,away_win,home_win
+2025-06-05,Kuwait,Palestine,27.9,away_win,home_win
+2025-06-05,North Korea,Kyrgyzstan,38.08,draw,home_win
+2025-06-05,Chile,Argentina,-290.45,away_win,draw
+2025-06-05,Paraguay,Uruguay,-91.49,home_win,home_win
+2025-06-05,Ecuador,Brazil,-119.62,draw,away_win
+2025-06-05,Qatar,Iran,-196.7,home_win,away_win
+2025-06-05,United Arab Emirates,Uzbekistan,-84.1,draw,home_win
+2025-06-06,Trinidad and Tobago,Saint Kitts and Nevis,78.06,home_win,home_win
+2025-06-06,Antigua and Barbuda,Cuba,5.41,away_win,home_win
+2025-06-06,Suriname,Puerto Rico,-25.43,home_win,home_win
+2025-06-06,Guatemala,Dominican Republic,189.63,home_win,home_win
+2025-06-06,Nicaragua,Guyana,65.45,home_win,home_win
+2025-06-06,Gibraltar,Croatia,-452.57,away_win,away_win
+2025-06-06,Curaçao,Saint Lucia,111.56,home_win,home_win
+2025-06-06,Estonia,Israel,-104.39,away_win,away_win
+2025-06-06,Czech Republic,Montenegro,63.06,home_win,home_win
+2025-06-06,Wales,Liechtenstein,434.3,home_win,home_win
+2025-06-06,Norway,Italy,-144.51,home_win,away_win
+2025-06-06,Venezuela,Bolivia,0.48,home_win,home_win
+2025-06-06,Colombia,Peru,94.75,draw,home_win
+2025-06-06,North Macedonia,Belgium,-297.58,draw,away_win
+2025-06-07,Cayman Islands,Honduras,-208.02,away_win,away_win
+2025-06-07,Anguilla,El Salvador,-257.77,away_win,away_win
+2025-06-07,British Virgin Islands,Jamaica,-233.99,away_win,away_win
+2025-06-07,Belize,Panama,-247.81,away_win,away_win
+2025-06-07,Aruba,Haiti,-168.59,away_win,away_win
+2025-06-07,Bahamas,Costa Rica,-380.66,away_win,away_win
+2025-06-07,Austria,Romania,-19.0,home_win,home_win
+2025-06-07,Bosnia and Herzegovina,San Marino,509.41,home_win,home_win
+2025-06-07,Finland,Netherlands,-306.16,away_win,away_win
+2025-06-07,Malta,Lithuania,-189.47,draw,away_win
+2025-06-07,Albania,Serbia,-218.27,draw,away_win
+2025-06-07,Andorra,England,-586.93,away_win,away_win
+2025-06-09,Faroe Islands,Gibraltar,-49.89,home_win,home_win
+2025-06-09,Belgium,Wales,206.56,home_win,home_win
+2025-06-09,Croatia,Czech Republic,156.83,home_win,home_win
+2025-06-09,Kazakhstan,North Macedonia,-176.34,away_win,away_win
+2025-06-09,Italy,Moldova,450.07,home_win,home_win
+2025-06-09,Estonia,Norway,-207.91,away_win,away_win
+2025-06-10,Costa Rica,Trinidad and Tobago,186.92,home_win,home_win
+2025-06-10,San Marino,Austria,-476.85,away_win,away_win
+2025-06-10,Serbia,Andorra,456.25,home_win,home_win
+2025-06-10,Latvia,Albania,-58.8,draw,home_win
+2025-06-10,Saint Kitts and Nevis,Grenada,57.83,away_win,home_win
+2025-06-10,Cuba,Bermuda,-37.31,away_win,home_win
+2025-06-10,El Salvador,Suriname,76.86,draw,home_win
+2025-06-10,Romania,Cyprus,225.36,home_win,home_win
+2025-06-10,Saint Lucia,Barbados,0.88,home_win,home_win
+2025-06-10,Haiti,Curaçao,50.15,away_win,home_win
+2025-06-10,Guyana,Montserrat,-11.92,home_win,home_win
+2025-06-10,Dominican Republic,Dominica,73.39,home_win,home_win
+2025-06-10,Jamaica,Guatemala,-96.04,home_win,away_win
+2025-06-10,Puerto Rico,Saint Vincent and the Grenadines,124.03,home_win,home_win
+2025-06-10,Honduras,Antigua and Barbuda,118.93,home_win,home_win
+2025-06-10,Panama,Nicaragua,160.86,home_win,home_win
+2025-06-10,Jordan,Iraq,25.17,away_win,home_win
+2025-06-10,Uzbekistan,Qatar,84.22,home_win,home_win
+2025-06-10,Palestine,Oman,-88.32,draw,away_win
+2025-06-10,Finland,Poland,-112.79,home_win,away_win
+2025-06-10,Uruguay,Venezuela,162.88,home_win,draw
+2025-06-10,Peru,Ecuador,-117.75,draw,home_win
+2025-06-10,Iran,North Korea,253.87,home_win,home_win
+2025-06-10,Argentina,Colombia,183.96,draw,home_win
+2025-06-10,Netherlands,Malta,650.68,home_win,home_win
+2025-06-10,Bolivia,Chile,-44.0,home_win,home_win
+2025-06-10,Kyrgyzstan,United Arab Emirates,-144.59,draw,away_win
+2025-06-10,South Korea,Kuwait,264.18,home_win,home_win
+2025-06-10,China,Bahrain,-6.08,home_win,home_win
+2025-06-10,Japan,Indonesia,351.23,home_win,home_win
+2025-06-10,Saudi Arabia,Australia,-50.74,away_win,away_win
+2025-06-10,Brazil,Paraguay,161.09,home_win,home_win
+2025-09-03,Seychelles,Gabon,-278.46,away_win,away_win
+2025-09-04,Chad,Ghana,-283.16,draw,away_win
+2025-09-04,Mali,Comoros,91.9,home_win,home_win
+2025-09-04,Luxembourg,Northern Ireland,-264.93,away_win,home_win
+2025-09-04,Georgia,Turkey,-212.5,away_win,away_win
+2025-09-04,Bulgaria,Spain,-315.27,away_win,away_win
+2025-09-04,Suriname,Panama,-180.13,draw,draw
+2025-09-04,Netherlands,Poland,222.56,draw,home_win
+2025-09-04,Kazakhstan,Wales,-247.5,away_win,away_win
+2025-09-04,Madagascar,Central African Republic,86.94,home_win,home_win
+2025-09-04,Guatemala,El Salvador,76.04,away_win,home_win
+2025-09-04,Liechtenstein,Belgium,-652.41,away_win,away_win
+2025-09-04,Paraguay,Ecuador,-55.02,draw,home_win
+2025-09-04,Slovakia,Germany,-326.44,home_win,away_win
+2025-09-04,Guinea-Bissau,Sierra Leone,-25.07,draw,home_win
+2025-09-04,Lithuania,Malta,175.25,draw,home_win
+2025-09-04,Tunisia,Liberia,283.34,home_win,home_win
+2025-09-04,Colombia,Bolivia,150.36,home_win,home_win
+2025-09-04,Uruguay,Peru,123.65,home_win,home_win
+2025-09-04,Brazil,Chile,282.03,home_win,home_win
+2025-09-04,Argentina,Venezuela,314.67,home_win,home_win
+2025-09-04,Angola,Libya,2.85,away_win,home_win
+2025-09-04,Cameroon,Eswatini,295.65,home_win,home_win
+2025-09-04,Algeria,Botswana,187.85,home_win,home_win
+2025-09-04,São Tomé and Príncipe,Equatorial Guinea,-126.54,away_win,away_win
+2025-09-04,Mauritius,Cape Verde,-200.57,away_win,away_win
+2025-09-05,Iceland,Azerbaijan,184.22,home_win,home_win
+2025-09-05,Ukraine,France,-204.11,away_win,away_win
+2025-09-05,Denmark,Scotland,82.24,draw,home_win
+2025-09-05,Greece,Belarus,256.68,home_win,home_win
+2025-09-05,Nicaragua,Costa Rica,-281.77,draw,away_win
+2025-09-05,Montenegro,Czech Republic,-79.02,away_win,away_win
+2025-09-05,Trinidad and Tobago,Curaçao,54.66,draw,home_win
+2025-09-05,Haiti,Honduras,-37.1,draw,home_win
+2025-09-05,Switzerland,Kosovo,305.5,home_win,home_win
+2025-09-05,Faroe Islands,Croatia,-498.11,away_win,away_win
+2025-09-05,Italy,Estonia,319.67,home_win,home_win
+2025-09-05,Bermuda,Jamaica,-61.53,away_win,draw
+2025-09-05,Slovenia,Sweden,-175.79,draw,away_win
+2025-09-05,Moldova,Israel,-267.18,away_win,away_win
+2025-09-05,Uganda,Mozambique,20.19,home_win,home_win
+2025-09-05,Senegal,Sudan,238.79,home_win,home_win
+2025-09-05,Mauritania,Togo,-108.04,home_win,away_win
+2025-09-05,Djibouti,Burkina Faso,-297.69,away_win,away_win
+2025-09-05,Egypt,Ethiopia,274.36,home_win,home_win
+2025-09-05,South Sudan,DR Congo,-186.61,away_win,away_win
+2025-09-05,Benin,Zimbabwe,80.96,home_win,home_win
+2025-09-05,South Africa,Lesotho,134.22,home_win,home_win
+2025-09-05,Kenya,Gambia,52.6,away_win,home_win
+2025-09-05,Ivory Coast,Burundi,225.18,home_win,home_win
+2025-09-05,Somalia,Guinea,-115.24,away_win,away_win
+2025-09-05,Namibia,Malawi,58.72,away_win,home_win
+2025-09-05,Congo,Tanzania,-33.06,draw,home_win
+2025-09-05,Morocco,Niger,290.09,home_win,home_win
+2025-09-06,England,Andorra,590.94,home_win,home_win
+2025-09-06,Austria,Cyprus,246.25,home_win,home_win
+2025-09-06,Nigeria,Rwanda,211.85,home_win,home_win
+2025-09-06,San Marino,Bosnia and Herzegovina,-514.25,away_win,away_win
+2025-09-06,Armenia,Portugal,-357.33,away_win,away_win
+2025-09-06,Republic of Ireland,Hungary,61.47,draw,home_win
+2025-09-06,Latvia,Serbia,-259.88,away_win,away_win
+2025-09-07,Turkey,Spain,-210.49,away_win,away_win
+2025-09-07,Poland,Finland,81.86,home_win,home_win
+2025-09-07,Lithuania,Netherlands,-475.32,away_win,away_win
+2025-09-07,Central African Republic,Comoros,-75.53,away_win,home_win
+2025-09-07,Belgium,Kazakhstan,474.57,home_win,home_win
+2025-09-07,Luxembourg,Slovakia,-353.94,away_win,away_win
+2025-09-07,Germany,Northern Ireland,352.68,home_win,home_win
+2025-09-07,Georgia,Bulgaria,-112.97,home_win,away_win
+2025-09-07,North Macedonia,Liechtenstein,377.33,home_win,home_win
+2025-09-08,Switzerland,Slovenia,191.66,home_win,home_win
+2025-09-08,Ghana,Mali,82.23,home_win,home_win
+2025-09-08,Panama,Guatemala,44.84,draw,home_win
+2025-09-08,Gibraltar,Faroe Islands,17.23,away_win,away_win
+2025-09-08,Croatia,Montenegro,266.41,home_win,home_win
+2025-09-08,Israel,Italy,-185.88,away_win,away_win
+2025-09-08,Greece,Denmark,-52.02,away_win,home_win
+2025-09-08,Belarus,Scotland,-244.58,away_win,away_win
+2025-09-08,Guinea-Bissau,Djibouti,142.73,home_win,home_win
+2025-09-08,Kosovo,Sweden,-284.44,home_win,away_win
+2025-09-08,Equatorial Guinea,Tunisia,-233.31,away_win,away_win
+2025-09-08,Uganda,Somalia,199.73,home_win,home_win
+2025-09-08,Guinea,Algeria,-170.7,draw,away_win
+2025-09-08,Mozambique,Botswana,47.99,home_win,home_win
+2025-09-08,Zambia,Morocco,-221.37,away_win,away_win
+2025-09-08,Libya,Eswatini,155.14,home_win,home_win
+2025-09-08,Madagascar,Chad,100.67,home_win,home_win
+2025-09-08,Malawi,Liberia,27.23,draw,home_win
+2025-09-08,El Salvador,Suriname,81.41,away_win,home_win
+2025-09-09,Kenya,Seychelles,164.18,home_win,home_win
+2025-09-09,Gambia,Burundi,-32.78,home_win,home_win
+2025-09-09,Namibia,São Tomé and Príncipe,137.14,home_win,home_win
+2025-09-09,Azerbaijan,Ukraine,-355.96,draw,away_win
+2025-09-09,France,Iceland,374.57,home_win,home_win
+2025-09-09,Hungary,Portugal,-242.55,away_win,away_win
+2025-09-09,Bosnia and Herzegovina,Austria,29.4,away_win,home_win
+2025-09-09,Gabon,Ivory Coast,-128.42,draw,draw
+2025-09-09,Norway,Moldova,361.72,home_win,home_win
+2025-09-09,Albania,Latvia,59.26,home_win,home_win
+2025-09-09,Cyprus,Romania,-244.09,draw,away_win
+2025-09-09,Jamaica,Trinidad and Tobago,21.3,home_win,home_win
+2025-09-09,Curaçao,Bermuda,14.99,home_win,home_win
+2025-09-09,Serbia,England,-126.11,away_win,away_win
+2025-09-09,Armenia,Republic of Ireland,-177.8,home_win,away_win
+2025-09-09,Cape Verde,Cameroon,-128.67,home_win,away_win
+2025-09-09,Honduras,Nicaragua,66.23,home_win,home_win
+2025-09-09,Chile,Uruguay,-189.46,draw,home_win
+2025-09-09,Costa Rica,Haiti,229.34,draw,home_win
+2025-09-09,Tanzania,Niger,31.78,away_win,home_win
+2025-09-09,Ecuador,Argentina,-157.17,home_win,draw
+2025-09-09,Peru,Paraguay,-65.17,away_win,away_win
+2025-09-09,Bolivia,Brazil,-306.08,home_win,draw
+2025-09-09,Sierra Leone,Ethiopia,47.2,home_win,home_win
+2025-09-09,Burkina Faso,Egypt,-96.19,draw,draw
+2025-09-09,Venezuela,Colombia,-158.36,away_win,home_win
+2025-09-09,DR Congo,Senegal,-66.53,away_win,draw
+2025-09-09,Mauritania,South Sudan,-22.46,draw,home_win
+2025-09-09,Angola,Mauritius,166.46,home_win,home_win
+2025-09-09,South Africa,Nigeria,-39.97,draw,home_win
+2025-09-09,Benin,Lesotho,86.94,home_win,home_win
+2025-09-09,Togo,Sudan,29.02,home_win,home_win
+2025-09-09,Zimbabwe,Rwanda,15.24,away_win,home_win
+2025-10-08,Niger,Congo,14.8,home_win,home_win
+2025-10-08,Eswatini,Angola,-144.77,draw,away_win
+2025-10-08,Chad,Mali,-180.01,away_win,away_win
+2025-10-08,Comoros,Madagascar,-33.04,away_win,home_win
+2025-10-08,Tanzania,Zambia,-56.26,away_win,home_win
+2025-10-08,Qatar,Oman,30.99,draw,home_win
+2025-10-08,Mauritius,Cameroon,-331.63,away_win,away_win
+2025-10-08,Sierra Leone,Burkina Faso,-132.29,away_win,away_win
+2025-10-08,Ethiopia,Guinea-Bissau,-46.43,home_win,home_win
+2025-10-08,Saudi Arabia,Indonesia,222.9,home_win,home_win
+2025-10-08,Libya,Cape Verde,-32.7,draw,home_win
+2025-10-08,Djibouti,Egypt,-408.16,away_win,away_win
+2025-10-08,Central African Republic,Ghana,-295.21,away_win,away_win
+2025-10-09,Austria,San Marino,504.07,home_win,home_win
+2025-10-09,Honduras,Costa Rica,-174.58,draw,away_win
+2025-10-09,Nicaragua,Haiti,-53.17,away_win,away_win
+2025-10-09,Liberia,Namibia,-59.12,home_win,home_win
+2025-10-09,Czech Republic,Croatia,-169.43,draw,draw
+2025-10-09,Faroe Islands,Montenegro,-213.86,home_win,away_win
+2025-10-09,Finland,Lithuania,178.16,home_win,home_win
+2025-10-09,Cyprus,Bosnia and Herzegovina,-262.0,draw,away_win
+2025-10-09,Belarus,Denmark,-338.52,away_win,away_win
+2025-10-09,Malawi,Equatorial Guinea,-27.58,home_win,home_win
+2025-10-09,Mozambique,Guinea,21.75,away_win,home_win
+2025-10-09,Botswana,Uganda,-116.59,away_win,away_win
+2025-10-09,Algeria,Somalia,306.73,home_win,home_win
+2025-10-09,Burundi,Kenya,-10.12,away_win,home_win
+2025-10-09,Malta,Netherlands,-638.43,away_win,away_win
+2025-10-09,Scotland,Greece,-4.58,home_win,home_win
+2025-10-10,Kosovo,Slovenia,-90.06,draw,away_win
+2025-10-10,El Salvador,Panama,-100.95,away_win,draw
+2025-10-10,Suriname,Guatemala,-104.46,draw,away_win
+2025-10-10,Bermuda,Trinidad and Tobago,-65.24,away_win,draw
+2025-10-10,Sweden,Switzerland,-62.47,away_win,home_win
+2025-10-10,France,Azerbaijan,565.76,home_win,home_win
+2025-10-10,Iceland,Ukraine,-147.84,away_win,away_win
+2025-10-10,Curaçao,Jamaica,-71.01,home_win,draw
+2025-10-10,Germany,Luxembourg,635.27,home_win,home_win
+2025-10-10,Lesotho,Nigeria,-202.75,away_win,away_win
+2025-10-10,Kazakhstan,Liechtenstein,180.45,home_win,home_win
+2025-10-10,Northern Ireland,Slovakia,-85.23,home_win,away_win
+2025-10-10,Tunisia,São Tomé and Príncipe,394.96,home_win,home_win
+2025-10-10,South Sudan,Senegal,-281.55,away_win,away_win
+2025-10-10,Sudan,Mauritania,25.26,draw,home_win
+2025-10-10,Togo,DR Congo,-129.44,away_win,away_win
+2025-10-10,Rwanda,Benin,-115.0,away_win,away_win
+2025-10-10,South Africa,Zimbabwe,187.7,draw,home_win
+2025-10-10,Gambia,Gabon,-131.32,away_win,away_win
+2025-10-10,Seychelles,Ivory Coast,-420.03,away_win,away_win
+2025-10-10,Belgium,North Macedonia,275.22,draw,home_win
+2025-10-11,Portugal,Republic of Ireland,214.35,home_win,home_win
+2025-10-11,Serbia,Albania,189.35,away_win,home_win
+2025-10-11,Latvia,Andorra,183.43,draw,home_win
+2025-10-11,Estonia,Italy,-335.56,away_win,away_win
+2025-10-11,Norway,Israel,94.92,home_win,home_win
+2025-10-11,Spain,Georgia,423.81,home_win,home_win
+2025-10-11,Iraq,Indonesia,168.83,home_win,home_win
+2025-10-11,United Arab Emirates,Oman,42.42,home_win,home_win
+2025-10-11,Hungary,Armenia,93.56,home_win,home_win
+2025-10-11,Bulgaria,Turkey,-126.01,away_win,away_win
+2025-10-12,Lithuania,Poland,-290.99,away_win,away_win
+2025-10-12,Djibouti,Sierra Leone,-180.84,away_win,away_win
+2025-10-12,Netherlands,Finland,293.64,home_win,home_win
+2025-10-12,Faroe Islands,Czech Republic,-305.05,home_win,away_win
+2025-10-12,Romania,Austria,-40.78,home_win,home_win
+2025-10-12,San Marino,Cyprus,-250.07,away_win,away_win
+2025-10-12,Denmark,Greece,96.5,home_win,home_win
+2025-10-12,Scotland,Belarus,275.31,home_win,home_win
+2025-10-12,Mali,Madagascar,52.08,home_win,home_win
+2025-10-12,Chad,Central African Republic,6.72,away_win,home_win
+2025-10-12,Zambia,Niger,53.53,away_win,home_win
+2025-10-12,Egypt,Guinea-Bissau,266.71,home_win,home_win
+2025-10-12,Burkina Faso,Ethiopia,198.0,home_win,home_win
+2025-10-12,Ghana,Comoros,214.32,home_win,home_win
+2025-10-12,Croatia,Gibraltar,498.39,home_win,home_win
+2025-10-13,Slovakia,Luxembourg,343.01,home_win,home_win
+2025-10-13,Slovenia,Switzerland,-222.75,draw,away_win
+2025-10-13,Costa Rica,Nicaragua,270.92,home_win,home_win
+2025-10-13,Honduras,Haiti,31.65,home_win,home_win
+2025-10-13,North Macedonia,Kazakhstan,205.07,draw,home_win
+2025-10-13,Wales,Belgium,-207.37,away_win,draw
+2025-10-13,Ukraine,Azerbaijan,342.89,home_win,home_win
+2025-10-13,Iceland,France,-390.88,draw,away_win
+2025-10-13,Sweden,Kosovo,218.07,away_win,home_win
+2025-10-13,São Tomé and Príncipe,Malawi,-140.63,home_win,away_win
+2025-10-13,Tunisia,Namibia,259.4,home_win,home_win
+2025-10-13,Equatorial Guinea,Liberia,18.75,draw,home_win
+2025-10-13,Mauritius,Libya,-216.17,draw,away_win
+2025-10-13,Cameroon,Angola,158.32,draw,home_win
+2025-10-13,Cape Verde,Eswatini,197.95,home_win,home_win
+2025-10-13,Lesotho,Zimbabwe,6.97,home_win,home_win
+2025-10-13,South Sudan,Togo,-56.55,draw,away_win
+2025-10-13,Northern Ireland,Germany,-341.79,away_win,away_win
+2025-10-14,Jamaica,Bermuda,108.9,home_win,home_win
+2025-10-14,Spain,Bulgaria,362.46,home_win,home_win
+2025-10-14,Panama,Suriname,151.84,draw,home_win
+2025-10-14,Latvia,England,-426.48,away_win,away_win
+2025-10-14,Somalia,Mozambique,-159.88,away_win,away_win
+2025-10-14,Saudi Arabia,Iraq,58.86,draw,home_win
+2025-10-14,Estonia,Moldova,135.3,draw,home_win
+2025-10-14,Republic of Ireland,Armenia,137.95,home_win,home_win
+2025-10-14,Curaçao,Trinidad and Tobago,-15.74,draw,home_win
+2025-10-14,Turkey,Georgia,211.74,home_win,home_win
+2025-10-14,Andorra,Serbia,-427.27,away_win,away_win
+2025-10-14,Italy,Israel,216.0,home_win,home_win
+2025-10-14,Portugal,Hungary,250.16,draw,home_win
+2025-10-14,Qatar,United Arab Emirates,-27.28,home_win,home_win
+2025-10-14,Guinea,Botswana,78.2,draw,home_win
+2025-10-14,Gabon,Burundi,155.51,home_win,home_win
+2025-10-14,Senegal,Mauritania,305.94,home_win,home_win
+2025-10-14,DR Congo,Sudan,196.71,home_win,home_win
+2025-10-14,El Salvador,Guatemala,-66.34,away_win,away_win
+2025-10-14,South Africa,Rwanda,174.44,home_win,home_win
+2025-10-14,Morocco,Congo,318.95,home_win,home_win
+2025-10-14,Seychelles,Gambia,-163.77,away_win,away_win
+2025-10-14,Ivory Coast,Kenya,226.95,home_win,home_win
+2025-10-14,Algeria,Uganda,86.8,home_win,home_win
+2025-10-14,Nigeria,Benin,90.08,home_win,home_win
+2025-11-13,Andorra,Albania,-285.19,away_win,away_win
+2025-11-13,Bermuda,Curaçao,-85.06,away_win,away_win
+2025-11-13,Cameroon,DR Congo,40.23,away_win,home_win
+2025-11-13,Guatemala,Panama,-37.79,away_win,home_win
+2025-11-13,Nicaragua,Honduras,-129.11,home_win,away_win
+2025-11-13,Trinidad and Tobago,Jamaica,-30.35,draw,home_win
+2025-11-13,Haiti,Costa Rica,-211.16,home_win,away_win
+2025-11-13,England,Serbia,168.14,home_win,home_win
+2025-11-13,Nigeria,Gabon,46.09,home_win,home_win
+2025-11-13,Norway,Estonia,249.63,home_win,home_win
+2025-11-13,France,Ukraine,209.29,home_win,home_win
+2025-11-13,Moldova,Italy,-479.61,away_win,away_win
+2025-11-13,United Arab Emirates,Iraq,-14.22,draw,home_win
+2025-11-13,Suriname,El Salvador,-11.03,home_win,home_win
+2025-11-13,Armenia,Hungary,-134.27,away_win,away_win
+2025-11-13,Republic of Ireland,Portugal,-209.29,home_win,draw
+2025-11-13,Azerbaijan,Iceland,-192.9,away_win,away_win
+2025-11-14,Luxembourg,Germany,-644.12,away_win,away_win
+2025-11-14,Slovakia,Northern Ireland,55.35,home_win,home_win
+2025-11-14,Finland,Malta,341.6,away_win,home_win
+2025-11-14,Poland,Netherlands,-196.57,draw,away_win
+2025-11-14,Croatia,Faroe Islands,436.94,home_win,home_win
+2025-11-14,Gibraltar,Montenegro,-206.51,away_win,away_win
+2025-11-15,Cyprus,Austria,-234.63,away_win,away_win
+2025-11-15,Kazakhstan,Belgium,-459.53,draw,away_win
+2025-11-15,Liechtenstein,Wales,-442.28,away_win,away_win
+2025-11-15,Georgia,Spain,-438.77,away_win,away_win
+2025-11-15,Bosnia and Herzegovina,Romania,9.77,home_win,home_win
+2025-11-15,Greece,Scotland,-41.86,home_win,home_win
+2025-11-15,Switzerland,Sweden,102.0,home_win,home_win
+2025-11-15,Slovenia,Kosovo,67.6,away_win,home_win
+2025-11-15,Turkey,Bulgaria,155.74,home_win,home_win
+2025-11-15,Denmark,Belarus,362.04,draw,home_win
+2025-11-16,Portugal,Armenia,352.32,home_win,home_win
+2025-11-16,Serbia,Latvia,254.82,home_win,home_win
+2025-11-16,Albania,England,-318.34,away_win,away_win
+2025-11-16,Italy,Norway,101.82,away_win,home_win
+2025-11-16,Azerbaijan,France,-573.86,away_win,away_win
+2025-11-16,Ukraine,Iceland,142.96,home_win,home_win
+2025-11-16,Nigeria,DR Congo,8.24,draw,home_win
+2025-11-16,Hungary,Republic of Ireland,-35.97,away_win,home_win
+2025-11-16,Moldova,Israel,-251.96,away_win,away_win
+2025-11-17,Czech Republic,Gibraltar,325.57,home_win,home_win
+2025-11-17,Montenegro,Croatia,-290.35,away_win,away_win
+2025-11-17,Netherlands,Lithuania,489.35,home_win,home_win
+2025-11-17,Malta,Poland,-429.37,away_win,away_win
+2025-11-17,Germany,Slovakia,281.88,home_win,home_win
+2025-11-17,Northern Ireland,Luxembourg,283.06,home_win,home_win
+2025-11-18,Romania,San Marino,474.33,home_win,home_win
+2025-11-18,Trinidad and Tobago,Bermuda,112.15,draw,home_win
+2025-11-18,Jamaica,Curaçao,32.02,draw,home_win
+2025-11-18,Panama,El Salvador,157.32,home_win,home_win
+2025-11-18,Guatemala,Suriname,72.86,home_win,home_win
+2025-11-18,Belgium,Liechtenstein,652.78,home_win,home_win
+2025-11-18,Wales,North Macedonia,51.21,home_win,home_win
+2025-11-18,Iraq,United Arab Emirates,12.99,home_win,home_win
+2025-11-18,Haiti,Nicaragua,73.0,home_win,home_win
+2025-11-18,Bulgaria,Georgia,63.22,home_win,home_win
+2025-11-18,Spain,Turkey,206.87,draw,home_win
+2025-11-18,Belarus,Greece,-248.78,draw,away_win
+2025-11-18,Scotland,Denmark,-81.64,home_win,home_win
+2025-11-18,Sweden,Slovenia,110.94,draw,home_win
+2025-11-18,Kosovo,Switzerland,-266.21,draw,away_win
+2025-11-18,Austria,Bosnia and Herzegovina,-10.9,draw,home_win
+2025-11-18,Costa Rica,Honduras,149.43,draw,home_win
+2026-03-26,Ukraine,Sweden,29.19,away_win,draw
+2026-03-26,Denmark,North Macedonia,169.21,home_win,home_win
+2026-03-26,Czech Republic,Republic of Ireland,-9.95,draw,home_win
+2026-03-26,Turkey,Romania,112.75,home_win,home_win
+2026-03-26,Slovakia,Kosovo,84.89,away_win,home_win
+2026-03-26,Italy,Northern Ireland,187.9,home_win,home_win
+2026-03-26,Bolivia,Suriname,-33.76,home_win,home_win
+2026-03-26,New Caledonia,Jamaica,-56.73,away_win,draw
+2026-03-26,Poland,Albania,173.48,home_win,home_win
+2026-03-26,Wales,Bosnia and Herzegovina,8.31,draw,home_win
+2026-03-31,Bosnia and Herzegovina,Italy,-115.85,draw,away_win
+2026-03-31,Sweden,Poland,-28.34,home_win,home_win
+2026-03-31,Kosovo,Turkey,-161.25,away_win,away_win
+2026-03-31,DR Congo,Jamaica,36.79,home_win,home_win
+2026-03-31,Iraq,Bolivia,155.61,home_win,home_win
+2026-03-31,Czech Republic,Denmark,-109.62,draw,draw

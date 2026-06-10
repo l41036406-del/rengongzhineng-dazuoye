@@ -1,8 +1,8 @@
 # Node / 前端构建产物
 node_modules/
 web/node_modules/
-dist/
-web/dist/
+# dist/  # 提交前端构建产物以支持 Render 纯 Python 部署
+# web/dist/
 .vite/
 
 # Python 缓存

@@ -59,6 +59,8 @@ app.add_middleware(
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         os.getenv("CORS_ORIGIN", "https://yfs.onrender.com"),
+        "https://worldcup-predict.azurewebsites.net",
+        "http://worldcup-predict.azurewebsites.net",
     ],
     allow_credentials=True,
     allow_methods=["*"],

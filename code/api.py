@@ -31,6 +31,64 @@ WEB_DIST = BASE_DIR / "web" / "dist"
 
 LABELS = ["home_win", "draw", "away_win"]
 LABEL_NAMES = {"home_win": "队伍A胜", "draw": "平局", "away_win": "队伍B胜"}
+FORMATION_PROFILES = {
+    "4-3-3": {
+        "attack": 0.76,
+        "control": 0.60,
+        "defense": 0.54,
+        "press": 0.74,
+        "width": 0.82,
+        "description": "强调边路宽度与前场压迫，进攻上限较高。",
+    },
+    "4-2-3-1": {
+        "attack": 0.65,
+        "control": 0.70,
+        "defense": 0.69,
+        "press": 0.63,
+        "width": 0.66,
+        "description": "双后腰保护中路，攻守转换更稳定。",
+    },
+    "4-4-2": {
+        "attack": 0.58,
+        "control": 0.53,
+        "defense": 0.64,
+        "press": 0.54,
+        "width": 0.70,
+        "description": "结构紧凑、双前锋直接，整体均衡。",
+    },
+    "3-5-2": {
+        "attack": 0.67,
+        "control": 0.79,
+        "defense": 0.57,
+        "press": 0.59,
+        "width": 0.64,
+        "description": "中场人数占优，依赖翼卫覆盖两侧空间。",
+    },
+    "5-3-2": {
+        "attack": 0.43,
+        "control": 0.55,
+        "defense": 0.85,
+        "press": 0.39,
+        "width": 0.47,
+        "description": "低位防守稳定，主要通过反击制造机会。",
+    },
+    "3-4-3": {
+        "attack": 0.83,
+        "control": 0.56,
+        "defense": 0.43,
+        "press": 0.77,
+        "width": 0.80,
+        "description": "前场投入积极，但身后空间风险更高。",
+    },
+    "4-1-4-1": {
+        "attack": 0.49,
+        "control": 0.71,
+        "defense": 0.76,
+        "press": 0.59,
+        "width": 0.57,
+        "description": "单后腰连接两线，适合控制节奏与封锁中路。",
+    },
+}
 
 
 class MatchRequest(BaseModel):
@@ -39,6 +97,8 @@ class MatchRequest(BaseModel):
     neutral: bool = True
     is_world_cup_final: bool = True
     model_name: str | None = None
+    home_formation: str = "4-2-3-1"
+    away_formation: str = "4-3-3"
     date: str | None = None
     tournament: str | None = None
 
@@ -181,6 +241,9 @@ def canonical_team_name(value: str) -> str:
 
 
 def normalize_match_request(request: MatchRequest) -> MatchRequest:
+    for formation in (request.home_formation, request.away_formation):
+        if formation not in FORMATION_PROFILES:
+            raise HTTPException(status_code=422, detail=f"暂不支持阵型“{formation}”")
     return request.model_copy(
         update={
             "home_team": canonical_team_name(request.home_team),
@@ -241,6 +304,114 @@ def build_feature_vector(request: MatchRequest) -> dict[str, float]:
     }
 
 
+def model_probability_map(model, scaled: np.ndarray) -> dict[str, float]:
+    probabilities = {label: 0.0 for label in LABELS}
+    if hasattr(model, "predict_proba"):
+        predicted = model.predict_proba(scaled)[0]
+        classes = list(model.classes_)
+        for label in LABELS:
+            if label in classes:
+                probabilities[label] = float(predicted[classes.index(label)])
+    else:
+        probabilities[str(model.predict(scaled)[0])] = 1.0
+    return probabilities
+
+
+def elo_prior(vector: dict[str, float]) -> dict[str, float]:
+    difference = float(vector["elo_diff"])
+    expected_home = 1.0 / (1.0 + 10 ** (-difference / 400.0))
+    draw_probability = 0.08 + 0.20 * np.exp(-abs(difference) / 250.0)
+    decisive_probability = 1.0 - draw_probability
+    return {
+        "home_win": float(decisive_probability * expected_home),
+        "draw": float(draw_probability),
+        "away_win": float(decisive_probability * (1.0 - expected_home)),
+    }
+
+
+def consensus_probabilities(bundle: dict, scaled: np.ndarray, vector: dict[str, float]):
+    metrics = evaluation_data()["metrics"]
+    totals = {label: 0.0 for label in LABELS}
+    weight_total = 0.0
+    votes = {LABEL_NAMES[label]: 0 for label in LABELS}
+    details = []
+    for name, model in bundle["models"].items():
+        model_probabilities = model_probability_map(model, scaled)
+        metric = metrics.get(name, {})
+        weight = float(
+            metric.get(
+                "composite",
+                (metric.get("accuracy", 0.5) + metric.get("macro_f1", 0.5)) / 2,
+            )
+        )
+        weight = max(weight, 0.1)
+        for label in LABELS:
+            totals[label] += model_probabilities[label] * weight
+        weight_total += weight
+        winner = max(LABELS, key=model_probabilities.get)
+        votes[LABEL_NAMES[winner]] += 1
+        details.append(
+            {
+                "model": name,
+                "prediction": LABEL_NAMES[winner],
+                "confidence": round(model_probabilities[winner] * 100, 1),
+            }
+        )
+
+    ensemble = {label: totals[label] / weight_total for label in LABELS}
+    prior = elo_prior(vector)
+    blended = {
+        label: 0.82 * ensemble[label] + 0.18 * prior[label] for label in LABELS
+    }
+    return blended, votes, details, prior
+
+
+def apply_formation_adjustment(
+    probabilities: dict[str, float],
+    home_formation: str,
+    away_formation: str,
+):
+    home = FORMATION_PROFILES[home_formation]
+    away = FORMATION_PROFILES[away_formation]
+    home_edge = (
+        0.48 * (home["attack"] - away["defense"])
+        + 0.28 * (home["control"] - away["control"])
+        + 0.16 * (home["press"] - away["control"])
+        + 0.08 * (home["width"] - away["width"])
+    )
+    away_edge = (
+        0.48 * (away["attack"] - home["defense"])
+        + 0.28 * (away["control"] - home["control"])
+        + 0.16 * (away["press"] - home["control"])
+        + 0.08 * (away["width"] - home["width"])
+    )
+    draw_edge = (
+        0.45 * (((home["defense"] + away["defense"]) / 2) - 0.62)
+        + 0.25 * (1.0 - abs(home["control"] - away["control"]) - 0.75)
+    )
+    adjustments = np.array([home_edge * 0.32, draw_edge * 0.22, away_edge * 0.32])
+    base = np.array([max(probabilities[label], 1e-6) for label in LABELS])
+    logits = np.log(base) + adjustments
+    adjusted = np.exp(logits - logits.max())
+    adjusted = adjusted / adjusted.sum()
+    result = {label: float(adjusted[index]) for index, label in enumerate(LABELS)}
+    deltas = {
+        LABEL_NAMES[label]: round((result[label] - probabilities[label]) * 100, 1)
+        for label in LABELS
+    }
+    strongest = max(deltas, key=lambda label: abs(deltas[label]))
+    direction = "提升" if deltas[strongest] >= 0 else "降低"
+    return result, {
+        "home_formation": home_formation,
+        "away_formation": away_formation,
+        "home_description": home["description"],
+        "away_description": away["description"],
+        "probability_delta": deltas,
+        "summary": f"阵型情景对“{strongest}”影响最大，概率{direction} {abs(deltas[strongest]):.1f} 个百分点。",
+        "method": "阵型影响为独立战术情景修正，不属于历史训练特征。",
+    }
+
+
 def run_prediction(request: MatchRequest) -> dict:
     request = normalize_match_request(request)
     if request.home_team == request.away_team:
@@ -257,16 +428,37 @@ def run_prediction(request: MatchRequest) -> dict:
     features = bundle["features"]
     values = np.array([[vector[column] for column in features]], dtype=float)
     scaled = bundle["scaler"].transform(values)
-    prediction = model.predict(scaled)[0]
-    probabilities = {LABEL_NAMES[label]: 0.0 for label in LABELS}
-    if hasattr(model, "predict_proba"):
-        predicted = model.predict_proba(scaled)[0]
-        classes = list(model.classes_)
-        for label in LABELS:
-            if label in classes:
-                probabilities[LABEL_NAMES[label]] = float(predicted[classes.index(label)])
+    model_votes = {}
+    model_details = []
+    prior = elo_prior(vector)
+    if request.model_name:
+        raw_probabilities = model_probability_map(model, scaled)
+        winner = max(LABELS, key=raw_probabilities.get)
+        model_votes = {LABEL_NAMES[label]: int(label == winner) for label in LABELS}
+        model_details = [
+            {
+                "model": request.model_name,
+                "prediction": LABEL_NAMES[winner],
+                "confidence": round(raw_probabilities[winner] * 100, 1),
+            }
+        ]
+        model_label = request.model_name
     else:
-        probabilities[LABEL_NAMES[prediction]] = 1.0
+        raw_probabilities, model_votes, model_details, prior = consensus_probabilities(
+            bundle, scaled, vector
+        )
+        model_label = "多模型共识 + ELO 校准"
+
+    adjusted_probabilities, formation_impact = apply_formation_adjustment(
+        raw_probabilities, request.home_formation, request.away_formation
+    )
+    prediction = max(LABELS, key=adjusted_probabilities.get)
+    probabilities = {
+        LABEL_NAMES[label]: adjusted_probabilities[label] for label in LABELS
+    }
+    base_probabilities = {
+        LABEL_NAMES[label]: raw_probabilities[label] for label in LABELS
+    }
 
     states = team_data()["team_state"]
     warnings = [
@@ -279,11 +471,25 @@ def run_prediction(request: MatchRequest) -> dict:
         "tournament": request.tournament,
         "neutral": request.neutral,
         "is_world_cup_final": request.is_world_cup_final,
+        "home_formation": request.home_formation,
+        "away_formation": request.away_formation,
         "prediction": LABEL_NAMES.get(prediction, prediction),
         "probabilities": probabilities,
+        "base_probabilities": base_probabilities,
         "home_elo": states.get(request.home_team, {}).get("elo", 1500),
         "away_elo": states.get(request.away_team, {}).get("elo", 1500),
-        "model": request.model_name or evaluation_data()["best_model_name"],
+        "model": model_label,
+        "model_votes": model_votes,
+        "model_details": model_details,
+        "elo_prior": {LABEL_NAMES[label]: prior[label] for label in LABELS},
+        "formation_impact": formation_impact,
+        "feature_snapshot": {
+            "elo_diff": round(vector["elo_diff"], 1),
+            "home_recent_winrate": round(vector["home_recent_winrate"] * 100, 1),
+            "away_recent_winrate": round(vector["away_recent_winrate"] * 100, 1),
+            "home_recent_goal_diff": round(vector["home_recent_goal_diff"], 2),
+            "away_recent_goal_diff": round(vector["away_recent_goal_diff"], 2),
+        },
         "warnings": warnings,
     }
 
@@ -309,6 +515,8 @@ def build_batch_xlsx(matches: list[MatchRequest]) -> BytesIO:
         "队伍B ELO",
         "中立场地",
         "世界杯正赛",
+        "队伍A阵型",
+        "队伍B阵型",
         "使用模型",
     ]
     worksheet.append(headers)
@@ -327,6 +535,8 @@ def build_batch_xlsx(matches: list[MatchRequest]) -> BytesIO:
                 item["away_elo"],
                 "是" if item["neutral"] else "否",
                 "是" if item["is_world_cup_final"] else "否",
+                item["home_formation"],
+                item["away_formation"],
                 item["model"],
             ]
         )
@@ -342,7 +552,7 @@ def build_batch_xlsx(matches: list[MatchRequest]) -> BytesIO:
         for cell in row[5:8]:
             cell.number_format = "0.0%"
 
-    widths = [13, 20, 20, 20, 12, 15, 13, 15, 13, 13, 12, 14, 22]
+    widths = [13, 20, 20, 20, 12, 15, 13, 15, 13, 13, 12, 14, 13, 13, 24]
     for index, width in enumerate(widths, start=1):
         worksheet.column_dimensions[chr(64 + index)].width = width
     worksheet.freeze_panes = "A2"
@@ -471,6 +681,12 @@ def build_dynamic_report(matches: list[MatchRequest]) -> dict:
                     "date": item["date"],
                     "opponent": opponent,
                     "side": "队伍A" if is_home else "队伍B",
+                    "formation": (
+                        item["home_formation"] if is_home else item["away_formation"]
+                    ),
+                    "opponent_formation": (
+                        item["away_formation"] if is_home else item["home_formation"]
+                    ),
                     "opponent_elo": round(opponent_elo, 1),
                     "win": round(win_probability * 100, 1),
                     "draw": round(draw_probability * 100, 1),
@@ -709,12 +925,15 @@ def build_report_pdf(report: dict) -> BytesIO:
             Paragraph("比赛预测明细", heading),
         ]
     )
-    match_rows = [["队伍A", "队伍B", "预测", "队伍A胜", "平局", "队伍B胜", "置信度"]]
+    match_rows = [
+        ["队伍A", "队伍B", "双方阵型", "预测", "队伍A胜", "平局", "队伍B胜", "置信度"]
+    ]
     for item in report["matches"]:
         match_rows.append(
             [
                 item["home_team"],
                 item["away_team"],
+                f"{item['home_formation']} / {item['away_formation']}",
                 item["prediction"],
                 f"{item['probabilities']['队伍A胜'] * 100:.1f}%",
                 f"{item['probabilities']['平局'] * 100:.1f}%",
@@ -733,7 +952,7 @@ def build_report_pdf(report: dict) -> BytesIO:
             ]
             for row_index, row in enumerate(match_rows)
         ],
-        colWidths=[27 * mm, 27 * mm, 22 * mm, 21 * mm, 18 * mm, 21 * mm, 21 * mm],
+        colWidths=[23 * mm, 23 * mm, 25 * mm, 19 * mm, 18 * mm, 15 * mm, 18 * mm, 19 * mm],
         repeatRows=1,
     )
     match_table.setStyle(
@@ -846,6 +1065,9 @@ def models():
         "metrics": metrics,
         "knn_tuning": sorted(tuning, key=lambda item: item["k"]),
         "model_names": list(model_bundle()["models"].keys()),
+        "formations": [
+            {"name": name, **profile} for name, profile in FORMATION_PROFILES.items()
+        ],
     }
 
 

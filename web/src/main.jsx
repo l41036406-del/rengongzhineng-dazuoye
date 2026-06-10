@@ -62,6 +62,29 @@ const CHART_COLORS = {
   axis: "#53675F",
 };
 
+const DEFAULT_FORMATIONS = ["4-3-3", "4-2-3-1", "4-4-2", "3-5-2", "5-3-2", "3-4-3", "4-1-4-1"];
+
+const formationPositions = (formation, side) => {
+  const lines = formation.split("-").map(Number);
+  const positions = [{ number: 1, x: 5, y: 50 }];
+  let number = 2;
+  lines.forEach((count, lineIndex) => {
+    const x = 12 + ((lineIndex + 1) * 34) / lines.length;
+    for (let index = 0; index < count; index += 1) {
+      positions.push({
+        number,
+        x,
+        y: ((index + 1) * 100) / (count + 1),
+      });
+      number += 1;
+    }
+  });
+  return positions.map((position) => ({
+    ...position,
+    x: side === "away" ? 100 - position.x : position.x,
+  }));
+};
+
 const FEATURE_LABELS = {
   home_elo: "队伍A ELO",
   away_elo: "队伍B ELO",
@@ -104,6 +127,8 @@ const CSV_FIELD_ALIASES = {
   is_world_cup_final: "is_world_cup_final",
   date: "date",
   tournament: "tournament",
+  home_formation: "home_formation",
+  away_formation: "away_formation",
   队伍A: "home_team",
   球队A: "home_team",
   主队: "home_team",
@@ -116,6 +141,10 @@ const CSV_FIELD_ALIASES = {
   日期: "date",
   赛事名称: "tournament",
   赛事: "tournament",
+  队伍A阵型: "home_formation",
+  主队阵型: "home_formation",
+  队伍B阵型: "away_formation",
+  客队阵型: "away_formation",
 };
 
 const decodeCsvFile = async (file) => {
@@ -139,6 +168,8 @@ const UPLOAD_FIELDS = [
   },
   { field: "比赛日期", alias: "date", meaning: "推荐格式 YYYY-MM-DD", type: "可选" },
   { field: "赛事名称", alias: "tournament", meaning: "例如 World Cup", type: "可选" },
+  { field: "队伍A阵型", alias: "home_formation", meaning: "例如 4-2-3-1", type: "可选" },
+  { field: "队伍B阵型", alias: "away_formation", meaning: "例如 4-3-3", type: "可选" },
 ];
 
 async function api(path, options) {
@@ -866,6 +897,8 @@ function Predict() {
     neutral: true,
     is_world_cup_final: true,
     model_name: "",
+    home_formation: "4-2-3-1",
+    away_formation: "4-3-3",
   });
   const [result, setResult] = useState(null);
   const [status, setStatus] = useState({ loading: false, error: "" });
@@ -874,6 +907,9 @@ function Predict() {
     return <ErrorState message={teamsState.error || modelsState.error} />;
   }
   const teams = teamsState.data.teams;
+  const formations = modelsState.data.formations?.map((item) => item.name) || DEFAULT_FORMATIONS;
+  const homeState = teams.find((team) => team.name === form.home_team);
+  const awayState = teams.find((team) => team.name === form.away_team);
   const submit = async (event) => {
     event.preventDefault();
     setStatus({ loading: true, error: "" });
@@ -893,10 +929,17 @@ function Predict() {
     <>
       <PageHeader
         title="单场比赛预测"
-        subtitle="选择对阵双方、比赛环境和模型，查看胜平负概率及模型置信度。"
+        subtitle="结合多模型共识、ELO 先验与阵型情景，查看胜平负概率和战术影响。"
       />
-      <form className="predict-layout" onSubmit={submit}>
-        <Panel title="比赛设置" icon={Target}>
+      <form className="match-center" onSubmit={submit}>
+        <section className="match-control-rail">
+          <div className="match-section-heading">
+            <span>01</span>
+            <div>
+              <strong>比赛设置</strong>
+              <small>选择球队与战术方案</small>
+            </div>
+          </div>
           <div className="form-grid">
             <Select
               label="队伍 A"
@@ -911,10 +954,26 @@ function Predict() {
               onChange={(away_team) => setForm((current) => ({ ...current, away_team }))}
             />
             <Select
-              label="预测模型"
+              label="队伍 A 阵型"
+              value={form.home_formation}
+              options={formations}
+              onChange={(home_formation) =>
+                setForm((current) => ({ ...current, home_formation }))
+              }
+            />
+            <Select
+              label="队伍 B 阵型"
+              value={form.away_formation}
+              options={formations}
+              onChange={(away_formation) =>
+                setForm((current) => ({ ...current, away_formation }))
+              }
+            />
+            <Select
+              label="预测方式"
               value={form.model_name}
               options={["", ...modelsState.data.model_names]}
-              optionLabel={(value) => value || `最佳模型（${modelsState.data.best_model}）`}
+              optionLabel={(value) => value || "多模型共识（推荐）"}
               onChange={(model_name) => setForm((current) => ({ ...current, model_name }))}
             />
           </div>
@@ -933,62 +992,207 @@ function Predict() {
             />
           </div>
           <button className="primary-button" disabled={status.loading}>
-            {status.loading ? "模型计算中…" : "开始预测"}
+            <Target size={17} />
+            {status.loading ? "模型计算中…" : "生成比赛预测"}
           </button>
           {status.error ? <p className="form-error">{status.error}</p> : null}
-        </Panel>
-        <PredictionResult result={result} />
+        </section>
+        <FormationPitch
+          homeTeam={form.home_team}
+          awayTeam={form.away_team}
+          homeFormation={form.home_formation}
+          awayFormation={form.away_formation}
+        />
+        <PredictionResult
+          result={result}
+          homeTeam={form.home_team}
+          awayTeam={form.away_team}
+          homeElo={homeState?.elo}
+          awayElo={awayState?.elo}
+        />
       </form>
+      {result ? <PredictionEvidence result={result} /> : null}
     </>
   );
 }
 
-function PredictionResult({ result }) {
+function FormationPitch({ homeTeam, awayTeam, homeFormation, awayFormation }) {
+  const homePositions = formationPositions(homeFormation, "home");
+  const awayPositions = formationPositions(awayFormation, "away");
+  return (
+    <section className="formation-stage">
+      <div className="match-section-heading">
+        <span>02</span>
+        <div>
+          <strong>阵型与战术布置</strong>
+          <small>阵型用于情景修正，不冒充历史训练字段</small>
+        </div>
+      </div>
+      <div className="pitch-scoreboard">
+        <strong>{homeTeam}</strong>
+        <span>{homeFormation}</span>
+        <b>VS</b>
+        <span>{awayFormation}</span>
+        <strong>{awayTeam}</strong>
+      </div>
+      <div className="football-pitch" aria-label={`${homeTeam} 对阵 ${awayTeam} 阵型图`}>
+        <i className="pitch-halfway" />
+        <i className="pitch-circle" />
+        <i className="pitch-box pitch-box-left" />
+        <i className="pitch-box pitch-box-right" />
+        {[...homePositions, ...awayPositions].map((position, index) => {
+          const isHome = index < homePositions.length;
+          return (
+            <span
+              key={`${isHome ? "home" : "away"}-${position.number}`}
+              className={`pitch-player ${isHome ? "home" : "away"}`}
+              style={{ left: `${position.x}%`, top: `${position.y}%` }}
+            >
+              {position.number}
+            </span>
+          );
+        })}
+      </div>
+      <div className="pitch-legend">
+        <span><i className="home" />队伍 A</span>
+        <span><i className="away" />队伍 B</span>
+        <small>阵型只对最终概率进行小幅、可解释修正</small>
+      </div>
+    </section>
+  );
+}
+
+function PredictionResult({ result, homeTeam, awayTeam, homeElo, awayElo }) {
   if (!result) {
     return (
-      <Panel title="预测结果" icon={Sparkles}>
-        <div className="empty-result">
-          <Target size={42} />
-          <strong>等待输入比赛条件</strong>
-          <p>提交后将展示预测结果、三分类概率与双方 ELO。</p>
+      <section className="match-result-rail">
+        <div className="match-section-heading">
+          <span>03</span>
+          <div>
+            <strong>预测结果</strong>
+            <small>多模型共识与概率校准</small>
+          </div>
         </div>
-      </Panel>
+        <div className="result-versus compact">
+          <div><strong>{homeTeam}</strong><small>ELO {homeElo ?? "—"}</small></div>
+          <b>VS</b>
+          <div><strong>{awayTeam}</strong><small>ELO {awayElo ?? "—"}</small></div>
+        </div>
+        <div className="result-waiting">
+          <Sparkles size={30} />
+          <strong>等待生成预测</strong>
+          <p>结果会同时展示模型投票、ELO 先验和阵型修正幅度。</p>
+        </div>
+      </section>
     );
   }
   const chart = Object.entries(result.probabilities).map(([name, value]) => ({
     name,
     probability: Math.round(value * 1000) / 10,
   }));
+  const confidence = Math.max(...chart.map((item) => item.probability));
   return (
-    <Panel title="预测结果" icon={Sparkles}>
-      <div className="versus">
+    <section className="match-result-rail">
+      <div className="match-section-heading">
+        <span>03</span>
         <div>
-          <span>队伍 A</span>
+          <strong>预测结果</strong>
+          <small>{result.model}</small>
+        </div>
+      </div>
+      <div className="result-versus">
+        <div>
           <strong>{result.home_team}</strong>
           <small>ELO {result.home_elo}</small>
         </div>
         <b>VS</b>
         <div>
-          <span>队伍 B</span>
           <strong>{result.away_team}</strong>
           <small>ELO {result.away_elo}</small>
         </div>
       </div>
-      <div className="prediction-label">{result.prediction}</div>
-      <ResponsiveContainer width="100%" height={220}>
-        <BarChart data={chart} layout="vertical" margin={{ left: 15, right: 20 }}>
-          <XAxis type="number" domain={[0, 100]} hide />
-          <YAxis type="category" dataKey="name" stroke="#91a39d" width={64} />
-          <Tooltip content={<ChartTooltip suffix="%" />} />
-          <Bar dataKey="probability" radius={[0, 6, 6, 0]}>
-            {chart.map((entry) => (
-              <Cell key={entry.name} fill={RESULT_COLORS[entry.name]} />
+      <div className="result-verdict">
+        <div>
+          <span>预测结论</span>
+          <strong>{result.prediction}</strong>
+        </div>
+        <div className="confidence-ring" style={{ "--confidence": `${confidence * 3.6}deg` }}>
+          <strong>{confidence.toFixed(0)}%</strong>
+          <span>最高概率</span>
+        </div>
+      </div>
+      <div className="probability-list">
+        {chart.map((entry) => (
+          <div key={entry.name}>
+            <span>{entry.name}</span>
+            <i><b style={{ width: `${entry.probability}%`, background: RESULT_COLORS[entry.name] }} /></i>
+            <strong>{entry.probability.toFixed(1)}%</strong>
+          </div>
+        ))}
+      </div>
+      <p className="result-note">概率来自模型共识、ELO 校准与阵型情景修正，仅作分析参考。</p>
+    </section>
+  );
+}
+
+function PredictionEvidence({ result }) {
+  const totalVotes = Object.values(result.model_votes || {}).reduce((sum, value) => sum + value, 0);
+  const voteRows = Object.entries(result.model_votes || {});
+  const deltas = result.formation_impact?.probability_delta || {};
+  return (
+    <section className="prediction-evidence">
+      <div className="consensus-block">
+        <div className="match-section-heading">
+          <span>04</span>
+          <div>
+            <strong>模型共识</strong>
+            <small>{totalVotes} 个模型参与判断</small>
+          </div>
+        </div>
+        <div className="consensus-body">
+          <div className="consensus-donut">
+            <strong>{totalVotes}</strong>
+            <span>参与模型</span>
+          </div>
+          <div className="vote-list">
+            {voteRows.map(([label, votes]) => (
+              <div key={label}>
+                <span>{label}</span>
+                <i><b style={{ width: `${totalVotes ? (votes / totalVotes) * 100 : 0}%`, background: RESULT_COLORS[label] }} /></i>
+                <strong>{votes} 票</strong>
+              </div>
             ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-      <p className="panel-note">使用模型：{result.model}。预测仅作课程分析与辅助参考。</p>
-    </Panel>
+          </div>
+        </div>
+      </div>
+      <div className="formation-impact-block">
+        <div className="match-section-heading">
+          <span>05</span>
+          <div>
+            <strong>阵型影响摘要</strong>
+            <small>与未加入阵型修正的基础概率相比</small>
+          </div>
+        </div>
+        <table className="formation-impact-table">
+          <thead>
+            <tr><th>结果</th><th>概率变化</th><th>影响方向</th></tr>
+          </thead>
+          <tbody>
+            {Object.entries(deltas).map(([label, delta]) => (
+              <tr key={label}>
+                <td>{label}</td>
+                <td className={delta > 0 ? "positive" : delta < 0 ? "negative" : ""}>
+                  {delta > 0 ? "+" : ""}{delta.toFixed(1)}%
+                </td>
+                <td>{delta > 0 ? "阵型提升" : delta < 0 ? "阵型压低" : "基本不变"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p>{result.formation_impact?.summary}</p>
+        <small>{result.formation_impact?.method}</small>
+      </div>
+    </section>
   );
 }
 
@@ -1029,6 +1233,8 @@ function Batch({ onUploadedMatches }) {
       away_team: row.away_team,
       neutral: parseBoolean(row.neutral),
       is_world_cup_final: parseBoolean(row.is_world_cup_final),
+      home_formation: row.home_formation || "4-2-3-1",
+      away_formation: row.away_formation || "4-3-3",
       date: row.date || null,
       tournament: row.tournament || null,
     }));
@@ -1079,9 +1285,9 @@ function Batch({ onUploadedMatches }) {
   };
   const downloadTemplate = () => {
     const content = [
-      "队伍A,队伍B,中立场地,世界杯正赛,比赛日期,赛事名称",
-      "Brazil,Argentina,是,是,2026-06-15,World Cup",
-      "France,Germany,否,是,2026-06-18,World Cup",
+      "队伍A,队伍B,队伍A阵型,队伍B阵型,中立场地,世界杯正赛,比赛日期,赛事名称",
+      "Brazil,Argentina,4-2-3-1,4-3-3,是,是,2026-06-15,World Cup",
+      "France,Germany,4-3-3,3-5-2,否,是,2026-06-18,World Cup",
     ].join("\n");
     const url = URL.createObjectURL(
       new Blob([`\uFEFF${content}`], { type: "text/csv;charset=utf-8" }),
@@ -1107,8 +1313,8 @@ function Batch({ onUploadedMatches }) {
             <input type="file" accept=".csv" onChange={loadFile} />
           </label>
           <div className="template">
-            <code>队伍A,队伍B,中立场地,世界杯正赛,比赛日期,赛事名称</code>
-            <code>Brazil,Argentina,是,是,2026-06-15,World Cup</code>
+            <code>队伍A,队伍B,队伍A阵型,队伍B阵型,中立场地,世界杯正赛,比赛日期,赛事名称</code>
+            <code>Brazil,Argentina,4-2-3-1,4-3-3,是,是,2026-06-15,World Cup</code>
           </div>
           <button className="secondary-button template-download" onClick={downloadTemplate}>
             <FileDown size={17} />
@@ -1419,9 +1625,10 @@ function Report({ matches }) {
                 <div className="table-scroll report-table">
                   <table>
                     <thead>
-                      <tr>
-                        <th>对手</th>
-                        <th>预测</th>
+                        <tr>
+                          <th>对手</th>
+                          <th>双方阵型</th>
+                          <th>预测</th>
                         <th>胜</th>
                         <th>平</th>
                         <th>负</th>
@@ -1432,6 +1639,7 @@ function Report({ matches }) {
                       {team.fixtures.map((fixture) => (
                         <tr key={`${fixture.match}-${fixture.opponent}`}>
                           <td>{fixture.opponent}</td>
+                          <td>{fixture.formation} / {fixture.opponent_formation}</td>
                           <td className="accent-text">{fixture.prediction}</td>
                           <td>{fixture.win}%</td>
                           <td>{fixture.draw}%</td>

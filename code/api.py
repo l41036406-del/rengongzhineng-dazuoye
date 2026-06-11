@@ -374,22 +374,27 @@ def apply_formation_adjustment(
     home = FORMATION_PROFILES[home_formation]
     away = FORMATION_PROFILES[away_formation]
     home_edge = (
-        0.48 * (home["attack"] - away["defense"])
-        + 0.28 * (home["control"] - away["control"])
+        0.52 * (home["attack"] - away["defense"])
+        + 0.24 * (home["control"] - away["control"])
         + 0.16 * (home["press"] - away["control"])
         + 0.08 * (home["width"] - away["width"])
     )
     away_edge = (
-        0.48 * (away["attack"] - home["defense"])
-        + 0.28 * (away["control"] - home["control"])
+        0.52 * (away["attack"] - home["defense"])
+        + 0.24 * (away["control"] - home["control"])
         + 0.16 * (away["press"] - home["control"])
         + 0.08 * (away["width"] - home["width"])
     )
     draw_edge = (
-        0.45 * (((home["defense"] + away["defense"]) / 2) - 0.62)
-        + 0.25 * (1.0 - abs(home["control"] - away["control"]) - 0.75)
+        0.50 * (((home["defense"] + away["defense"]) / 2) - 0.60)
+        + 0.32 * (0.22 - abs(home["control"] - away["control"]))
     )
-    adjustments = np.array([home_edge * 0.32, draw_edge * 0.22, away_edge * 0.32])
+    # Increase formation impact enough to be decision-relevant, but keep a hard cap
+    # so tactical setup does not overwhelm team strength and model consensus.
+    home_shift = float(np.clip(home_edge * 0.95, -0.60, 0.60))
+    draw_shift = float(np.clip(draw_edge * 0.70, -0.42, 0.42))
+    away_shift = float(np.clip(away_edge * 0.95, -0.60, 0.60))
+    adjustments = np.array([home_shift, draw_shift, away_shift])
     base = np.array([max(probabilities[label], 1e-6) for label in LABELS])
     logits = np.log(base) + adjustments
     adjusted = np.exp(logits - logits.max())
@@ -406,9 +411,10 @@ def apply_formation_adjustment(
         "away_formation": away_formation,
         "home_description": home["description"],
         "away_description": away["description"],
+        "impact_score": round(max(abs(home_shift), abs(draw_shift), abs(away_shift)), 2),
         "probability_delta": deltas,
         "summary": f"阵型情景对“{strongest}”影响最大，概率{direction} {abs(deltas[strongest]):.1f} 个百分点。",
-        "method": "阵型影响为独立战术情景修正，不属于历史训练特征。",
+        "method": "阵型影响为独立战术情景修正，不属于历史训练特征；本次已提高权重，但仍受硬上限约束。",
     }
 
 

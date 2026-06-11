@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -1101,10 +1101,15 @@ def batch_predict(request: BatchRequest):
 @app.post("/api/batch/export/xlsx")
 def export_batch_xlsx(request: BatchRequest):
     filename = f"batch-predictions-{datetime.now().strftime('%Y%m%d-%H%M%S')}.xlsx"
-    return StreamingResponse(
-        build_batch_xlsx(request.matches),
+    workbook = build_batch_xlsx(request.matches)
+    content = workbook.getvalue()
+    return Response(
+        content=content,
         media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+        headers={
+            "Content-Disposition": f'attachment; filename="{filename}"',
+            "Content-Length": str(len(content)),
+        },
     )
 
 
@@ -1123,12 +1128,20 @@ def analyze_report(request: BatchRequest):
 
 @app.post("/api/report/export/pdf")
 def export_report_pdf(request: BatchRequest):
-    report_data = build_dynamic_report(request.matches)
     filename = f"world-cup-analysis-{datetime.now().strftime('%Y%m%d-%H%M%S')}.pdf"
-    return StreamingResponse(
-        build_report_pdf(report_data),
+    try:
+        report_data = build_dynamic_report(request.matches)
+        pdf_buffer = build_report_pdf(report_data)
+        content = pdf_buffer.getvalue()
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"PDF 报告生成失败：{exc}") from exc
+    return Response(
+        content=content,
         media_type="application/pdf",
-        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+        headers={
+            "Content-Disposition": f'attachment; filename="{filename}"',
+            "Content-Length": str(len(content)),
+        },
     )
 
 

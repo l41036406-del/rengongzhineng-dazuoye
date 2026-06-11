@@ -936,7 +936,22 @@ function Predict() {
           <div className="predict-toolbar">
             <span><CalendarDays size={15} />{new Intl.DateTimeFormat("zh-CN").format(new Date())}</span>
             <i />
-            <span><Globe2 size={16} />世界杯正赛<ChevronDown size={13} /></span>
+            <button
+              type="button"
+              className={form.is_world_cup_final ? "is-active" : ""}
+              aria-pressed={form.is_world_cup_final}
+              title="点击切换世界杯正赛与预选赛"
+              onClick={() =>
+                setForm((current) => ({
+                  ...current,
+                  is_world_cup_final: !current.is_world_cup_final,
+                }))
+              }
+            >
+              <Globe2 size={16} />
+              {form.is_world_cup_final ? "世界杯正赛" : "世界杯预选赛"}
+              <ChevronDown size={13} />
+            </button>
           </div>
         )}
       />

@@ -2626,10 +2626,34 @@ body,
   white-space: nowrap;
 }
 
-.predict-toolbar span {
+.predict-toolbar span,
+.predict-toolbar button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+
+.predict-toolbar button {
+  padding: 6px 8px;
+  color: #536a61;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  transition: color .16s ease, background .16s ease, border-color .16s ease;
+}
+
+.predict-toolbar button:hover,
+.predict-toolbar button:focus-visible {
+  color: #1f5a32;
+  background: rgba(31, 90, 50, .06);
+  border-color: rgba(31, 90, 50, .22);
+  outline: none;
+}
+
+.predict-toolbar button.is-active {
+  color: #1f5a32;
 }
 
 .predict-toolbar i {
@@ -2644,21 +2668,6 @@ body,
   overflow: hidden;
 }
 
-.page-predict .main-area::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  right: 0;
-  width: 96px;
-  height: 130px;
-  background:
-    radial-gradient(circle at 28% 20%, rgba(221, 229, 171, .24) 0 1px, transparent 2px),
-    repeating-linear-gradient(112deg, rgba(218, 227, 178, .09) 0 1px, transparent 1px 7px),
-    linear-gradient(140deg, #5f842f, #376923 55%, #214f18);
-  box-shadow: inset 0 0 44px rgba(6, 35, 7, .35);
-}
-
 .page-predict .page-header,
 .page-predict .match-center,
 .page-predict .prediction-evidence,
@@ -2668,7 +2677,7 @@ body,
 }
 
 .page-predict .page-header {
-  padding-right: 116px;
+  padding-right: 10px;
 }
 
 .match-center {

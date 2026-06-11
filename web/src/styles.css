@@ -2640,6 +2640,7 @@ body,
 
 .page-predict .main-area {
   position: relative;
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -2671,15 +2672,21 @@ body,
 }
 
 .match-center {
-  grid-template-columns: minmax(260px, .78fr) minmax(500px, 1.62fr) minmax(310px, 1fr);
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: minmax(225px, .78fr) minmax(390px, 1.62fr) minmax(255px, 1fr);
   margin-top: 18px;
+  overflow: hidden;
   background: rgba(250, 247, 239, .22);
 }
 
 .match-control-rail,
 .formation-stage,
 .match-result-rail {
+  width: 100%;
+  max-width: 100%;
   padding: 18px 18px 22px;
+  overflow: hidden;
 }
 
 .match-section-heading {
@@ -2799,7 +2806,10 @@ body,
 }
 
 .prediction-evidence {
+  width: 100%;
+  max-width: 100%;
   margin-top: 0;
+  overflow: hidden;
   background: rgba(250, 247, 239, .18);
 }
 
@@ -2822,23 +2832,21 @@ body,
   color: #c25f45;
 }
 
-@media (min-width: 1450px) {
-  .page-predict .prediction-evidence {
-    width: calc(100% - 218px);
+@media (max-width: 1320px) {
+  .match-center {
+    grid-template-columns: minmax(210px, .74fr) minmax(360px, 1.5fr) minmax(235px, .92fr);
   }
 
-  .page-predict .prediction-evidence::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    width: 218px;
-    background:
-      radial-gradient(circle at 34% 24%, transparent 0 31px, rgba(222, 230, 180, .26) 32px 34px, transparent 35px),
-      radial-gradient(circle at 80% 78%, transparent 0 42px, rgba(222, 230, 180, .2) 43px 46px, transparent 47px),
-      repeating-linear-gradient(112deg, rgba(218, 227, 178, .08) 0 1px, transparent 1px 7px),
-      linear-gradient(140deg, #5f842f, #376923 55%, #214f18);
-    box-shadow: inset 0 0 55px rgba(6, 35, 7, .34);
+  .match-control-rail,
+  .formation-stage,
+  .match-result-rail {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .result-verdict {
+    grid-template-columns: minmax(0, 1fr) 68px;
+    padding-right: 10px;
+    padding-left: 12px;
   }
 }
